@@ -4,7 +4,12 @@ import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * The python package (sklearn4x) implements a class named BinaryBuffer that saves the python objects
@@ -25,6 +30,7 @@ public class BinaryModelPackage {
     private static final int ELEMENT_TYPE_STRING = 0x30;
     private static final int ELEMENT_TYPE_LIST = 0x40;
     private static final int ELEMENT_TYPE_DICTIONARY = 0x41;
+    private static final int ELEMENT_TYPE_NULL = 0x10;
 
     private final InputStream stream;
 
@@ -63,7 +69,7 @@ public class BinaryModelPackage {
      *
      * @return A byte value stored in the stream.
      */
-    public int readByte() {
+    public byte readByte() {
         int size = 1;
 
         byte[] data = readBuffer(size);
@@ -75,7 +81,7 @@ public class BinaryModelPackage {
      *
      * @return A short value stored in the stream.
      */
-    public int readShort() {
+    public short readShort() {
         int size = 2;
         int result = 0;
 
@@ -86,7 +92,7 @@ public class BinaryModelPackage {
             result = (data[size - 1 - i] & 0x000000FF) + result;
         }
 
-        return result;
+        return (short) result;
     }
 
     /**
@@ -135,9 +141,13 @@ public class BinaryModelPackage {
      * @return A float value stored in the stream.
      */
     public float readFloat() {
-        float result = 0;
-        int temp = readInteger();
-        result = Float.intBitsToFloat(temp);
+        float result = Float.NaN;
+        int hasValue = readByte();
+
+        if (hasValue == 1) {
+            int temp = readInteger();
+            result = Float.intBitsToFloat(temp);
+        }
 
         return result;
     }
@@ -149,9 +159,13 @@ public class BinaryModelPackage {
      * @return A double value stored in the stream.
      */
     public double readDouble() {
-        double result = 0;
-        long temp = readLongInteger();
-        result = Double.longBitsToDouble(temp);
+        double result = Double.NaN;
+        int hasValue = readByte();
+
+        if (hasValue == 1) {
+            long temp = readLongInteger();
+            result = Double.longBitsToDouble(temp);
+        }
 
         return result;
     }
@@ -159,7 +173,7 @@ public class BinaryModelPackage {
     /**
      * Reads a string with UTF-8 encoding from stream.
      *
-     * @return The string stored in the stream, or null if it has not value.
+     * @return The string stored in the stream, or null if it has no value.
      */
     public String readString() {
         String result = null;
@@ -176,10 +190,183 @@ public class BinaryModelPackage {
     }
 
     /**
+     * Read a multidimensional numpy array from the stream.
+     *
+     * @return The numpy array stored in the stream, or null if it has no value.
+     */
+    public Object readNumpyArray() {
+        Object result = null;
+        int hasValue = readByte();
+
+        if (hasValue == 1) {
+            int[] shape = new int[readInteger()];
+            int elementType = readByte();
+
+            for (int i = 0; i < shape.length; i++) {
+                shape[i] = readInteger();
+            }
+
+            result = Array.newInstance(getComponentType(elementType), shape);
+            readNumpyDataFromStream(result, shape, 0, elementType);
+        }
+
+        return result;
+    }
+
+    /**
+     * Reads a list from the stream.
+     *
+     * @return The list stored in the stream, or null if it has no value.
+     */
+    public List<Object> readList() {
+        List<Object> result = null;
+        int hasValue = readByte();
+
+        if (hasValue == 1) {
+            result = new ArrayList<>();
+
+            int count = readInteger();
+            for (int i = 0; i < count; i++) {
+                byte elementType = readByte();
+
+                if (elementType == ELEMENT_TYPE_NULL) {
+                    result.add(null);
+                } else {
+                    IBinaryModelPackagePrimitiveValueReader reader = getPrimitiveDataReader(elementType);
+                    Object value = reader.readPrimitiveValue();
+                    result.add(value);
+                }
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Reads a dictionary from the stream.
+     *
+     * @return The dictionary stored in the stream, or null if it has no value.
+     */
+    public Map<String, Object> readDictionary() {
+        Map<String, Object> result = null;
+        int hasValue = readByte();
+
+        if (hasValue == 1) {
+            result = new HashMap<>();
+            int count = readInteger();
+
+            for (int i = 0; i < count; i++) {
+                String key = readString();
+                byte elementType = readByte();
+                if (elementType == ELEMENT_TYPE_NULL) {
+                    result.put(key, null);
+                } else {
+                    IBinaryModelPackagePrimitiveValueReader reader = getPrimitiveDataReader(elementType);
+                    Object value = reader.readPrimitiveValue();
+                    result.put(key, value);
+                }
+            }
+        }
+
+        return result;
+    }
+
+
+    /**
+     * Recursively read the stream to load an encoded numpy array from the stream.
+     *
+     * @param array       The array to be loaded.
+     * @param shape       The shape of the numpy array.
+     * @param dimension   The current dimension being loaded.
+     * @param elementType The type of the numpy array's elements.
+     */
+    private void readNumpyDataFromStream(Object array, int[] shape, int dimension, int elementType) {
+        if (dimension == shape.length - 1) {
+            // This is the last dimension of the tensor, read actual values.
+            IBinaryModelPackagePrimitiveValueReader reader = getPrimitiveDataReader(elementType);
+            int count = shape[dimension];
+
+            for (int i = 0; i < count; i++) {
+                Array.set(array, i, reader.readPrimitiveValue());
+            }
+        } else {
+            // This is an intermediate dimensions, it should read a tensor from the buffer
+            for (int i = 0; i < shape[dimension]; i++) {
+                readNumpyDataFromStream(Array.get(array, i), shape, dimension + 1, elementType);
+            }
+        }
+    }
+
+    /**
+     * The element type of a numpy array is stored as a byte. The value of this byte is defined as
+     * constants ELEMENT_TYPE_* in the class. This method converts these element type constants into
+     * respective Java types to create an array using reflection.
+     *
+     * @param elementType A byte value read from buffer that specifies the type of numpy array.
+     * @return A Class object used by reflection to create a new array.
+     */
+    private Class<?> getComponentType(int elementType) {
+        Class<?> result = null;
+
+        if (elementType == ELEMENT_TYPE_BYTE || elementType == ELEMENT_TYPE_UNSIGNED_BYTE) {
+            result = byte.class;
+        } else if (elementType == ELEMENT_TYPE_SHORT || elementType == ELEMENT_TYPE_UNSIGNED_SHORT) {
+            result = short.class;
+        } else if (elementType == ELEMENT_TYPE_INT || elementType == ELEMENT_TYPE_UNSIGNED_INT) {
+            result = int.class;
+        } else if (elementType == ELEMENT_TYPE_LONG || elementType == ELEMENT_TYPE_UNSIGNED_LONG) {
+            result = long.class;
+        } else if (elementType == ELEMENT_TYPE_FLOAT) {
+            result = float.class;
+        } else if (elementType == ELEMENT_TYPE_DOUBLE) {
+            result = double.class;
+        } else {
+            throw new RuntimeException(String.format("Numpy array with element type %d is not supported.", elementType));
+        }
+
+        return result;
+    }
+
+    /**
+     * Gets an IBinaryModelPackagePrimitiveValueReader to read numerical values from the stream. This
+     * method was added to prevent having many if-elses in the code.
+     *
+     * @param elementType A byte value read from buffer that specifies the type of numerical value.
+     * @return An instance of IBinaryModelPackagePrimitiveValueReader to read numerical values.
+     */
+    private IBinaryModelPackagePrimitiveValueReader getPrimitiveDataReader(int elementType) {
+        IBinaryModelPackagePrimitiveValueReader result = null;
+
+        if (elementType == ELEMENT_TYPE_BYTE || elementType == ELEMENT_TYPE_UNSIGNED_BYTE) {
+            result = this::readByte;
+        } else if (elementType == ELEMENT_TYPE_SHORT || elementType == ELEMENT_TYPE_UNSIGNED_SHORT) {
+            result = this::readShort;
+        } else if (elementType == ELEMENT_TYPE_INT || elementType == ELEMENT_TYPE_UNSIGNED_INT) {
+            result = this::readInteger;
+        } else if (elementType == ELEMENT_TYPE_LONG || elementType == ELEMENT_TYPE_UNSIGNED_LONG) {
+            result = this::readLongInteger;
+        } else if (elementType == ELEMENT_TYPE_FLOAT) {
+            result = this::readFloat;
+        } else if (elementType == ELEMENT_TYPE_DOUBLE) {
+            result = this::readDouble;
+        } else if (elementType == ELEMENT_TYPE_STRING) {
+            result = this::readString;
+        } else if (elementType == ELEMENT_TYPE_DICTIONARY) {
+            result = this::readDictionary;
+        } else if (elementType == ELEMENT_TYPE_LIST) {
+            result = this::readList;
+        } else {
+            throw new RuntimeException(String.format("Numpy array with element type %d is not supported.", elementType));
+        }
+
+        return result;
+    }
+
+
+    /**
      * Reads a buffer from the stream.
      *
      * @param size Length of the buffer to be read from stream.
-     *
      * @return A byte[] buffer.
      */
     private byte[] readBuffer(int size) {
@@ -198,4 +385,9 @@ public class BinaryModelPackage {
 
         return buffer;
     }
+
+}
+
+interface IBinaryModelPackagePrimitiveValueReader {
+    Object readPrimitiveValue();
 }
