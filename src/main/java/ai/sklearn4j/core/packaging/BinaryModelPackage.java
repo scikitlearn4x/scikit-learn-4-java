@@ -38,7 +38,7 @@ public class BinaryModelPackage {
      * @param path Path to the file to be read.
      * @return A BinaryModelPackage instance to read the package file.
      */
-    public BinaryModelPackage fromFile(String path) {
+    public static BinaryModelPackage fromFile(String path) {
         try {
             InputStream stream = new BufferedInputStream(new FileInputStream(path));
             return fromStream(stream);
@@ -54,7 +54,7 @@ public class BinaryModelPackage {
      * @param stream The input stream that should be loaded. It is recommended to use a buffered stream.
      * @return A BinaryModelPackage instance to read the package stream.
      */
-    public BinaryModelPackage fromStream(InputStream stream) {
+    public static BinaryModelPackage fromStream(InputStream stream) {
         return new BinaryModelPackage(stream);
     }
 
