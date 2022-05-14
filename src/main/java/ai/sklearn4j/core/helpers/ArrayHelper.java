@@ -1,6 +1,7 @@
 package ai.sklearn4j.core.helpers;
 
-import ai.sklearn4j.core.NumpyArray;
+
+import ai.sklearn4j.core.numpy.NumpyArray;
 
 public class ArrayHelper {
     public static int[] getArgmaxFromClassProbabilityDistribution(NumpyArray<Double> array) {
