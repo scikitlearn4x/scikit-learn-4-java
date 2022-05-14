@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * The python package (sklearn4x) implements a class named BinaryBuffer that saves the python objects
- * in a binary format. BinaryModelPackage is its conterpart to load these files (or stream) in other
+ * in a binary format. BinaryModelPackage is its counterpart to load these files (or stream) in other
  * languages.
  */
 public class BinaryModelPackage {
@@ -47,7 +47,11 @@ public class BinaryModelPackage {
     public static BinaryModelPackage fromFile(String path) {
         try {
             InputStream stream = new BufferedInputStream(new FileInputStream(path));
-            return fromStream(stream);
+            BinaryModelPackage result = fromStream(stream);
+
+            stream.close();
+
+            return result;
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
