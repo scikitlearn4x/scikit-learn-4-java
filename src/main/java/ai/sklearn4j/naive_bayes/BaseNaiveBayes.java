@@ -1,11 +1,13 @@
 package ai.sklearn4j.naive_bayes;
 
+import ai.sklearn4j.base.ClassifierMixin;
 import ai.sklearn4j.core.NumpyArray;
+import ai.sklearn4j.core.helpers.ArrayHelper;
 
 /**
  * Abstract base class for naive Bayes estimators
  */
-public abstract class BaseNaiveBayes {
+public abstract class BaseNaiveBayes extends ClassifierMixin {
     /**
      * Compute the unnormalized posterior log probability of X.
      *
@@ -17,22 +19,25 @@ public abstract class BaseNaiveBayes {
      *
      * @param x An array-like of shape (n_samples, n_classes).
      */
-    protected abstract NumpyArray jointLogLikelihood(NumpyArray x);
+    protected abstract NumpyArray<Double> jointLogLikelihood(NumpyArray<Double> x);
 
     /**
      * To be overridden in subclasses with the actual checks. Only used in predict* methods.
      * @param x An array-like of shape (n_samples, n_classes).
      */
-    protected abstract NumpyArray checkX(NumpyArray x);
+    protected abstract NumpyArray<Double> checkX(NumpyArray<Double> x);
 
-    /**
-     * Perform classification on an array of test vectors X.
-     *
-     * @param x Array-like of shape (n_samples, n_features) The input samples.
-     * @return NumpyArray of shape (n_samples,) Predicted target values for X.
-     */
-    public NumpyArray predict(NumpyArray x) {
+    public NumpyArray<Integer> predict(NumpyArray<Double> x) {
         x = this.checkX(x);
-        NumpyArray jll = jointLogLikelihood(x);
+        NumpyArray<Double> jll = jointLogLikelihood(x);
+        return NumpyArray.from(ArrayHelper.getArgmaxFromClassProbabilityDistribution(jll));
+    }
+
+    public NumpyArray<Double> predictLogProbabilities(NumpyArray<Double> x) {
+        throw new RuntimeException();
+    }
+
+    public NumpyArray<Double> predictProbabilities(NumpyArray<Double> x) {
+        return ArrayHelper.exponentOfLogProbabilities(predictLogProbabilities(x));
     }
 }
