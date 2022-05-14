@@ -1,6 +1,6 @@
 package ai.sklearn4j.base;
 
-import ai.sklearn4j.core.numpy.NumpyArray;
+import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 
 /**
  * Mixin class for all classifiers in scikit-learn.
