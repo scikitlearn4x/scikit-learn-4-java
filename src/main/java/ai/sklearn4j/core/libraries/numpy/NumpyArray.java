@@ -84,5 +84,9 @@ public class NumpyArray<Type> {
     public int numberOfBytes() {
         return data.numberOfBits() / 8;
     }
+
+    public NumpyArray<Type> transpose() {
+        return data.transpose();
+    }
 }
 

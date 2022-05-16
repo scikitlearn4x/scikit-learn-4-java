@@ -1,6 +1,7 @@
 package ai.sklearn4j.naive_bayes;
 
 import ai.sklearn4j.base.ClassifierMixin;
+import ai.sklearn4j.core.libraries.Scipy;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 
@@ -36,11 +37,12 @@ public abstract class BaseNaiveBayes extends ClassifierMixin {
     public NumpyArray<Double> predictLogProbabilities(NumpyArray<Double> x) {
         x = this.checkX(x);
         NumpyArray<Double> jll = jointLogLikelihood(x);
+        NumpyArray<Double> logProbabilityOfX = Scipy.logSumExponent(jll, 1);
 
         throw new RuntimeException();
     }
 
     public NumpyArray<Double> predictProbabilities(NumpyArray<Double> x) {
-        throw new RuntimeException();
+        return Numpy.exp(predictLogProbabilities(x));
     }
 }

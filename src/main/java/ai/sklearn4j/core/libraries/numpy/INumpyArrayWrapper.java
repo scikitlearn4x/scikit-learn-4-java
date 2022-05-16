@@ -10,4 +10,6 @@ public interface INumpyArrayWrapper {
     boolean isFloatingPoint();
 
     int numberOfBits();
+
+    NumpyArray transpose();
 }

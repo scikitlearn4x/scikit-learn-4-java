@@ -5,6 +5,9 @@
 package ai.sklearn4j.core.libraries.numpy.wrappers;
 
 import ai.sklearn4j.core.libraries.numpy.INumpyArrayWrapper;
+import ai.sklearn4j.core.libraries.numpy.NumpyArray;
+
+import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 
 public class Dim2DoubleNumpyWrapper implements INumpyArrayWrapper {
 	private final double[][] array;
@@ -30,14 +33,29 @@ public class Dim2DoubleNumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]] = (double)value;
 	}
 
+	@Override
 	public boolean isFloatingPoint() {
-
 		return true;
 	}
 
 
+	@Override
 	public int numberOfBits() {
-
 		return 64;
+	}
+
+
+	@Override
+	public NumpyArray transpose() {
+		double[][] result = new double[shape[1]][shape[0]];
+
+		for (int d0 = 0; d0 < this.shape[0]; d0++) {
+			for (int d1 = 0; d1 < this.shape[1]; d1++) {
+				result[d1][d0] = array[d0][d1];
+
+			}
+		}
+
+		return NumpyArrayFactory.from(result);
 	}
 }
