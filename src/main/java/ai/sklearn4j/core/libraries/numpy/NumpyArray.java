@@ -88,5 +88,31 @@ public class NumpyArray<Type> {
     public NumpyArray<Type> transpose() {
         return data.transpose();
     }
+
+    public boolean isSingleValueArray() {
+        int count = 1;
+        int[] shape = getShape();
+
+        for (int i = 0; i < shape.length; i++) {
+            count = count * shape[i];
+        }
+
+        return count == 1;
+    }
+
+    public Type getSingleValue() {
+        int[] shape = getShape();
+        int[] index = new int[shape.length];
+
+        return (Type) data.get(index);
+    }
+
+    public NumpyArray<Type> wrapInnerSubsetArray(int... indices) {
+        return data.wrapInnerSubsetArray(indices);
+    }
+
+    public int numberOfDimensions() {
+        return getShape().length;
+    }
 }
 

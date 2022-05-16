@@ -12,4 +12,8 @@ public interface INumpyArrayWrapper {
     int numberOfBits();
 
     NumpyArray transpose();
+
+    NumpyArray wrapInnerSubsetArray(int... indices);
+
+    Object getRawArray();
 }

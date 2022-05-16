@@ -5,9 +5,10 @@
 package ai.sklearn4j.core.libraries.numpy.wrappers;
 
 import ai.sklearn4j.core.libraries.numpy.INumpyArrayWrapper;
+import ai.sklearn4j.core.libraries.numpy.NumpyUtils;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
+import ai.sklearn4j.core.libraries.numpy.NumpyOperationException;
 
 public class Dim1Int8NumpyWrapper implements INumpyArrayWrapper {
 	private final byte[] array;
@@ -30,7 +31,7 @@ public class Dim1Int8NumpyWrapper implements INumpyArrayWrapper {
 
 	@Override
 	public void set(Object value, int... indices) {
-		this.array[indices[0]] = (byte)value;
+		this.array[indices[0]] = NumpyUtils.toByte(value);
 	}
 
 	@Override
@@ -42,6 +43,18 @@ public class Dim1Int8NumpyWrapper implements INumpyArrayWrapper {
 	@Override
 	public int numberOfBits() {
 		return 8;
+	}
+
+
+	@Override
+	public Object getRawArray() {
+		return array;
+	}
+
+
+	@Override
+	public NumpyArray wrapInnerSubsetArray(int... indices) {
+		throw new NumpyOperationException("A single dimension sub array can't be sliced.");
 	}
 
 

@@ -5,9 +5,10 @@
 package ai.sklearn4j.core.libraries.numpy.wrappers;
 
 import ai.sklearn4j.core.libraries.numpy.INumpyArrayWrapper;
+import ai.sklearn4j.core.libraries.numpy.NumpyUtils;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
+import ai.sklearn4j.core.libraries.numpy.NumpyOperationException;
 
 public class Dim1FloatNumpyWrapper implements INumpyArrayWrapper {
 	private final float[] array;
@@ -30,7 +31,7 @@ public class Dim1FloatNumpyWrapper implements INumpyArrayWrapper {
 
 	@Override
 	public void set(Object value, int... indices) {
-		this.array[indices[0]] = (float)value;
+		this.array[indices[0]] = NumpyUtils.toFloat(value);
 	}
 
 	@Override
@@ -42,6 +43,18 @@ public class Dim1FloatNumpyWrapper implements INumpyArrayWrapper {
 	@Override
 	public int numberOfBits() {
 		return 32;
+	}
+
+
+	@Override
+	public Object getRawArray() {
+		return array;
+	}
+
+
+	@Override
+	public NumpyArray wrapInnerSubsetArray(int... indices) {
+		throw new NumpyOperationException("A single dimension sub array can't be sliced.");
 	}
 
 

@@ -5,9 +5,10 @@
 package ai.sklearn4j.core.libraries.numpy.wrappers;
 
 import ai.sklearn4j.core.libraries.numpy.INumpyArrayWrapper;
+import ai.sklearn4j.core.libraries.numpy.NumpyUtils;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
+import ai.sklearn4j.core.libraries.numpy.NumpyOperationException;
 
 public class Dim8Int8NumpyWrapper implements INumpyArrayWrapper {
 	private final byte[][][][][][][][] array;
@@ -30,7 +31,7 @@ public class Dim8Int8NumpyWrapper implements INumpyArrayWrapper {
 
 	@Override
 	public void set(Object value, int... indices) {
-		this.array[indices[0]][indices[1]][indices[2]][indices[3]][indices[4]][indices[5]][indices[6]][indices[7]] = (byte)value;
+		this.array[indices[0]][indices[1]][indices[2]][indices[3]][indices[4]][indices[5]][indices[6]][indices[7]] = NumpyUtils.toByte(value);
 	}
 
 	@Override
@@ -42,6 +43,38 @@ public class Dim8Int8NumpyWrapper implements INumpyArrayWrapper {
 	@Override
 	public int numberOfBits() {
 		return 8;
+	}
+
+
+	@Override
+	public Object getRawArray() {
+		return array;
+	}
+
+
+	@Override
+	public NumpyArray wrapInnerSubsetArray(int... indices) {
+		NumpyArray result = null;
+
+		if (indices.length == 1) {
+			result = NumpyArrayFactory.from(array[indices[0]]);
+		} else if (indices.length == 2) {
+			result = NumpyArrayFactory.from(array[indices[0]][indices[1]]);
+		} else if (indices.length == 3) {
+			result = NumpyArrayFactory.from(array[indices[0]][indices[1]][indices[2]]);
+		} else if (indices.length == 4) {
+			result = NumpyArrayFactory.from(array[indices[0]][indices[1]][indices[2]][indices[3]]);
+		} else if (indices.length == 5) {
+			result = NumpyArrayFactory.from(array[indices[0]][indices[1]][indices[2]][indices[3]][indices[4]]);
+		} else if (indices.length == 6) {
+			result = NumpyArrayFactory.from(array[indices[0]][indices[1]][indices[2]][indices[3]][indices[4]][indices[5]]);
+		} else if (indices.length == 7) {
+			result = NumpyArrayFactory.from(array[indices[0]][indices[1]][indices[2]][indices[3]][indices[4]][indices[5]][indices[6]]);
+		} else {
+			throw new NumpyOperationException("Invalid slice for array specified.");
+		}
+
+		return result;
 	}
 
 
