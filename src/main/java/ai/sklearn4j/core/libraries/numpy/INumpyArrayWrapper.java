@@ -6,4 +6,8 @@ public interface INumpyArrayWrapper {
     Object get(int... indices);
 
     void set(Object value, int... index);
+
+    boolean isFloatingPoint();
+
+    int numberOfBits();
 }

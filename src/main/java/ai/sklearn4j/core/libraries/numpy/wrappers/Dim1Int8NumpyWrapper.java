@@ -30,4 +30,14 @@ public class Dim1Int8NumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]] = (byte)value;
 	}
 
+	public boolean isFloatingPoint() {
+
+		return false;
+	}
+
+
+	public int numberOfBits() {
+
+		return 8;
+	}
 }

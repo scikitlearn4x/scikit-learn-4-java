@@ -30,4 +30,14 @@ public class Dim3Int16NumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]][indices[2]] = (short)value;
 	}
 
+	public boolean isFloatingPoint() {
+
+		return false;
+	}
+
+
+	public int numberOfBits() {
+
+		return 16;
+	}
 }

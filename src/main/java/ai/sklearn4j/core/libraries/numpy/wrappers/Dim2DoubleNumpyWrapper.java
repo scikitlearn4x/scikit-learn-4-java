@@ -30,4 +30,14 @@ public class Dim2DoubleNumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]] = (double)value;
 	}
 
+	public boolean isFloatingPoint() {
+
+		return true;
+	}
+
+
+	public int numberOfBits() {
+
+		return 64;
+	}
 }

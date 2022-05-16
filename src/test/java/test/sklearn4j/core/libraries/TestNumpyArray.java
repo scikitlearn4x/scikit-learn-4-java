@@ -1,9 +1,11 @@
 package test.sklearn4j.core.libraries;
 
+import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import test.sklearn4j.core.TestHelper;
 
 public class TestNumpyArray {
     @Test
@@ -11,56 +13,32 @@ public class TestNumpyArray {
         double[][][] data = {{{0.34207587, 0.59631829, 0.59525696, 0.95059543, 0.39912264}, {0.85464008, 0.90788009, 0.82057904, 0.43492519, 0.43897654}, {0.80624335, 0.80625582, 0.04637509, 0.21079158, 0.2956869}}, {{0.53870154, 0.54324711, 0.86099808, 0.21863662, 0.2951117}, {0.45954226, 0.1318496, 0.94744519, 0.95518557, 0.16132475}, {0.67286602, 0.2399391, 0.40854949, 0.8254005, 0.47404008}}};
         NumpyArray<Double> array = NumpyArrayFactory.from(data);
 
-        NumpyArray<Integer> axis0 = array.argmax(0);
+        NumpyArray<Integer> axis0 = Numpy.argmax(array, 0);
         int[][] axis0Expected = {{1, 0, 1, 0, 0}, {0, 0, 1, 1, 0,}, {0, 0, 1, 1, 1}};
-        assertEqualData(axis0, axis0Expected);
+        TestHelper.assertEqualData(axis0, axis0Expected);
 
-        NumpyArray<Integer> axis1 = array.argmax(1);
+        NumpyArray<Integer> axis1 = Numpy.argmax(array, 1);
         int[][] axis1Expected = {{1, 1, 1, 0, 1}, {2, 0, 1, 1, 2}};
-        assertEqualData(axis1, axis1Expected);
+        TestHelper.assertEqualData(axis1, axis1Expected);
 
-        NumpyArray<Integer> axis2 = array.argmax(2);
+        NumpyArray<Integer> axis2 = Numpy.argmax(array, 2);
         int[][] axis2Expected = {{3, 1, 1}, {2, 3, 3}};
-        assertEqualData(axis2, axis2Expected);
+        TestHelper.assertEqualData(axis2, axis2Expected);
     }
 
     @Test
     public void testSum() {
         double[][] data = {{0.817, 0.721, 0.67, 0.3}, {0.524, 0.935, 0.883, 0.866}, {0.134, 0.849, 0.578, 0.142}};
 
-        NumpyArray<Double> numpy = NumpyArrayFactory.from(data);
+        NumpyArray<Double> array = NumpyArrayFactory.from(data);
 
         double[] axis0Expected = {1.475, 2.505, 2.131, 1.308};
-        NumpyArray<Double> axis0 = numpy.sum(0);
-        assertEqualData(axis0, axis0Expected);
+        NumpyArray<Double> axis0 = Numpy.sum(array, 0);
+        TestHelper.assertEqualData(axis0, axis0Expected);
 
         double[] axis1Expected = {2.508, 3.208, 1.703};
-        NumpyArray<Double> axis1 = numpy.sum(1);
-        assertEqualData(axis1, axis1Expected);
-    }
-
-    private void assertEqualData(NumpyArray<Integer> numpyArray, int[][] array) {
-        Assertions.assertEquals(2, numpyArray.getShape().length);
-        Assertions.assertEquals(array.length, numpyArray.getShape()[0]);
-        Assertions.assertEquals(array[0].length, numpyArray.getShape()[1]);
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                Assertions.assertEquals(array[i][j], numpyArray.get(i, j));
-            }
-        }
-    }
-
-    private void assertEqualData(NumpyArray<Double> numpyArray, double[] array) {
-        Assertions.assertEquals(1, numpyArray.getShape().length);
-        Assertions.assertEquals(array.length, numpyArray.getShape()[0]);
-
-        for (int i = 0; i < array.length; i++) {
-            double diff = Math.abs(array[i] - numpyArray.get(i));
-            boolean check = diff < 0.0000001;
-
-            Assertions.assertTrue(check);
-        }
+        NumpyArray<Double> axis1 = Numpy.sum(array, 1);
+        TestHelper.assertEqualData(axis1, axis1Expected);
     }
 
     @Test

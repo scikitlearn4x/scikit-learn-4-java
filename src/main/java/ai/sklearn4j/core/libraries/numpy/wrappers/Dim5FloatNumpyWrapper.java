@@ -30,4 +30,14 @@ public class Dim5FloatNumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]][indices[2]][indices[3]][indices[4]] = (float)value;
 	}
 
+	public boolean isFloatingPoint() {
+
+		return true;
+	}
+
+
+	public int numberOfBits() {
+
+		return 32;
+	}
 }
