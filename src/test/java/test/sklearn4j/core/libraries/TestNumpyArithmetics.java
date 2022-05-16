@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import test.sklearn4j.core.TestHelper;
 
-public class TestNumpyAddAndSubtract {
+public class TestNumpyArithmetics {
     @Test
     public void testAddNumpyArraysOfSameDimensions() {
         double[][][] array1 = {{{0.8498362688651786, 0.38847262219392775, 0.491529490731744, 0.14519928481748345}, {0.7016401109880209, 0.9559815834146775, 0.24616147376815534, 0.49604242026690226}, {0.2542089747022154, 0.27716146772691064, 0.9914409615786711, 0.116915835428262}}, {{0.38492600320251036, 0.04455663085917927, 0.1726474566458548, 0.2543754431463955}, {0.11273591863545018, 0.8474118940812869, 0.21211414003536688, 0.3491955367429401}, {0.21874285575081864, 0.20394376525199898, 0.872450640099929, 0.6191935922156495}}, {{0.1880355870914292, 0.689014552012491, 0.5099566042459871, 0.5178654988076001}, {0.8319721008181516, 0.8978320425252354, 0.22334773151980836, 0.40578844056105323}, {0.21778219349883654, 0.1509668440151467, 0.95399825367282, 0.9995919847841824}}};
@@ -18,8 +18,12 @@ public class TestNumpyAddAndSubtract {
         NumpyArray<Double> a1 = NumpyArrayFactory.from(array1);
         NumpyArray<Double> a2 = NumpyArrayFactory.from(array2);
 
-        NumpyArray<Double> actualSum = Numpy.add(a1, a2);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Double> actual = Numpy.add(a1, a2);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0.8498362688651786, array1[0][0][0]);
+        Assertions.assertEquals(0.07694844908148424, array2[0][0][0]);
     }
 
     @Test
@@ -31,8 +35,12 @@ public class TestNumpyAddAndSubtract {
         NumpyArray<Double> a1 = NumpyArrayFactory.from(array1);
         NumpyArray<Double> a2 = NumpyArrayFactory.from(array2);
 
-        NumpyArray<Double> actualSum = Numpy.subtract(a1, a2);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Double> actual = Numpy.subtract(a1, a2);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0.9673749067232011, array1[0][0][0]);
+        Assertions.assertEquals(0.9224495177071387, array2[0][0][0]);
     }
 
     @Test
@@ -76,8 +84,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Double> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Double> actualSum = Numpy.add(a1, 2.0);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Double> actual = Numpy.add(a1, 2.0);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0.9907355250598483, array1[0][0][0]);
     }
 
     @Test
@@ -87,8 +98,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Double> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Double> actualSum = Numpy.subtract(a1, 0.5);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Double> actual = Numpy.subtract(a1, 0.5);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0.43499481593998646, array1[0][0][0]);
     }
 
     @Test
@@ -98,8 +112,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Byte> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Byte> actualSum = Numpy.add(a1, (byte) 20);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Byte> actual = Numpy.add(a1, (byte) 20);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(29 , array1[0][0][0]);
     }
 
     @Test
@@ -109,8 +126,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Byte> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Byte> actualSum = Numpy.subtract(a1, (byte) 2);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Byte> actual = Numpy.subtract(a1, (byte) 2);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(27 , array1[0][0][0]);
     }
 
     @Test
@@ -120,8 +140,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Short> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Short> actualSum = Numpy.add(a1, (short) 20);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Short> actual = Numpy.add(a1, (short) 20);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(16 , array1[0][0][0]);
     }
 
     @Test
@@ -131,8 +154,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Short> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Short> actualSum = Numpy.subtract(a1, (short) 2);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Short> actual = Numpy.subtract(a1, (short) 2);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(20 , array1[0][0][0]);
     }
 
     @Test
@@ -142,8 +168,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Integer> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Integer> actualSum = Numpy.add(a1, 20);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Integer> actual = Numpy.add(a1, 20);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0 , array1[0][0][0]);
     }
 
     @Test
@@ -153,8 +182,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Integer> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Integer> actualSum = Numpy.subtract(a1, 2);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Integer> actual = Numpy.subtract(a1, 2);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(6 , array1[0][0][0]);
     }
 
     @Test
@@ -164,8 +196,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Long> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Long> actualSum = Numpy.add(a1, (long) 20);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Long> actual = Numpy.add(a1, (long) 20);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(6 , array1[0][0][0]);
     }
 
     @Test
@@ -175,8 +210,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Long> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Long> actualSum = Numpy.subtract(a1, (long) 2);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Long> actual = Numpy.subtract(a1, (long) 2);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(26 , array1[0][0][0]);
     }
 
     @Test
@@ -186,8 +224,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Float> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Float> actualSum = Numpy.add(a1, -20.0f);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Float> actual = Numpy.add(a1, -20.0f);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(24.636015f , array1[0][0][0]);
     }
 
     @Test
@@ -197,8 +238,11 @@ public class TestNumpyAddAndSubtract {
 
         NumpyArray<Float> a1 = NumpyArrayFactory.from(array1);
 
-        NumpyArray<Float> actualSum = Numpy.subtract(a1, 2.0f);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Float> actual = Numpy.subtract(a1, 2.0f);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(31.434202f , array1[0][0][0]);
     }
 
     @Test
@@ -210,8 +254,12 @@ public class TestNumpyAddAndSubtract {
         NumpyArray<Double> a1 = NumpyArrayFactory.from(array1);
         NumpyArray<Double> a2 = NumpyArrayFactory.from(array2);
 
-        NumpyArray<Double> actualSum = Numpy.add(a1, a2);
-        TestHelper.assertEqualData(actualSum, expectedSum);
+        NumpyArray<Double> actual = Numpy.add(a1, a2);
+        TestHelper.assertEqualData(actual, expectedSum);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(14.577887064075227, array1[0][0][0]);
+        Assertions.assertEquals(9.360844617718007, array2[0][0][0]);
     }
 
     @Test
@@ -223,7 +271,47 @@ public class TestNumpyAddAndSubtract {
         NumpyArray<Double> a1 = NumpyArrayFactory.from(array1);
         NumpyArray<Double> a2 = NumpyArrayFactory.from(array2);
 
-        NumpyArray<Double> actualSum = Numpy.subtract(a1, a2);
-        TestHelper.assertEqualData(actualSum, expectedSubtraction);
+        NumpyArray<Double> actual = Numpy.subtract(a1, a2);
+        TestHelper.assertEqualData(actual, expectedSubtraction);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0.9624292569843312, array1[0][0][0]);
+        Assertions.assertEquals(0.6788013293525661, array2[0][0][0]);
+    }
+
+    @Test
+    public void testDoubleMultiplicationAndDivision() {
+        double[][] array={{0.9383549975480937, 0.6707543764947346, 0.3727462159254752}, {0.2746844265995788, 0.30641062192634816, 0.4176566561467244}, {0.7149964220406743, 0.2593190510607888, 0.6630315531623971}};
+        double[][] expected={{9.383549975480937, 6.707543764947346, 3.7274621592547517}, {2.7468442659957883, 3.064106219263482, 4.1765665614672445}, {7.149964220406742, 2.593190510607888, 6.630315531623971}};
+
+        NumpyArray<Double> a = NumpyArrayFactory.from(array);
+        NumpyArray<Double> actual = Numpy.multiply(a, 10);
+        TestHelper.assertEqualData(actual, expected);
+
+        a = NumpyArrayFactory.from(expected);
+        actual = Numpy.divide(a, 10);
+        TestHelper.assertEqualData(actual, array);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0.9383549975480937, array[0][0]);
+        Assertions.assertEquals(9.383549975480937, expected[0][0]);
+    }
+
+    @Test
+    public void testFloatMultiplicationAndDivision() {
+        float[][] array={{0.9425335f, 0.74280167f}, {0.42412087f, 0.2686771f}};
+        float[][] expected={{9.425335f, 7.4280167f}, {4.2412086f, 2.686771f}};
+
+        NumpyArray<Float> a = NumpyArrayFactory.from(array);
+        NumpyArray<Float> actual = Numpy.multiply(a, 10);
+        TestHelper.assertEqualData(actual, expected);
+
+        a = NumpyArrayFactory.from(expected);
+        actual = Numpy.divide(a, 10);
+        TestHelper.assertEqualData(actual, array);
+
+        // Test the computations didn't impact the original source
+        Assertions.assertEquals(0.9425335f, array[0][0]);
+        Assertions.assertEquals(9.425335f, expected[0][0]);
     }
 }

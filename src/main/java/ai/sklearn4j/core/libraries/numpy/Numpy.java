@@ -404,4 +404,28 @@ public final class Numpy {
     private static void addInPlace(NumpyArray target, NumpyArray array, byte value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (byte) element);
     }
+
+    public static NumpyArray<Double> multiply(NumpyArray<Double> array, double factor) {
+        NumpyArray<Double> result = NumpyUtils.createArrayOfShapeAndTypeInfo(array);
+
+        array.applyToEachElementAnsSaveToTarget(result, value -> value * factor);
+
+        return result;
+    }
+
+    public static NumpyArray<Float> multiply(NumpyArray<Float> array, float factor) {
+        NumpyArray<Float> result = NumpyUtils.createArrayOfShapeAndTypeInfo(array);
+
+        array.applyToEachElementAnsSaveToTarget(result, value -> value * factor);
+
+        return result;
+    }
+
+    public static NumpyArray<Double> divide(NumpyArray<Double> array, double factor) {
+        return multiply(array, 1.0 / factor);
+    }
+
+    public static NumpyArray<Float> divide(NumpyArray<Float> array, float factor) {
+        return multiply(array, 1.0f / factor);
+    }
 }
