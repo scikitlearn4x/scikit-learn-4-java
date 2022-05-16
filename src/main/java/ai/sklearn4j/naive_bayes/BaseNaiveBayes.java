@@ -39,7 +39,8 @@ public abstract class BaseNaiveBayes extends ClassifierMixin {
         NumpyArray<Double> jll = jointLogLikelihood(x);
         NumpyArray<Double> logProbabilityOfX = Scipy.logSumExponent(jll, 1);
 
-        throw new RuntimeException();
+        //jll - np.atleast_2d(log_prob_x).T
+        return Numpy.subtract(jll, Numpy.atLeast2D(logProbabilityOfX).transpose());
     }
 
     public NumpyArray<Double> predictProbabilities(NumpyArray<Double> x) {

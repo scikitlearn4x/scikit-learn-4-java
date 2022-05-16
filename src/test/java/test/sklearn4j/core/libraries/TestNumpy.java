@@ -3,6 +3,7 @@ package test.sklearn4j.core.libraries;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import test.sklearn4j.core.TestHelper;
 
@@ -25,5 +26,37 @@ public class TestNumpy {
         NumpyArray<Double> actual = Numpy.log(array);
         double[] expected = {-0.28236291, -0.45413028, -0.28236291, -0.79186315, -0.8187104};
         TestHelper.assertEqualData(actual, expected);
+    }
+
+    @Test
+    public void testAtLeast2D() {
+        double vd = 10;
+        double[][] vda = {{vd}};
+        TestHelper.assertEqualData(Numpy.atLeast2D(vd), vda);
+
+        float vf = 10;
+        float[][] vfa = {{vf}};
+        TestHelper.assertEqualData(Numpy.atLeast2D(vf), vfa);
+
+        long vl = 10;
+        long[][] vla = {{vl}};
+        TestHelper.assertEqualData(Numpy.atLeast2D(vl), vla);
+
+        int vi = 10;
+        int[][] via = {{vi}};
+        TestHelper.assertEqualData(Numpy.atLeast2D(vi), via);
+
+        short vs = 10;
+        short[][] vsa = {{vs}};
+        TestHelper.assertEqualData(Numpy.atLeast2D(vs), vsa);
+
+        byte vb = 10;
+        byte[][] vba = {{vb}};
+        TestHelper.assertEqualData(Numpy.atLeast2D(vb), vba);
+
+        double[] array = {0, 1, 2, 3, 4, 5, 6};
+        NumpyArray<Double> numpyArray = NumpyArrayFactory.from(array);
+
+        TestHelper.assertEqualData(Numpy.atLeast2D(numpyArray), new double[][]{array});
     }
 }

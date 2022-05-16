@@ -148,7 +148,6 @@ public final class Numpy {
      *
      * @param a1 Array on the left hand-side of the addition.
      * @param a2 Array on the right hand-side of the addition.
-     *
      * @return A boolean indicating if the values should be swapped or not.
      */
     private static boolean shouldSwapForAdd(NumpyArray a1, NumpyArray a2) {
@@ -166,14 +165,13 @@ public final class Numpy {
     /**
      * Gets the effective shape of the array. The effective shape is defined as the number of dimensions
      * on the left that is followed only by ones.
-     *
+     * <p>
      * Example:
-     *  (2, 2) -> (2, 2): Will return 2
-     *  (1, 4) -> (1, 4): Will return 2
-     *  (3, 5, 1, 1) -> (3, 5): Will return 2
+     * (2, 2) -> (2, 2): Will return 2
+     * (1, 4) -> (1, 4): Will return 2
+     * (3, 5, 1, 1) -> (3, 5): Will return 2
      *
      * @param shape Shape to evaluate the effective dimensions.
-     *
      * @return Number of effective dimensions.
      */
     private static int getEffectiveShapeWithRemovingEndingDimensions(int[] shape) {
@@ -206,7 +204,7 @@ public final class Numpy {
 
         for (int i = 0; i < effective1; i++) {
             if (shape1[i] != shape2[i] && (shape1[i] != 1 && shape2[i] != 1)) {
-                throw new NumpyOperationException(String.format("Dimension %d of the two numpy arrays doesn't match.", i+1));
+                throw new NumpyOperationException(String.format("Dimension %d of the two numpy arrays doesn't match.", i + 1));
             }
         }
     }
@@ -215,19 +213,19 @@ public final class Numpy {
         INumpyArrayElementOperation negate = null;
         if (a2.isFloatingPoint()) {
             if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_DOUBLE) {
-                negate = value -> -((double)value);
+                negate = value -> -((double) value);
             } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_FLOAT) {
-                negate = value -> -((float)value);
+                negate = value -> -((float) value);
             }
         } else {
             if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_8) {
-                negate = value -> -((byte)value);
+                negate = value -> -((byte) value);
             } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_16) {
-                negate = value -> -((short)value);
+                negate = value -> -((short) value);
             } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_32) {
-                negate = value -> -((int)value);
+                negate = value -> -((int) value);
             } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_64) {
-                negate = value -> -((long)value);
+                negate = value -> -((long) value);
             }
         }
 
@@ -277,6 +275,7 @@ public final class Numpy {
 
         return result;
     }
+
     public static NumpyArray<Float> subtract(NumpyArray array, float value) {
         return add(array, -value);
     }
@@ -289,7 +288,7 @@ public final class Numpy {
     }
 
     public static NumpyArray subtract(NumpyArray array, byte value) {
-        return add(array, (byte)-value);
+        return add(array, (byte) -value);
     }
 
     public static NumpyArray add(NumpyArray array, short value) {
@@ -300,7 +299,7 @@ public final class Numpy {
     }
 
     public static NumpyArray subtract(NumpyArray array, short value) {
-        return add(array, (short)-value);
+        return add(array, (short) -value);
     }
 
     public static NumpyArray add(NumpyArray array, int value) {
@@ -354,19 +353,19 @@ public final class Numpy {
 
                 if (target.isFloatingPoint()) {
                     if (target.numberOfBytes() == NumpyUtils.SIZE_OF_DOUBLE) {
-                        value = (double)a1.get(i) + sign * (double)a2.get(i);
+                        value = (double) a1.get(i) + sign * (double) a2.get(i);
                     } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_FLOAT) {
-                        value = (float)a1.get(i) + sign * (float)a2.get(i);
+                        value = (float) a1.get(i) + sign * (float) a2.get(i);
                     }
                 } else {
                     if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_8) {
-                        value = (byte)a1.get(i) + sign * (byte)a2.get(i);
+                        value = (byte) a1.get(i) + sign * (byte) a2.get(i);
                     } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_16) {
-                        value = (short)a1.get(i) + sign * (short)a2.get(i);
+                        value = (short) a1.get(i) + sign * (short) a2.get(i);
                     } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_32) {
-                        value = (int)a1.get(i) + sign * (int)a2.get(i);
+                        value = (int) a1.get(i) + sign * (int) a2.get(i);
                     } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_64) {
-                        value = (long)a1.get(i) + sign * (long)a2.get(i);
+                        value = (long) a1.get(i) + sign * (long) a2.get(i);
                     }
                 }
 
@@ -427,5 +426,65 @@ public final class Numpy {
 
     public static NumpyArray<Float> divide(NumpyArray<Float> array, float factor) {
         return multiply(array, 1.0f / factor);
+    }
+
+    public static NumpyArray<Double> atLeast2D(double value) {
+        NumpyArray<Double> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, NumpyUtils.SIZE_OF_DOUBLE, new int[]{1, 1});
+        result.set(value, 0, 0);
+
+        return result;
+    }
+
+    public static NumpyArray<Float> atLeast2D(float value) {
+        NumpyArray<Float> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, NumpyUtils.SIZE_OF_FLOAT, new int[]{1, 1});
+        result.set(value, 0, 0);
+
+        return result;
+    }
+
+    public static NumpyArray<Long> atLeast2D(long value) {
+        NumpyArray<Long> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_64, new int[]{1, 1});
+        result.set(value, 0, 0);
+
+        return result;
+    }
+
+    public static NumpyArray<Integer> atLeast2D(int value) {
+        NumpyArray<Integer> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_32, new int[]{1, 1});
+        result.set(value, 0, 0);
+
+        return result;
+    }
+
+    public static NumpyArray<Short> atLeast2D(short value) {
+        NumpyArray<Short> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_16, new int[]{1, 1});
+        result.set(value, 0, 0);
+
+        return result;
+    }
+
+    public static NumpyArray<Byte> atLeast2D(byte value) {
+        NumpyArray<Byte> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_8, new int[]{1, 1});
+        result.set(value, 0, 0);
+
+        return result;
+    }
+
+    public static <Type> NumpyArray<Type> atLeast2D(NumpyArray<Type> array) {
+        // https://github.com/numpy/numpy/blob/v1.22.0/numpy/core/shape_base.py#L81-L132
+        NumpyArray<Type> result = null;
+
+        if (array.numberOfDimensions() == 1) {
+            result = NumpyUtils.createArrayOfShapeAndTypeInfo(array.isFloatingPoint(), array.numberOfBytes(), new int[]{1, array.getShape()[0]});
+            for (int i = 0; i < array.getShape()[0]; i++) {
+                result.set(array.get(i), 0, i);
+            }
+        } else if (array.numberOfDimensions() > 1) {
+            result = array;
+        } else {
+            throw new NumpyOperationException("The input for atLeast2D is invalid");
+        }
+
+        return result;
     }
 }
