@@ -200,15 +200,43 @@ public final class Numpy {
         int effective1 = getEffectiveShapeWithRemovingEndingDimensions(shape1);
         int effective2 = getEffectiveShapeWithRemovingEndingDimensions(shape2);
 
-        if (effective1 != effective2) {
+        if (effective1 != effective2 && Math.abs(effective2 - effective1) != 1) {
             throw new NumpyOperationException("The effective shape of the two numpy array has different number of dimensions.");
         }
 
         for (int i = 0; i < effective1; i++) {
-            if (shape1[i] != shape2[i]) {
+            if (shape1[i] != shape2[i] && (shape1[i] != 1 && shape2[i] != 1)) {
                 throw new NumpyOperationException(String.format("Dimension %d of the two numpy arrays doesn't match.", i+1));
             }
         }
+    }
+
+    public static NumpyArray subtract(NumpyArray a1, NumpyArray a2) {
+        INumpyArrayElementOperation negate = null;
+        if (a2.isFloatingPoint()) {
+            if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_DOUBLE) {
+                negate = value -> -((double)value);
+            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_FLOAT) {
+                negate = value -> -((float)value);
+            }
+        } else {
+            if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_8) {
+                negate = value -> -((byte)value);
+            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_16) {
+                negate = value -> -((short)value);
+            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_32) {
+                negate = value -> -((int)value);
+            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_64) {
+                negate = value -> -((long)value);
+            }
+        }
+
+
+        NumpyArray negA2 = NumpyUtils.createArrayOfShapeAndTypeInfo(a2);
+        INumpyArrayElementOperation finalNegate = negate;
+        a2.applyToEachElementAnsSaveToTarget(negA2, value -> finalNegate.apply(value));
+
+        return add(a1, negA2);
     }
 
     public static NumpyArray add(NumpyArray a1, NumpyArray a2) {
@@ -239,11 +267,18 @@ public final class Numpy {
         return result;
     }
 
+    public static NumpyArray<Double> subtract(NumpyArray array, double value) {
+        return add(array, -value);
+    }
+
     public static NumpyArray<Float> add(NumpyArray array, float value) {
         NumpyArray<Float> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, NumpyUtils.SIZE_OF_FLOAT, array.getShape());
         addInPlace(result, array, value);
 
         return result;
+    }
+    public static NumpyArray<Float> subtract(NumpyArray array, float value) {
+        return add(array, -value);
     }
 
     public static NumpyArray add(NumpyArray array, byte value) {
@@ -253,11 +288,19 @@ public final class Numpy {
         return result;
     }
 
+    public static NumpyArray subtract(NumpyArray array, byte value) {
+        return add(array, (byte)-value);
+    }
+
     public static NumpyArray add(NumpyArray array, short value) {
         NumpyArray result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_16, array.getShape());
         addInPlace(result, array, value);
 
         return result;
+    }
+
+    public static NumpyArray subtract(NumpyArray array, short value) {
+        return add(array, (short)-value);
     }
 
     public static NumpyArray add(NumpyArray array, int value) {
@@ -267,11 +310,19 @@ public final class Numpy {
         return result;
     }
 
+    public static NumpyArray subtract(NumpyArray array, int value) {
+        return add(array, -value);
+    }
+
     public static NumpyArray add(NumpyArray array, long value) {
         NumpyArray result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_64, array.getShape());
         addInPlace(result, array, value);
 
         return result;
+    }
+
+    public static NumpyArray subtract(NumpyArray array, long value) {
+        return add(array, -value);
     }
 
     private static void addInPlace(NumpyArray target, NumpyArray a1, NumpyArray a2, byte sign) {

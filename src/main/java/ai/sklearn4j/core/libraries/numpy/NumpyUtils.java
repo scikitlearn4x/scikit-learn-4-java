@@ -8,6 +8,10 @@ public class NumpyUtils {
     public static final int SIZE_OF_FLOAT = 4;
     public static final int SIZE_OF_DOUBLE = 8;
 
+    public static NumpyArray createArrayOfShapeAndTypeInfo(NumpyArray other) {
+        return createArrayOfShapeAndTypeInfo(other.isFloatingPoint(), other.numberOfBytes(), other.getShape());
+    }
+
     public static NumpyArray createArrayOfShapeAndTypeInfo(boolean isFloatingPoint, int size, int[] shape) {
         NumpyArray result = null;
 
