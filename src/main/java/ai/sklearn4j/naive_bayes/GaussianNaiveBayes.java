@@ -93,9 +93,4 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
         return NumpyArrayFactory.from(jointLogLikelihood);
     }
-
-    @Override
-    protected NumpyArray<Double> checkX(NumpyArray<Double> x) {
-        return null;
-    }
 }

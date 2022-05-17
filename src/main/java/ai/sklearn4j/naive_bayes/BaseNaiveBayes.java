@@ -15,31 +15,22 @@ public abstract class BaseNaiveBayes extends ClassifierMixin {
      * I.e. ``log P(c) + log P(x|c)`` for all rows x of X, as an array-like of shape
      * (n_samples, n_classes).
      *
-     * predict, predictProbabilities, and predictLogProbabilities pass the input through
-     * checkX and handle it over to jointLogLikelihood.
+     * predict, predictProbabilities, and predictLogProbabilities pass the input over to
+     * jointLogLikelihood.
      *
      * @param x An array-like of shape (n_samples, n_classes).
      */
     protected abstract NumpyArray<Double> jointLogLikelihood(NumpyArray<Double> x);
 
-    /**
-     * To be overridden in subclasses with the actual checks. Only used in predict* methods.
-     * @param x An array-like of shape (n_samples, n_classes).
-     */
-    protected abstract NumpyArray<Double> checkX(NumpyArray<Double> x);
-
     public NumpyArray<Integer> predict(NumpyArray<Double> x) {
-        x = this.checkX(x);
         NumpyArray<Double> jll = jointLogLikelihood(x);
         return Numpy.argmax(jll, 1);
     }
 
     public NumpyArray<Double> predictLogProbabilities(NumpyArray<Double> x) {
-        x = this.checkX(x);
         NumpyArray<Double> jll = jointLogLikelihood(x);
         NumpyArray<Double> logProbabilityOfX = Scipy.logSumExponent(jll, 1);
 
-        //jll - np.atleast_2d(log_prob_x).T
         return Numpy.subtract(jll, Numpy.atLeast2D(logProbabilityOfX).transpose());
     }
 
