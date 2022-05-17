@@ -34,6 +34,10 @@ public class Dim5DoubleNumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]][indices[2]][indices[3]][indices[4]] = NumpyUtils.toDouble(value);
 	}
 
+	public double[][][][][] getArray() {
+		return this.array;
+	}
+
 	@Override
 	public boolean isFloatingPoint() {
 		return true;

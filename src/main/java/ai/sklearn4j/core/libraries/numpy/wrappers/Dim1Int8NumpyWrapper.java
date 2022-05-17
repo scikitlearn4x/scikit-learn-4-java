@@ -34,6 +34,10 @@ public class Dim1Int8NumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]] = NumpyUtils.toByte(value);
 	}
 
+	public byte[] getArray() {
+		return this.array;
+	}
+
 	@Override
 	public boolean isFloatingPoint() {
 		return false;

@@ -114,5 +114,9 @@ public class NumpyArray<Type> {
     public int numberOfDimensions() {
         return getShape().length;
     }
+
+    public INumpyArrayWrapper getWrapper() {
+        return data;
+    }
 }
 

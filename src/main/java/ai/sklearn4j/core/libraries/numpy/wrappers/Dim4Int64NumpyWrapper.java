@@ -34,6 +34,10 @@ public class Dim4Int64NumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]][indices[2]][indices[3]] = NumpyUtils.toLong(value);
 	}
 
+	public long[][][][] getArray() {
+		return this.array;
+	}
+
 	@Override
 	public boolean isFloatingPoint() {
 		return false;

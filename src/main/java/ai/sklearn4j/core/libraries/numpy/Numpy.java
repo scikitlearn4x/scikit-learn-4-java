@@ -31,6 +31,14 @@ public final class Numpy {
         return operation.apply(array, axis);
     }
 
+    public static NumpyArray<Double> pow(NumpyArray array, double power) {
+        NumpyArray<Double> result = NumpyArrayFactory.arrayOfDoubleWithShape(array.getShape());
+
+        array.applyToEachElementAnsSaveToTarget(result, value -> Math.pow((double) value, power));
+
+        return result;
+    }
+
     public static NumpyArray sum(NumpyArray array, int axis) {
         INumpyReduceAxisFunction function = null;
 

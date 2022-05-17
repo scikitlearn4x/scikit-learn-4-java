@@ -34,6 +34,10 @@ public class Dim3Int16NumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]][indices[2]] = NumpyUtils.toShort(value);
 	}
 
+	public short[][][] getArray() {
+		return this.array;
+	}
+
 	@Override
 	public boolean isFloatingPoint() {
 		return false;

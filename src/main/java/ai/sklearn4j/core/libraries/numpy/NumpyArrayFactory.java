@@ -2,6 +2,8 @@ package ai.sklearn4j.core.libraries.numpy;
 
 import ai.sklearn4j.core.libraries.numpy.wrappers.*;
 
+import java.util.List;
+
 public class NumpyArrayFactory {
     public static NumpyArray<Byte> from(byte[] array) {
         return new NumpyArray<>(new Dim1Int8NumpyWrapper(array));
@@ -397,5 +399,9 @@ public class NumpyArrayFactory {
         }
 
         throw new RuntimeException();
+    }
+
+    public static NumpyArray<Double> from(List<NumpyArray<Double>> arrays) {
+        return null;
     }
 }

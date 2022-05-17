@@ -34,6 +34,10 @@ public class Dim2FloatNumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]][indices[1]] = NumpyUtils.toFloat(value);
 	}
 
+	public float[][] getArray() {
+		return this.array;
+	}
+
 	@Override
 	public boolean isFloatingPoint() {
 		return true;

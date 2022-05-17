@@ -34,6 +34,10 @@ public class Dim1Int32NumpyWrapper implements INumpyArrayWrapper {
 		this.array[indices[0]] = NumpyUtils.toInteger(value);
 	}
 
+	public int[] getArray() {
+		return this.array;
+	}
+
 	@Override
 	public boolean isFloatingPoint() {
 		return false;
