@@ -6,7 +6,7 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 import ai.sklearn4j.core.libraries.numpy.NumpyOperationException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import test.sklearn4j.core.TestHelper;
+import test.sklearn4j.TestHelper;
 
 public class TestNumpyArithmetics {
     @Test

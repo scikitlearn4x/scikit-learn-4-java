@@ -1,4 +1,4 @@
-package test.sklearn4j.core;
+package test.sklearn4j;
 
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import org.junit.jupiter.api.Assertions;
@@ -191,5 +191,13 @@ public class TestHelper {
 
             Assertions.assertTrue(check);
         }
+    }
+
+    public static String getAbsolutePathOfBinaryPackage(String path) {
+        throw new RuntimeException();
+    }
+
+    public static void assertEqualPredictions(NumpyArray<Integer> predictions, double[][] rawArray) {
+        throw new RuntimeException();
     }
 }
