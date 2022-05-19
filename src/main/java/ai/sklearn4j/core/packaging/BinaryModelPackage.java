@@ -1,9 +1,6 @@
 package ai.sklearn4j.core.packaging;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -47,7 +44,9 @@ public class BinaryModelPackage {
     public static BinaryModelPackage fromFile(String path) {
         try {
             InputStream stream = new BufferedInputStream(new FileInputStream(path));
-            BinaryModelPackage result = fromStream(stream);
+            byte[] data = new byte[stream.available()];
+            stream.read(data);
+            BinaryModelPackage result = fromStream(new ByteArrayInputStream(data));
 
             stream.close();
 

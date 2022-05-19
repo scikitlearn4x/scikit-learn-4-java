@@ -194,7 +194,7 @@ public class TestHelper {
     }
 
     public static String getAbsolutePathOfBinaryPackage(String path) {
-        throw new RuntimeException();
+        return "/Users/yektaie/Desktop/unit_tests/binaries/" + path;
     }
 
     public static void assertEqualPredictions(NumpyArray<Integer> predictions, double[][] rawArray) {
