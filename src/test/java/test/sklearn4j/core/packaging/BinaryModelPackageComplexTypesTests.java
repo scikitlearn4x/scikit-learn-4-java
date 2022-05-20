@@ -129,6 +129,46 @@ public class BinaryModelPackageComplexTypesTests {
     }
 
     @Test
+    public void testReadingNullArrayOfString() {
+        byte[] data = new byte[]{0};
+        InputStream stream = new ByteArrayInputStream(data);
+        BinaryModelPackage binary = BinaryModelPackage.fromStream(stream);
+
+        String[] actual = binary.readStringArray();
+        Assertions.assertNull(actual);
+    }
+
+    @Test
+    public void testReadingArrayOfString() {
+        byte[] data = new byte[]{1, 3, 0, 0, 0, 1, 1, 0, 0, 0, 97, 1, 1, 0, 0, 0, 98, 0};
+        InputStream stream = new ByteArrayInputStream(data);
+        BinaryModelPackage binary = BinaryModelPackage.fromStream(stream);
+
+        String[] actual = binary.readStringArray();
+        Assertions.assertEquals(3, actual.length);
+
+        Assertions.assertEquals("a", actual[0]);
+        Assertions.assertEquals("b", actual[1]);
+        Assertions.assertNull(actual[2]);
+    }
+
+    @Test
+    public void testReadingArrayOfStringInDictionary() {
+        byte[] data = new byte[]{1, 1, 0, 0, 0, 1, 9, 0, 0, 0, 115, 116, 114, 95, 97, 114, 114, 97, 121, 67, 1, 2, 0, 0, 0, 1, 1, 0, 0, 0, 97, 1, 1, 0, 0, 0, 98};
+        InputStream stream = new ByteArrayInputStream(data);
+        BinaryModelPackage binary = BinaryModelPackage.fromStream(stream);
+
+        Map<String, Object> dic = binary.readDictionary();
+        Assertions.assertEquals(1, dic.size());
+
+        String[] actual = (String[]) dic.get("str_array");
+        Assertions.assertEquals(2, actual.length);
+
+        Assertions.assertEquals("a", actual[0]);
+        Assertions.assertEquals("b", actual[1]);
+    }
+
+    @Test
     public void testReadingNullDictionary() {
         byte[] data = new byte[]{0};
         InputStream stream = new ByteArrayInputStream(data);

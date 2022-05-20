@@ -202,4 +202,13 @@ public class TestHelper {
 
         Assertions.assertArrayEquals(rawArray, preds);
     }
+
+    public static void assertCorrectFeatureNames(String[] expected, String[] actual) {
+        Assertions.assertNotNull(actual);
+        Assertions.assertEquals(expected.length, actual.length);
+
+        for (int i = 0; i < expected.length; i++) {
+            Assertions.assertEquals(expected[i], actual[i]);
+        }
+    }
 }

@@ -64,6 +64,6 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
         header.scipyVersion = (String) headerValues.get("scipy_version");
         header.pythonInfo = (String) headerValues.get("python_info");
         header.platformInfo = (String) headerValues.get("platform_info");
-        header.serializerTypes = (List<String>)headerValues.get("serializer_types");
+        header.serializerTypes = (String[])headerValues.get("serializer_types");
     }
 }

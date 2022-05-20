@@ -46,6 +46,9 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_NUMPY) {
                 NumpyArray value = buffer.readNumpyArray();
                 ((IScikitLearnLoaderNumpyArrayFieldSetter<ObjectType>)info.setter).setNumpyArrayField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_STRING_ARRAY) {
+                String[] value = buffer.readStringArray();
+                ((IScikitLearnLoaderStringArrayFieldSetter<ObjectType>)info.setter).setStringArrayField(result, value);
             }
         }
 
@@ -90,12 +93,26 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
 
         fields.put(name, field);
     }
+
+    protected void registerStringArrayField(String name, IScikitLearnLoaderStringArrayFieldSetter<ObjectType> setter) {
+        if (fields.containsKey(name)) {
+            throw new RuntimeException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_STRING_ARRAY;
+
+        fields.put(name, field);
+    }
 }
 
 class LoaderFieldInfo {
     public static final int FIELD_TYPE_DOUBLE = 1;
     public static final int FIELD_TYPE_LONG = 2;
     public static final int FIELD_TYPE_NUMPY = 3;
+    public static final int FIELD_TYPE_STRING_ARRAY = 4;
 
     public String name = null;
     public int fieldType = 0;

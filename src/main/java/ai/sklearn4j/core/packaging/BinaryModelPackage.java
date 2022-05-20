@@ -31,6 +31,7 @@ public class BinaryModelPackage {
     private static final int ELEMENT_TYPE_LIST = 0x40;
     private static final int ELEMENT_TYPE_DICTIONARY = 0x41;
     private static final int ELEMENT_TYPE_NUMPY_ARRAY = 0x42;
+    private static final int ELEMENT_TYPE_STRING_ARRAY = 0x43;
     private static final int ELEMENT_TYPE_NULL = 0x10;
 
     private final InputStream stream;
@@ -297,11 +298,34 @@ public class BinaryModelPackage {
                 byte elementType = readByte();
                 if (elementType == ELEMENT_TYPE_NULL) {
                     result.put(key, null);
+                } else if (elementType == ELEMENT_TYPE_STRING_ARRAY) {
+                    result.put(key, readStringArray());
                 } else {
                     IBinaryModelPackagePrimitiveValueReader reader = getPrimitiveDataReader(elementType);
                     Object value = reader.readPrimitiveValue();
                     result.put(key, value);
                 }
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Reads an array of string from the stream.
+     *
+     * @return The String[] stored in the stream, or null if it has no value.
+     */
+    public String[] readStringArray() {
+        String[] result = null;
+        int hasValue = readByte();
+
+        if (hasValue == 1) {
+            int count = readInteger();
+            result = new String[count];
+
+            for (int i = 0; i < count; i++) {
+                result[i] = readString();
             }
         }
 

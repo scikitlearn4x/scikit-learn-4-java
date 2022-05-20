@@ -29,11 +29,11 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
         registerNumpyArrayField("theta_", this::setMeanValues);
         registerNumpyArrayField("var_", this::setVarianceValues);
         registerLongField("n_features_in_", this::setNumberOfFeatureIn);
-        registerLongField("feature_names_in_", this::setFeaturesIn);
+        registerStringArrayField("feature_names_in_", this::setFeaturesIn);
     }
 
-    private void setFeaturesIn(GaussianNaiveBayes result, long value) {
-        throw new RuntimeException();
+    private void setFeaturesIn(GaussianNaiveBayes result, String[] value) {
+        result.setFeatureNamesIn(value);
     }
 
     private void setNumberOfFeatureIn(GaussianNaiveBayes result, long value) {

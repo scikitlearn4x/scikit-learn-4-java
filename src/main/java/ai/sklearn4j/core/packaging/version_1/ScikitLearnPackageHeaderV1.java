@@ -12,7 +12,7 @@ public class ScikitLearnPackageHeaderV1 implements IScikitLearnPackageHeader {
     public String scipyVersion = null;
     public String pythonInfo = null;
     public String platformInfo = null;
-    public List<String> serializerTypes = null;
+    public String[] serializerTypes = null;
 
     @Override
     public int getFileFormatVersion() {
