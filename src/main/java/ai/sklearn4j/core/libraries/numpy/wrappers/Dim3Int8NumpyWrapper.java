@@ -5,7 +5,7 @@
 package ai.sklearn4j.core.libraries.numpy.wrappers;
 
 import ai.sklearn4j.core.libraries.numpy.INumpyArrayWrapper;
-import ai.sklearn4j.core.libraries.numpy.NumpyUtils;
+
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 import ai.sklearn4j.core.libraries.numpy.NumpyOperationException;
@@ -31,7 +31,7 @@ public class Dim3Int8NumpyWrapper implements INumpyArrayWrapper {
 
 	@Override
 	public void set(Object value, int... indices) {
-		this.array[indices[0]][indices[1]][indices[2]] = NumpyUtils.toByte(value);
+		this.array[indices[0]][indices[1]][indices[2]] = NumpyArrayFactory.toByte(value);
 	}
 
 	public byte[][][] getArray() {

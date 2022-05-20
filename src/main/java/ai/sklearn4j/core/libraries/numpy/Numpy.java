@@ -125,7 +125,7 @@ public final class Numpy {
      * @return Output array, element-wise exponential of x.
      */
     public static NumpyArray<Double> exp(NumpyArray array) {
-        NumpyArray<Double> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, 8, array.getShape());
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, 8, array.getShape());
 
         array.applyToEachElementAnsSaveToTarget(result, value -> Math.exp((double) value));
 
@@ -142,7 +142,7 @@ public final class Numpy {
      * @return Output array, element-wise log of x.
      */
     public static NumpyArray<Double> log(NumpyArray array) {
-        NumpyArray<Double> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, 8, array.getShape());
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, 8, array.getShape());
 
         array.applyToEachElementAnsSaveToTarget(result, value -> Math.log((double) value));
 
@@ -220,25 +220,25 @@ public final class Numpy {
     public static NumpyArray subtract(NumpyArray a1, NumpyArray a2) {
         INumpyArrayElementOperation negate = null;
         if (a2.isFloatingPoint()) {
-            if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_DOUBLE) {
+            if (a2.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
                 negate = value -> -((double) value);
-            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_FLOAT) {
+            } else if (a2.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
                 negate = value -> -((float) value);
             }
         } else {
-            if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_8) {
+            if (a2.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
                 negate = value -> -((byte) value);
-            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_16) {
+            } else if (a2.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
                 negate = value -> -((short) value);
-            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_32) {
+            } else if (a2.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
                 negate = value -> -((int) value);
-            } else if (a2.numberOfBytes() == NumpyUtils.SIZE_OF_INT_64) {
+            } else if (a2.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
                 negate = value -> -((long) value);
             }
         }
 
 
-        NumpyArray negA2 = NumpyUtils.createArrayOfShapeAndTypeInfo(a2);
+        NumpyArray negA2 = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(a2);
         INumpyArrayElementOperation finalNegate = negate;
         a2.applyToEachElementAnsSaveToTarget(negA2, value -> finalNegate.apply(value));
 
@@ -260,14 +260,14 @@ public final class Numpy {
             size = a1.numberOfBytes();
         }
 
-        NumpyArray result = NumpyUtils.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, a1.getShape());
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, a1.getShape());
         addInPlace(result, a1, a2, (byte) 1);
         return result;
     }
 
 
     public static NumpyArray<Double> add(NumpyArray array, double value) {
-        NumpyArray<Double> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, NumpyUtils.SIZE_OF_DOUBLE, array.getShape());
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, array.getShape());
         addInPlace(result, array, value);
 
         return result;
@@ -278,7 +278,7 @@ public final class Numpy {
     }
 
     public static NumpyArray<Float> add(NumpyArray array, float value) {
-        NumpyArray<Float> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, NumpyUtils.SIZE_OF_FLOAT, array.getShape());
+        NumpyArray<Float> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_FLOAT, array.getShape());
         addInPlace(result, array, value);
 
         return result;
@@ -289,7 +289,7 @@ public final class Numpy {
     }
 
     public static NumpyArray add(NumpyArray array, byte value) {
-        NumpyArray result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_8, array.getShape());
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_8, array.getShape());
         addInPlace(result, array, value);
 
         return result;
@@ -300,7 +300,7 @@ public final class Numpy {
     }
 
     public static NumpyArray add(NumpyArray array, short value) {
-        NumpyArray result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_16, array.getShape());
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_16, array.getShape());
         addInPlace(result, array, value);
 
         return result;
@@ -311,7 +311,7 @@ public final class Numpy {
     }
 
     public static NumpyArray add(NumpyArray array, int value) {
-        NumpyArray result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_32, array.getShape());
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_32, array.getShape());
         addInPlace(result, array, value);
 
         return result;
@@ -322,7 +322,7 @@ public final class Numpy {
     }
 
     public static NumpyArray add(NumpyArray array, long value) {
-        NumpyArray result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_64, array.getShape());
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_64, array.getShape());
         addInPlace(result, array, value);
 
         return result;
@@ -337,19 +337,19 @@ public final class Numpy {
             Object singleValue = a2.getSingleValue();
 
             if (target.isFloatingPoint()) {
-                if (target.numberOfBytes() == NumpyUtils.SIZE_OF_DOUBLE) {
+                if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
                     addInPlace(target, a1, ((double) singleValue) * sign);
-                } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_FLOAT) {
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
                     addInPlace(target, a1, ((double) singleValue) * sign);
                 }
             } else {
-                if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_8) {
+                if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
                     addInPlace(target, a1, ((byte) singleValue) * sign);
-                } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_16) {
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
                     addInPlace(target, a1, ((short) singleValue) * sign);
-                } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_32) {
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
                     addInPlace(target, a1, ((int) singleValue) * sign);
-                } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_64) {
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
                     addInPlace(target, a1, ((long) singleValue) * sign);
                 }
             }
@@ -360,19 +360,19 @@ public final class Numpy {
                 Object value = null;
 
                 if (target.isFloatingPoint()) {
-                    if (target.numberOfBytes() == NumpyUtils.SIZE_OF_DOUBLE) {
+                    if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
                         value = (double) a1.get(i) + sign * (double) a2.get(i);
-                    } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_FLOAT) {
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
                         value = (float) a1.get(i) + sign * (float) a2.get(i);
                     }
                 } else {
-                    if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_8) {
+                    if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
                         value = (byte) a1.get(i) + sign * (byte) a2.get(i);
-                    } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_16) {
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
                         value = (short) a1.get(i) + sign * (short) a2.get(i);
-                    } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_32) {
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
                         value = (int) a1.get(i) + sign * (int) a2.get(i);
-                    } else if (target.numberOfBytes() == NumpyUtils.SIZE_OF_INT_64) {
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
                         value = (long) a1.get(i) + sign * (long) a2.get(i);
                     }
                 }
@@ -413,7 +413,7 @@ public final class Numpy {
     }
 
     public static NumpyArray<Double> multiply(NumpyArray<Double> array, double factor) {
-        NumpyArray<Double> result = NumpyUtils.createArrayOfShapeAndTypeInfo(array);
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
 
         array.applyToEachElementAnsSaveToTarget(result, value -> value * factor);
 
@@ -421,7 +421,7 @@ public final class Numpy {
     }
 
     public static NumpyArray<Float> multiply(NumpyArray<Float> array, float factor) {
-        NumpyArray<Float> result = NumpyUtils.createArrayOfShapeAndTypeInfo(array);
+        NumpyArray<Float> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
 
         array.applyToEachElementAnsSaveToTarget(result, value -> value * factor);
 
@@ -437,42 +437,42 @@ public final class Numpy {
     }
 
     public static NumpyArray<Double> atLeast2D(double value) {
-        NumpyArray<Double> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, NumpyUtils.SIZE_OF_DOUBLE, new int[]{1, 1});
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, new int[]{1, 1});
         result.set(value, 0, 0);
 
         return result;
     }
 
     public static NumpyArray<Float> atLeast2D(float value) {
-        NumpyArray<Float> result = NumpyUtils.createArrayOfShapeAndTypeInfo(true, NumpyUtils.SIZE_OF_FLOAT, new int[]{1, 1});
+        NumpyArray<Float> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_FLOAT, new int[]{1, 1});
         result.set(value, 0, 0);
 
         return result;
     }
 
     public static NumpyArray<Long> atLeast2D(long value) {
-        NumpyArray<Long> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_64, new int[]{1, 1});
+        NumpyArray<Long> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_64, new int[]{1, 1});
         result.set(value, 0, 0);
 
         return result;
     }
 
     public static NumpyArray<Integer> atLeast2D(int value) {
-        NumpyArray<Integer> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_32, new int[]{1, 1});
+        NumpyArray<Integer> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_32, new int[]{1, 1});
         result.set(value, 0, 0);
 
         return result;
     }
 
     public static NumpyArray<Short> atLeast2D(short value) {
-        NumpyArray<Short> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_16, new int[]{1, 1});
+        NumpyArray<Short> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_16, new int[]{1, 1});
         result.set(value, 0, 0);
 
         return result;
     }
 
     public static NumpyArray<Byte> atLeast2D(byte value) {
-        NumpyArray<Byte> result = NumpyUtils.createArrayOfShapeAndTypeInfo(false, NumpyUtils.SIZE_OF_INT_8, new int[]{1, 1});
+        NumpyArray<Byte> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_8, new int[]{1, 1});
         result.set(value, 0, 0);
 
         return result;
@@ -483,7 +483,7 @@ public final class Numpy {
         NumpyArray<Type> result = null;
 
         if (array.numberOfDimensions() == 1) {
-            result = NumpyUtils.createArrayOfShapeAndTypeInfo(array.isFloatingPoint(), array.numberOfBytes(), new int[]{1, array.getShape()[0]});
+            result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array.isFloatingPoint(), array.numberOfBytes(), new int[]{1, array.getShape()[0]});
             for (int i = 0; i < array.getShape()[0]; i++) {
                 result.set(array.get(i), 0, i);
             }

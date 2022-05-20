@@ -50,7 +50,7 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
         int size = array.numberOfBytes();
         boolean isFloatingPoint = array.isFloatingPoint();
 
-        return (NumpyArray<OutputType>)NumpyUtils.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, shape);
+        return (NumpyArray<OutputType>)NumpyArrayFactory.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, shape);
     }
 
     public abstract Object reduceAxisValues(Object[] valuesInAxis);
