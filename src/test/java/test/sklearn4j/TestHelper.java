@@ -197,7 +197,9 @@ public class TestHelper {
         return "/Users/yektaie/Desktop/unit_tests/binaries/" + path;
     }
 
-    public static void assertEqualPredictions(NumpyArray<Integer> predictions, double[][] rawArray) {
-        throw new RuntimeException();
+    public static void assertEqualPredictions(NumpyArray<Long> predictions, long[] rawArray) {
+        long[] preds = (long[]) predictions.getWrapper().getRawArray();
+
+        Assertions.assertArrayEquals(rawArray, preds);
     }
 }

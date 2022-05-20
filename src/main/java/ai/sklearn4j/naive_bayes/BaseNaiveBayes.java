@@ -22,7 +22,7 @@ public abstract class BaseNaiveBayes extends ClassifierMixin {
      */
     protected abstract NumpyArray<Double> jointLogLikelihood(NumpyArray<Double> x);
 
-    public NumpyArray<Integer> predict(NumpyArray<Double> x) {
+    public NumpyArray<Long> predict(NumpyArray<Double> x) {
         NumpyArray<Double> jll = jointLogLikelihood(x);
         return Numpy.argmax(jll, 1);
     }

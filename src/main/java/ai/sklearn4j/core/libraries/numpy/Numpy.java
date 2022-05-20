@@ -4,16 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public final class Numpy {
-    public static <Type> NumpyArray<Integer> argmax(NumpyArray<Type> array, int axis) {
-        NumpyArrayOperationWithAxisReduction<Type, Integer> operation = new NumpyArrayOperationWithAxisReduction<>() {
+    public static <Type> NumpyArray<Long> argmax(NumpyArray<Type> array, int axis) {
+        NumpyArrayOperationWithAxisReduction<Type, Long> operation = new NumpyArrayOperationWithAxisReduction<>() {
             @Override
-            public NumpyArray<Integer> createInstanceResultNumpyArray(int[] shape) {
-                return NumpyArrayFactory.arrayOfInt32WithShape(shape);
+            public NumpyArray<Long> createInstanceResultNumpyArray(int[] shape) {
+                return NumpyArrayFactory.arrayOfInt64WithShape(shape);
             }
 
             @Override
             public Object reduceAxisValues(Object[] valuesInAxis) {
-                int result = 0;
+                long result = 0;
                 double max = (double) valuesInAxis[0];
 
                 for (int i = 1; i < valuesInAxis.length; i++) {

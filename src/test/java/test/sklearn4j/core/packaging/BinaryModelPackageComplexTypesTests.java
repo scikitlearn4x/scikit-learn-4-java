@@ -1,5 +1,6 @@
 package test.sklearn4j.core.packaging;
 
+import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.BinaryModelPackage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -51,7 +52,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 1, 0, 0, 0, 17, 2, 0, 0, 0, 6, 7};
         byte[] expected = new byte[]{6, 7};
 
-        byte[] actual = (byte[]) readNumpyArrayFromByteArray(data);
+        byte[] actual = (byte[]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -60,7 +61,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 1, 0, 0, 0, 18, 2, 0, 0, 0, 6, 0, 7, 0};
         short[] expected = new short[]{6, 7};
 
-        short[] actual = (short[]) readNumpyArrayFromByteArray(data);
+        short[] actual = (short[]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -69,7 +70,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 1, 0, 0, 0, 20, 2, 0, 0, 0, 6, 0, 0, 0, 7, 0, 0, 0};
         int[] expected = new int[]{6, 7};
 
-        int[] actual = (int[]) readNumpyArrayFromByteArray(data);
+        int[] actual = (int[]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -78,7 +79,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 1, 0, 0, 0, 24, 2, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0};
         long[] expected = new long[]{6, 7};
 
-        long[] actual = (long[]) readNumpyArrayFromByteArray(data);
+        long[] actual = (long[]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -87,7 +88,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 1, 0, 0, 0, 32, 3, 0, 0, 0, 1, 0, 0, (byte) 192, 64, 1, 0, 0, (byte) 224, 64, 0};
         float[] expected = new float[]{6, 7, Float.NaN};
 
-        float[] actual = (float[]) readNumpyArrayFromByteArray(data);
+        float[] actual = (float[]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -96,7 +97,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 1, 0, 0, 0, 33, 3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 24, 64, 1, 0, 0, 0, 0, 0, 0, 28, 64, 0};
         double[] expected = new double[]{6, 7, Double.NaN};
 
-        double[] actual = (double[]) readNumpyArrayFromByteArray(data);
+        double[] actual = (double[]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -105,7 +106,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 2, 0, 0, 0, 17, 2, 0, 0, 0, 1, 0, 0, 0, 6, 7};
         byte[][] expected = new byte[][]{{6}, {7}};
 
-        byte[][] actual = (byte[][]) readNumpyArrayFromByteArray(data);
+        byte[][] actual = (byte[][]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -114,7 +115,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 2, 0, 0, 0, 4, 2, 0, 0, 0, 1, 0, 0, 0, 6, 0, 0, 0, 7, 0, 0, 0};
         int[][] expected = new int[][]{{6}, {7}};
 
-        int[][] actual = (int[][]) readNumpyArrayFromByteArray(data);
+        int[][] actual = (int[][]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -123,7 +124,7 @@ public class BinaryModelPackageComplexTypesTests {
         byte[] data = new byte[]{1, 3, 0, 0, 0, 4, 2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 6, 0, 0, 0, 7, 0, 0, 0, 8, 0, 0, 0, 9, 0, 0, 0};
         int[][][] expected = new int[][][]{{{6}, {7}}, {{8}, {9}}};
 
-        int[][][] actual = (int[][][]) readNumpyArrayFromByteArray(data);
+        int[][][] actual = (int[][][]) readNumpyArrayFromByteArray(data).getWrapper().getRawArray();
         checkArraySimilarity(expected, actual);
     }
 
@@ -258,7 +259,7 @@ public class BinaryModelPackageComplexTypesTests {
         return binary.readString();
     }
 
-    private Object readNumpyArrayFromByteArray(byte[] data) {
+    private NumpyArray readNumpyArrayFromByteArray(byte[] data) {
         InputStream stream = new ByteArrayInputStream(data);
         BinaryModelPackage binary = BinaryModelPackage.fromStream(stream);
 

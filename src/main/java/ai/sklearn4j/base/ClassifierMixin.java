@@ -12,7 +12,7 @@ public abstract class ClassifierMixin {
      * @param x Array-like of shape (n_samples, n_features) The input samples.
      * @return NumpyArray of shape (n_samples,) Predicted target values for X.
      */
-    public abstract NumpyArray<Integer> predict(NumpyArray<Double> x);
+    public abstract NumpyArray<Long> predict(NumpyArray<Double> x);
 
     /**
      * Return log-probability estimates for the test vector X.

@@ -13,16 +13,16 @@ public class TestNumpyArray {
         double[][][] data = {{{0.34207587, 0.59631829, 0.59525696, 0.95059543, 0.39912264}, {0.85464008, 0.90788009, 0.82057904, 0.43492519, 0.43897654}, {0.80624335, 0.80625582, 0.04637509, 0.21079158, 0.2956869}}, {{0.53870154, 0.54324711, 0.86099808, 0.21863662, 0.2951117}, {0.45954226, 0.1318496, 0.94744519, 0.95518557, 0.16132475}, {0.67286602, 0.2399391, 0.40854949, 0.8254005, 0.47404008}}};
         NumpyArray<Double> array = NumpyArrayFactory.from(data);
 
-        NumpyArray<Integer> axis0 = Numpy.argmax(array, 0);
-        int[][] axis0Expected = {{1, 0, 1, 0, 0}, {0, 0, 1, 1, 0,}, {0, 0, 1, 1, 1}};
+        NumpyArray<Long> axis0 = Numpy.argmax(array, 0);
+        long[][] axis0Expected = {{1, 0, 1, 0, 0}, {0, 0, 1, 1, 0,}, {0, 0, 1, 1, 1}};
         TestHelper.assertEqualData(axis0, axis0Expected);
 
-        NumpyArray<Integer> axis1 = Numpy.argmax(array, 1);
-        int[][] axis1Expected = {{1, 1, 1, 0, 1}, {2, 0, 1, 1, 2}};
+        NumpyArray<Long> axis1 = Numpy.argmax(array, 1);
+        long[][] axis1Expected = {{1, 1, 1, 0, 1}, {2, 0, 1, 1, 2}};
         TestHelper.assertEqualData(axis1, axis1Expected);
 
-        NumpyArray<Integer> axis2 = Numpy.argmax(array, 2);
-        int[][] axis2Expected = {{3, 1, 1}, {2, 3, 3}};
+        NumpyArray<Long> axis2 = Numpy.argmax(array, 2);
+        long[][] axis2Expected = {{3, 1, 1}, {2, 3, 3}};
         TestHelper.assertEqualData(axis2, axis2Expected);
     }
 

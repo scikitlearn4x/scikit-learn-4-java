@@ -1,5 +1,8 @@
 package ai.sklearn4j.core.packaging;
 
+import ai.sklearn4j.core.libraries.numpy.NumpyArray;
+import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
+
 import java.io.*;
 import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
@@ -27,6 +30,7 @@ public class BinaryModelPackage {
     private static final int ELEMENT_TYPE_STRING = 0x30;
     private static final int ELEMENT_TYPE_LIST = 0x40;
     private static final int ELEMENT_TYPE_DICTIONARY = 0x41;
+    private static final int ELEMENT_TYPE_NUMPY_ARRAY = 0x42;
     private static final int ELEMENT_TYPE_NULL = 0x10;
 
     private final InputStream stream;
@@ -197,8 +201,8 @@ public class BinaryModelPackage {
      *
      * @return The numpy array stored in the stream, or null if it has no value.
      */
-    public Object readNumpyArray() {
-        Object result = null;
+    public NumpyArray readNumpyArray() {
+        NumpyArray result = null;
         int hasValue = readByte();
 
         if (hasValue == 1) {
@@ -209,8 +213,38 @@ public class BinaryModelPackage {
                 shape[i] = readInteger();
             }
 
-            result = Array.newInstance(getComponentType(elementType), shape);
-            readNumpyDataFromStream(result, shape, 0, elementType);
+            result = createNumpyArray(elementType, shape);
+            readNumpyDataFromStream(result.getWrapper().getRawArray(), shape, 0, elementType);
+        }
+
+        return result;
+    }
+
+    /**
+     * The element type of a numpy array is stored as a byte. The value of this byte is defined as
+     * constants ELEMENT_TYPE_* in the class. This method converts these element type constants into
+     * respective Java types to create an array using reflection.
+     *
+     * @param elementType A byte value read from buffer that specifies the type of numpy array.
+     * @return A Class object used by reflection to create a new array.
+     */
+    private NumpyArray createNumpyArray(int elementType, int[] shape) {
+        NumpyArray result = null;
+
+        if (elementType == ELEMENT_TYPE_BYTE || elementType == ELEMENT_TYPE_UNSIGNED_BYTE) {
+            result = NumpyArrayFactory.arrayOfInt8WithShape(shape);
+        } else if (elementType == ELEMENT_TYPE_SHORT || elementType == ELEMENT_TYPE_UNSIGNED_SHORT) {
+            result = NumpyArrayFactory.arrayOfInt16WithShape(shape);
+        } else if (elementType == ELEMENT_TYPE_INT || elementType == ELEMENT_TYPE_UNSIGNED_INT) {
+            result = NumpyArrayFactory.arrayOfInt32WithShape(shape);
+        } else if (elementType == ELEMENT_TYPE_LONG || elementType == ELEMENT_TYPE_UNSIGNED_LONG) {
+            result = NumpyArrayFactory.arrayOfInt64WithShape(shape);
+        } else if (elementType == ELEMENT_TYPE_FLOAT) {
+            result = NumpyArrayFactory.arrayOfFloatWithShape(shape);
+        } else if (elementType == ELEMENT_TYPE_DOUBLE) {
+            result = NumpyArrayFactory.arrayOfDoubleWithShape(shape);
+        } else {
+            throw new RuntimeException(String.format("Numpy array with element type %d is not supported.", elementType));
         }
 
         return result;
@@ -301,36 +335,6 @@ public class BinaryModelPackage {
     }
 
     /**
-     * The element type of a numpy array is stored as a byte. The value of this byte is defined as
-     * constants ELEMENT_TYPE_* in the class. This method converts these element type constants into
-     * respective Java types to create an array using reflection.
-     *
-     * @param elementType A byte value read from buffer that specifies the type of numpy array.
-     * @return A Class object used by reflection to create a new array.
-     */
-    private Class<?> getComponentType(int elementType) {
-        Class<?> result = null;
-
-        if (elementType == ELEMENT_TYPE_BYTE || elementType == ELEMENT_TYPE_UNSIGNED_BYTE) {
-            result = byte.class;
-        } else if (elementType == ELEMENT_TYPE_SHORT || elementType == ELEMENT_TYPE_UNSIGNED_SHORT) {
-            result = short.class;
-        } else if (elementType == ELEMENT_TYPE_INT || elementType == ELEMENT_TYPE_UNSIGNED_INT) {
-            result = int.class;
-        } else if (elementType == ELEMENT_TYPE_LONG || elementType == ELEMENT_TYPE_UNSIGNED_LONG) {
-            result = long.class;
-        } else if (elementType == ELEMENT_TYPE_FLOAT) {
-            result = float.class;
-        } else if (elementType == ELEMENT_TYPE_DOUBLE) {
-            result = double.class;
-        } else {
-            throw new RuntimeException(String.format("Numpy array with element type %d is not supported.", elementType));
-        }
-
-        return result;
-    }
-
-    /**
      * Gets an IBinaryModelPackagePrimitiveValueReader to read numerical values from the stream. This
      * method was added to prevent having many if-elses in the code.
      *
@@ -356,6 +360,8 @@ public class BinaryModelPackage {
             result = this::readString;
         } else if (elementType == ELEMENT_TYPE_DICTIONARY) {
             result = this::readDictionary;
+        } else if (elementType == ELEMENT_TYPE_NUMPY_ARRAY) {
+            result = this::readNumpyArray;
         } else if (elementType == ELEMENT_TYPE_LIST) {
             result = this::readList;
         } else {
@@ -389,6 +395,13 @@ public class BinaryModelPackage {
         return buffer;
     }
 
+    public boolean canRead() {
+        try {
+            return stream.available() > 0;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
 
 interface IBinaryModelPackagePrimitiveValueReader {

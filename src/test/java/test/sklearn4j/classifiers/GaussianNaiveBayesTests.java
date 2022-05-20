@@ -30,8 +30,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -59,8 +59,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -88,8 +88,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -117,8 +117,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -146,8 +146,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -175,8 +175,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -204,8 +204,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -233,8 +233,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -262,8 +262,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -291,8 +291,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -320,8 +320,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -349,8 +349,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -378,8 +378,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -407,8 +407,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -436,8 +436,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -465,8 +465,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -498,8 +498,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -527,8 +527,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -556,8 +556,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -585,8 +585,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -614,8 +614,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -643,8 +643,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -672,8 +672,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -701,8 +701,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -730,8 +730,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -759,8 +759,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -788,8 +788,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -817,8 +817,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -846,8 +846,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -875,8 +875,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -904,8 +904,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -933,8 +933,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -966,8 +966,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -995,8 +995,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1024,8 +1024,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1053,8 +1053,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1082,8 +1082,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1111,8 +1111,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1140,8 +1140,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1169,8 +1169,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1198,8 +1198,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1227,8 +1227,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1256,8 +1256,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1285,8 +1285,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1314,8 +1314,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1343,8 +1343,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1372,8 +1372,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1401,8 +1401,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1434,8 +1434,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1463,8 +1463,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1492,8 +1492,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1521,8 +1521,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1550,8 +1550,9 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        Object obj = gtPredictions.getWrapper().getRawArray();
+        TestHelper.assertEqualPredictions(predictions, (long[]) obj);
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1579,8 +1580,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1608,8 +1609,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1637,8 +1638,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1666,8 +1667,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1695,8 +1696,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1724,8 +1725,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1753,8 +1754,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1782,8 +1783,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1811,8 +1812,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1840,8 +1841,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1869,8 +1870,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1902,8 +1903,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1931,8 +1932,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1960,8 +1961,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -1989,8 +1990,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2018,8 +2019,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2047,8 +2048,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2076,8 +2077,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2105,8 +2106,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2134,8 +2135,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2163,8 +2164,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2192,8 +2193,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2221,8 +2222,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2250,8 +2251,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2279,8 +2280,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2308,8 +2309,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2337,8 +2338,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2370,8 +2371,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2399,8 +2400,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2428,8 +2429,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2457,8 +2458,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2486,8 +2487,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2515,8 +2516,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2544,8 +2545,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2573,8 +2574,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2602,8 +2603,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2631,8 +2632,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2660,8 +2661,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2689,8 +2690,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2718,8 +2719,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2747,8 +2748,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2776,8 +2777,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2805,8 +2806,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2838,8 +2839,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2867,8 +2868,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2896,8 +2897,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2925,8 +2926,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2954,8 +2955,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -2983,8 +2984,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3012,8 +3013,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3041,8 +3042,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3070,8 +3071,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3099,8 +3100,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3128,8 +3129,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3157,8 +3158,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3186,8 +3187,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3215,8 +3216,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3244,8 +3245,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3273,8 +3274,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3306,8 +3307,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3335,8 +3336,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3364,8 +3365,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3393,8 +3394,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3422,8 +3423,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3451,8 +3452,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3480,8 +3481,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3509,8 +3510,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3538,8 +3539,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3567,8 +3568,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3596,8 +3597,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3625,8 +3626,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3654,8 +3655,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3683,8 +3684,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3712,8 +3713,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3741,8 +3742,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3774,8 +3775,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3803,8 +3804,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3832,8 +3833,9 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        Object obj = gtPredictions.getWrapper().getRawArray();
+        TestHelper.assertEqualPredictions(predictions, (long[]) obj);
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3861,8 +3863,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3890,8 +3892,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3919,8 +3921,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3948,8 +3950,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -3977,8 +3979,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4006,8 +4008,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4035,8 +4037,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4064,8 +4066,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4093,8 +4095,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4122,8 +4124,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4151,8 +4153,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4180,8 +4182,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4209,8 +4211,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4242,8 +4244,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4271,8 +4273,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4300,8 +4302,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4329,8 +4331,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4358,8 +4360,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4387,8 +4389,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4416,8 +4418,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4445,8 +4447,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4474,8 +4476,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4503,8 +4505,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4532,8 +4534,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4561,8 +4563,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4590,8 +4592,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4619,8 +4621,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4648,8 +4650,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4677,8 +4679,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4710,8 +4712,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4739,8 +4741,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4768,8 +4770,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4797,8 +4799,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4826,8 +4828,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4855,8 +4857,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4884,8 +4886,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4913,8 +4915,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4942,8 +4944,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -4971,8 +4973,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -5000,8 +5002,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -5029,8 +5031,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -5058,8 +5060,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -5087,8 +5089,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -5116,8 +5118,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
@@ -5145,8 +5147,8 @@ public class GaussianNaiveBayesTests {
 
         NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
         NumpyArray<Double> gtPredictions = (NumpyArray<Double>) binaryPackage.getExtraValues().get("predictions");
-        NumpyArray<Integer> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (double[][]) gtPredictions.getWrapper().getRawArray());
+        NumpyArray<Long> predictions = classifier.predict(x);
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
         NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);

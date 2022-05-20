@@ -93,4 +93,76 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
         return NumpyArrayFactory.from(jointLogLikelihood);
     }
+
+    public NumpyArray<Double> getClassCounts() {
+        return classCounts;
+    }
+
+    public void setClassCounts(NumpyArray<Double> classCounts) {
+        this.classCounts = classCounts;
+    }
+
+    public NumpyArray<Double> getClassPriors() {
+        return classPriors;
+    }
+
+    public void setClassPriors(NumpyArray<Double> classPriors) {
+        this.classPriors = classPriors;
+    }
+
+    public NumpyArray<Long> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(NumpyArray<Long> classes) {
+        this.classes = classes;
+    }
+
+    public NumpyArray<Double> getPriors() {
+        return priors;
+    }
+
+    public void setPriors(NumpyArray<Double> priors) {
+        this.priors = priors;
+    }
+
+    public String[] getFeatureNamesIn() {
+        return featureNamesIn;
+    }
+
+    public void setFeatureNamesIn(String[] featureNamesIn) {
+        this.featureNamesIn = featureNamesIn;
+    }
+
+    public int getNumberOfFeatures() {
+        return numberOfFeatures;
+    }
+
+    public void setNumberOfFeatures(int numberOfFeatures) {
+        this.numberOfFeatures = numberOfFeatures;
+    }
+
+    public NumpyArray<Double> getSigma() {
+        return sigma;
+    }
+
+    public void setSigma(NumpyArray<Double> sigma) {
+        this.sigma = sigma;
+    }
+
+    public NumpyArray<Double> getTheta() {
+        return theta;
+    }
+
+    public void setTheta(NumpyArray<Double> theta) {
+        this.theta = theta;
+    }
+
+    public double getVarSmoothing() {
+        return varSmoothing;
+    }
+
+    public void setVarSmoothing(double varSmoothing) {
+        this.varSmoothing = varSmoothing;
+    }
 }
