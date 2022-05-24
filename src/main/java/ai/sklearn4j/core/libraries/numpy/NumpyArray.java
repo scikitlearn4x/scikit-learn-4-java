@@ -9,17 +9,13 @@ public class NumpyArray<Type> {
         this.data = data;
     }
 
-    public static <ArrayType> NumpyArray<ArrayType> withShape(int[] shape) {
-        return null;
-    }
-
     public int[] getShape() {
         return data.getShape();
     }
 
     public Type get(int... indices) {
         if (indices.length != getShape().length) {
-            throw new RuntimeException();
+            throw new NumpyOperationException("The number of indices provided doesn't match the number of dimensions.");
         }
 
         return (Type) data.get(indices);

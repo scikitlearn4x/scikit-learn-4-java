@@ -144,4 +144,21 @@ public class TestNumpyArray {
         }
 
     }
+
+    @Test
+    public void testWrapSubArray()
+    {
+        int[][][] data = new int[][][] { { { 1, 2 }, { 3, 4 } } , { { 5, 6 }, { 7, 8 } }};
+        NumpyArray<Integer> np = NumpyArrayFactory.from(data);
+
+        NumpyArray<Integer> sub = np.wrapInnerSubsetArray(1);
+        Assertions.assertEquals(2, sub.numberOfDimensions());
+        Assertions.assertEquals(2, sub.getShape()[0]);
+        Assertions.assertEquals(2, sub.getShape()[1]);
+        Assertions.assertEquals(5, sub.get(0, 0));
+        Assertions.assertEquals(6, sub.get(0, 1));
+        Assertions.assertEquals(7, sub.get(1, 0));
+        Assertions.assertEquals(8, sub.get(1, 1));
+    }
+
 }
