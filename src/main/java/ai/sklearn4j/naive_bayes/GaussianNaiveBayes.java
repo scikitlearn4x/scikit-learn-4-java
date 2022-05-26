@@ -10,6 +10,9 @@ import ai.sklearn4j.core.libraries.numpy.wrappers.Dim2DoubleNumpyWrapper;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Naive Bayes classifier for normal distributed models.
+ */
 public class GaussianNaiveBayes extends BaseNaiveBayes {
     /**
      * The frequency of each class in the training set.
@@ -58,6 +61,18 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
     private NumpyArray<Double> theta = null;
     private double varSmoothing = 1e-9;
 
+    /**
+     * Compute the unnormalized posterior log probability of X.
+     *
+     * I.e. ``log P(c) + log P(x|c)`` for all rows x of X, as an array-like of shape
+     * (n_samples, n_classes).
+     *
+     * predict, predictProbabilities, and predictLogProbabilities pass the input over to
+     * jointLogLikelihood.
+     *
+     * @param x An array-like of shape (n_samples, n_classes).
+     * @return The unnormalized posterior log probability of X.
+     */
     @Override
     protected NumpyArray<Double> jointLogLikelihood(NumpyArray<Double> x) {
         int count = x.getShape()[0];

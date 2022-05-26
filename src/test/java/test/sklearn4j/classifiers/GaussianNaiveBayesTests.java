@@ -2,7 +2,7 @@ package test.sklearn4j.classifiers;
 
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.IScikitLearnPackage;
-import ai.sklearn4j.core.packaging.ScikitLearnPackage;
+import ai.sklearn4j.core.packaging.ScikitLearnPackageFactory;
 import ai.sklearn4j.naive_bayes.GaussianNaiveBayes;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -45,7 +45,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -75,7 +75,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -104,7 +104,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -133,7 +133,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -162,7 +162,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -191,7 +191,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -221,7 +221,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -250,7 +250,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -279,7 +279,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -308,7 +308,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -337,7 +337,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -367,7 +367,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -396,7 +396,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -425,7 +425,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -458,7 +458,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -487,7 +487,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -517,7 +517,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -546,7 +546,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -575,7 +575,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -604,7 +604,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -633,7 +633,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -663,7 +663,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -692,7 +692,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -721,7 +721,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -750,7 +750,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -779,7 +779,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -809,7 +809,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -838,7 +838,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -867,7 +867,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -900,7 +900,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -929,7 +929,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -959,7 +959,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -988,7 +988,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1017,7 +1017,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1046,7 +1046,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1075,7 +1075,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1105,7 +1105,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1134,7 +1134,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1163,7 +1163,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1192,7 +1192,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1221,7 +1221,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1251,7 +1251,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1280,7 +1280,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1309,7 +1309,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1342,7 +1342,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1371,7 +1371,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1401,7 +1401,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1430,7 +1430,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1459,7 +1459,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1488,7 +1488,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1517,7 +1517,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1547,7 +1547,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1576,7 +1576,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1605,7 +1605,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1634,7 +1634,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1663,7 +1663,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1693,7 +1693,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1722,7 +1722,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1751,7 +1751,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1784,7 +1784,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1813,7 +1813,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1843,7 +1843,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1872,7 +1872,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1901,7 +1901,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_0_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1930,7 +1930,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1959,7 +1959,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -1989,7 +1989,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2018,7 +2018,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2047,7 +2047,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_0_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2076,7 +2076,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2105,7 +2105,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2135,7 +2135,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2164,7 +2164,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2193,7 +2193,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_0_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.1/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2226,7 +2226,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2255,7 +2255,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2285,7 +2285,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2314,7 +2314,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2343,7 +2343,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2372,7 +2372,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2401,7 +2401,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2431,7 +2431,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2460,7 +2460,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2489,7 +2489,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2518,7 +2518,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2547,7 +2547,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2577,7 +2577,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2606,7 +2606,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2635,7 +2635,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2668,7 +2668,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2697,7 +2697,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2727,7 +2727,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2756,7 +2756,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2785,7 +2785,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2814,7 +2814,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2843,7 +2843,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2873,7 +2873,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2902,7 +2902,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2931,7 +2931,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2960,7 +2960,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -2989,7 +2989,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3019,7 +3019,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3048,7 +3048,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3077,7 +3077,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3110,7 +3110,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3139,7 +3139,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3169,7 +3169,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3198,7 +3198,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3227,7 +3227,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_0_2OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3256,7 +3256,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3285,7 +3285,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3315,7 +3315,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3344,7 +3344,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3373,7 +3373,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_0_2OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3402,7 +3402,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3431,7 +3431,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3461,7 +3461,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3490,7 +3490,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3519,7 +3519,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_0_2OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0.2/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3552,7 +3552,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3581,7 +3581,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3611,7 +3611,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3640,7 +3640,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3669,7 +3669,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3698,7 +3698,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3727,7 +3727,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3757,7 +3757,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3786,7 +3786,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3815,7 +3815,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3844,7 +3844,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3873,7 +3873,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3903,7 +3903,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3932,7 +3932,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3961,7 +3961,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -3994,7 +3994,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4023,7 +4023,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4053,7 +4053,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4082,7 +4082,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4111,7 +4111,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4140,7 +4140,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4169,7 +4169,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4199,7 +4199,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4228,7 +4228,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4257,7 +4257,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4286,7 +4286,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4315,7 +4315,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4345,7 +4345,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4374,7 +4374,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4403,7 +4403,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4436,7 +4436,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4465,7 +4465,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4495,7 +4495,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4524,7 +4524,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4553,7 +4553,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_1_0OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4582,7 +4582,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4611,7 +4611,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4641,7 +4641,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4670,7 +4670,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4699,7 +4699,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_1_0OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4728,7 +4728,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4757,7 +4757,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4787,7 +4787,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4816,7 +4816,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4845,7 +4845,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_1_0OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.0/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4878,7 +4878,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4907,7 +4907,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4937,7 +4937,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4966,7 +4966,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -4995,7 +4995,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5024,7 +5024,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5053,7 +5053,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5083,7 +5083,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5112,7 +5112,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5141,7 +5141,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5170,7 +5170,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_8_13WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5199,7 +5199,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_8_13WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5229,7 +5229,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_8_13WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5258,7 +5258,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_8_13WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5287,7 +5287,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_8_13WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.8/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5320,7 +5320,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5349,7 +5349,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5379,7 +5379,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5408,7 +5408,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5437,7 +5437,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5466,7 +5466,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5495,7 +5495,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5525,7 +5525,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5554,7 +5554,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5583,7 +5583,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5612,7 +5612,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_9_12WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5641,7 +5641,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_9_12WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5671,7 +5671,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_9_12WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5700,7 +5700,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_9_12WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5729,7 +5729,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_9_12WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.9/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5762,7 +5762,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5791,7 +5791,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5822,7 +5822,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_prior_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5851,7 +5851,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5880,7 +5880,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_1_1OnIris() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_iris.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5909,7 +5909,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5938,7 +5938,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5968,7 +5968,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_prior_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -5997,7 +5997,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -6026,7 +6026,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_1_1OnWine() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_wine.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -6055,7 +6055,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testSimplestBaseCaseWithoutCustomizationOnPython3_10_4WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_simplest_base_case_without_customization_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -6084,7 +6084,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testBaseCaseIncludingFeatureNameOnPython3_10_4WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_base_case_including_feature_name_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -6114,7 +6114,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorOnPython3_10_4WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_prior_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -6143,7 +6143,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitVarSmoothingOnPython3_10_4WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
@@ -6172,7 +6172,7 @@ public class GaussianNaiveBayesTests {
     @Test
     public void testWithExplicitPriorAndVarSmoothingOnPython3_10_4WithSkLearn1_1_1OnBreastCancer() {
         String path = TestHelper.getAbsolutePathOfBinaryPackage("1.1.1/3.10/gaussian_naive_bayes_with_explicit_prior_and_var_smoothing_on_breast_cancer.skx");
-        IScikitLearnPackage binaryPackage = ScikitLearnPackage.loadFromFile(path);
+        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         // Check header values
         Assertions.assertEquals(1, binaryPackage.getPackageHeader().getFileFormatVersion());
