@@ -5,8 +5,12 @@ plugins {
     id 'signing'
 }
 
-group 'ai.scikitlearn4x' // update line 35 as well
-version '0.0.0.3'  // update line 36 as well
+def library_version = '0.0.0.3'
+def library_group_id = 'ai.scikitlearn4x'
+def library_artifact_id = 'sklearn4jvm'
+
+group library_group_id
+version library_version
 
 repositories {
     mavenCentral()
@@ -31,9 +35,9 @@ publishing {
 
         mavenJava(MavenPublication){
 
-            groupId = 'ai.scikitlearn4x'
-            artifactId = 'sklearn4jvm'
-            version = '0.0.0.3'
+            groupId = library_group_id
+            artifactId = library_artifact_id
+            version = library_version
             from components.java
 
             pom {
