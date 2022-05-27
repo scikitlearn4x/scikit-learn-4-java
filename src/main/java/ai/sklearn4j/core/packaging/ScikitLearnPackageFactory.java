@@ -16,7 +16,6 @@ public class ScikitLearnPackageFactory {
      * load the appropriate loader to deserialize the file.
      *
      * @param path Path of the file to be loaded.
-     *
      * @return An IScikitLearnPackage object that represent the models stored in the binary package file.
      */
     public static IScikitLearnPackage loadFromFile(String path) {
@@ -37,7 +36,6 @@ public class ScikitLearnPackageFactory {
      * Reads the version of the binary package from a file.
      *
      * @param path Path of the file to be loaded.
-     *
      * @return An integer representing the file format version.
      */
     private static int readFileVersion(String path) {
@@ -49,7 +47,7 @@ public class ScikitLearnPackageFactory {
             fs.close();
             return result;
         } catch (Exception ex) {
-            throw new ScikitLearnCoreException("An error occurred while determining the version of binary package file."  + ex.getMessage());
+            throw new ScikitLearnCoreException("An error occurred while determining the version of binary package file." + ex.getMessage());
         }
     }
 

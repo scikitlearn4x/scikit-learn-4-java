@@ -4,7 +4,7 @@ package ai.sklearn4j.core.libraries.numpy;
  * Base class for all the operations that performs an aggregation and reduction on a given
  * NumpyArray.
  *
- * @param <InputType> The element type of the input numpy array.
+ * @param <InputType>  The element type of the input numpy array.
  * @param <OutputType> The element type of the output numpy array.
  */
 public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType> {
@@ -17,8 +17,7 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
      * Applies the operation on the numpy array.
      *
      * @param array Input array to perform operation on.
-     * @param axis The axis that should be reduced on.
-     *
+     * @param axis  The axis that should be reduced on.
      * @return The numpy array that contains the result of the reduction.
      */
     public NumpyArray<OutputType> apply(NumpyArray<InputType> array, int axis) {
@@ -68,21 +67,19 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
      * Instantiate the result numpy array.
      *
      * @param shape The shape of the desired array.
-     *
      * @return An empty array with the desired specifications.
      */
     public NumpyArray<OutputType> createInstanceResultNumpyArray(int[] shape) {
         int size = array.numberOfBytes();
         boolean isFloatingPoint = array.isFloatingPoint();
 
-        return (NumpyArray<OutputType>)NumpyArrayFactory.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, shape);
+        return (NumpyArray<OutputType>) NumpyArrayFactory.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, shape);
     }
 
     /**
      * The core operation that does the aggregation.
      *
      * @param valuesInAxis The elements of the specified axis.
-     *
      * @return The aggregated value.
      */
     public abstract Object reduceAxisValues(Object[] valuesInAxis);

@@ -1,10 +1,8 @@
 package test.sklearn4j.core.libraries;
 
 import ai.sklearn4j.core.libraries.Scipy;
-import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import test.sklearn4j.TestHelper;
 

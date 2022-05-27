@@ -116,7 +116,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSum);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(29 , array1[0][0][0]);
+        Assertions.assertEquals(29, array1[0][0][0]);
     }
 
     @Test
@@ -130,7 +130,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSubtraction);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(27 , array1[0][0][0]);
+        Assertions.assertEquals(27, array1[0][0][0]);
     }
 
     @Test
@@ -144,7 +144,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSum);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(16 , array1[0][0][0]);
+        Assertions.assertEquals(16, array1[0][0][0]);
     }
 
     @Test
@@ -158,7 +158,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSubtraction);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(20 , array1[0][0][0]);
+        Assertions.assertEquals(20, array1[0][0][0]);
     }
 
     @Test
@@ -172,7 +172,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSum);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(0 , array1[0][0][0]);
+        Assertions.assertEquals(0, array1[0][0][0]);
     }
 
     @Test
@@ -186,7 +186,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSubtraction);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(6 , array1[0][0][0]);
+        Assertions.assertEquals(6, array1[0][0][0]);
     }
 
     @Test
@@ -200,7 +200,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSum);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(6 , array1[0][0][0]);
+        Assertions.assertEquals(6, array1[0][0][0]);
     }
 
     @Test
@@ -214,7 +214,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSubtraction);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(26 , array1[0][0][0]);
+        Assertions.assertEquals(26, array1[0][0][0]);
     }
 
     @Test
@@ -228,7 +228,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSum);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(24.636015f , array1[0][0][0]);
+        Assertions.assertEquals(24.636015f, array1[0][0][0]);
     }
 
     @Test
@@ -242,7 +242,7 @@ public class TestNumpyArithmetics {
         TestHelper.assertEqualData(actual, expectedSubtraction);
 
         // Test the computations didn't impact the original source
-        Assertions.assertEquals(31.434202f , array1[0][0][0]);
+        Assertions.assertEquals(31.434202f, array1[0][0][0]);
     }
 
     @Test
@@ -281,8 +281,8 @@ public class TestNumpyArithmetics {
 
     @Test
     public void testDoubleMultiplicationAndDivision() {
-        double[][] array={{0.9383549975480937, 0.6707543764947346, 0.3727462159254752}, {0.2746844265995788, 0.30641062192634816, 0.4176566561467244}, {0.7149964220406743, 0.2593190510607888, 0.6630315531623971}};
-        double[][] expected={{9.383549975480937, 6.707543764947346, 3.7274621592547517}, {2.7468442659957883, 3.064106219263482, 4.1765665614672445}, {7.149964220406742, 2.593190510607888, 6.630315531623971}};
+        double[][] array = {{0.9383549975480937, 0.6707543764947346, 0.3727462159254752}, {0.2746844265995788, 0.30641062192634816, 0.4176566561467244}, {0.7149964220406743, 0.2593190510607888, 0.6630315531623971}};
+        double[][] expected = {{9.383549975480937, 6.707543764947346, 3.7274621592547517}, {2.7468442659957883, 3.064106219263482, 4.1765665614672445}, {7.149964220406742, 2.593190510607888, 6.630315531623971}};
 
         NumpyArray<Double> a = NumpyArrayFactory.from(array);
         NumpyArray<Double> actual = Numpy.multiply(a, 10);
@@ -299,8 +299,8 @@ public class TestNumpyArithmetics {
 
     @Test
     public void testFloatMultiplicationAndDivision() {
-        float[][] array={{0.9425335f, 0.74280167f}, {0.42412087f, 0.2686771f}};
-        float[][] expected={{9.425335f, 7.4280167f}, {4.2412086f, 2.686771f}};
+        float[][] array = {{0.9425335f, 0.74280167f}, {0.42412087f, 0.2686771f}};
+        float[][] expected = {{9.425335f, 7.4280167f}, {4.2412086f, 2.686771f}};
 
         NumpyArray<Float> a = NumpyArrayFactory.from(array);
         NumpyArray<Float> actual = Numpy.multiply(a, 10);

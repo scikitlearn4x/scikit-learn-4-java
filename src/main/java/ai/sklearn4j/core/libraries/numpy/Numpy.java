@@ -1,8 +1,5 @@
 package ai.sklearn4j.core.libraries.numpy;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Implementation of the Numpy library APIs.
  */
@@ -12,8 +9,7 @@ public final class Numpy {
      * See: https://numpy.org/doc/stable/reference/generated/numpy.argmax.html
      *
      * @param array The input multidimensional array.
-     * @param axis The axis which the argmax should reduce to.
-     *
+     * @param axis  The axis which the argmax should reduce to.
      * @return Array of indices into the array. It has the same shape as a.shape with the dimension along axis removed.
      */
     public static <Type> NumpyArray<Long> argmax(NumpyArray<Type> array, int axis) {
@@ -49,7 +45,6 @@ public final class Numpy {
      *
      * @param array Input array.
      * @param power The value of the power.
-     *
      * @return An array with same dimension with the requested power calculation.
      */
     public static NumpyArray<Double> pow(NumpyArray array, double power) {
@@ -65,8 +60,7 @@ public final class Numpy {
      * See: https://numpy.org/doc/stable/reference/generated/numpy.sum.html
      *
      * @param array Input array.
-     * @param axis Axis along which a sum is performed.
-     *
+     * @param axis  Axis along which a sum is performed.
      * @return An array with the same shape as a, with the specified axis removed.
      */
     public static NumpyArray sum(NumpyArray array, int axis) {
@@ -252,7 +246,6 @@ public final class Numpy {
      *
      * @param a1 Left-hand side of the expression.
      * @param a2 Right-hand side of the expression.
-     *
      * @return The subtraction result.
      */
     public static NumpyArray subtract(NumpyArray a1, NumpyArray a2) {
@@ -288,7 +281,6 @@ public final class Numpy {
      *
      * @param a1 Left-hand side of the expression.
      * @param a2 Right-hand side of the expression.
-     *
      * @return The addition result.
      */
     public static NumpyArray add(NumpyArray a1, NumpyArray a2) {
@@ -317,7 +309,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The addition result.
      */
     public static NumpyArray<Double> add(NumpyArray array, double value) {
@@ -332,7 +323,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The subtraction result.
      */
     public static NumpyArray<Double> subtract(NumpyArray array, double value) {
@@ -344,7 +334,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The addition result.
      */
     public static NumpyArray<Float> add(NumpyArray array, float value) {
@@ -359,7 +348,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The subtraction result.
      */
     public static NumpyArray<Float> subtract(NumpyArray array, float value) {
@@ -371,7 +359,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The addition result.
      */
     public static NumpyArray add(NumpyArray array, byte value) {
@@ -386,7 +373,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The subtraction result.
      */
     public static NumpyArray subtract(NumpyArray array, byte value) {
@@ -398,7 +384,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The addition result.
      */
     public static NumpyArray add(NumpyArray array, short value) {
@@ -413,7 +398,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The subtraction result.
      */
     public static NumpyArray subtract(NumpyArray array, short value) {
@@ -425,7 +409,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The addition result.
      */
     public static NumpyArray add(NumpyArray array, int value) {
@@ -440,7 +423,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The subtraction result.
      */
     public static NumpyArray subtract(NumpyArray array, int value) {
@@ -452,7 +434,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The addition result.
      */
     public static NumpyArray add(NumpyArray array, long value) {
@@ -467,7 +448,6 @@ public final class Numpy {
      *
      * @param array Left-hand side of the expression.
      * @param value Right-hand side of the expression.
-     *
      * @return The subtraction result.
      */
     public static NumpyArray subtract(NumpyArray array, long value) {
@@ -478,9 +458,9 @@ public final class Numpy {
      * Adds two numpy array and stores the result into a target array.
      *
      * @param target The target array that stores the results.
-     * @param a1 The left-hand side of the expression.
-     * @param a2 The right-hand side of the expression.
-     * @param sign A sign value to multiply by the right-hand side. The value of this parameter is either 1 or -1. The -1 is used to implement subtraction.
+     * @param a1     The left-hand side of the expression.
+     * @param a2     The right-hand side of the expression.
+     * @param sign   A sign value to multiply by the right-hand side. The value of this parameter is either 1 or -1. The -1 is used to implement subtraction.
      */
     private static void addInPlace(NumpyArray target, NumpyArray a1, NumpyArray a2, byte sign) {
         if (a2.isSingleValueArray()) {
@@ -540,9 +520,10 @@ public final class Numpy {
 
     /**
      * Adds a double value to a numpy array.
+     *
      * @param target The array that stores the calculation.
-     * @param array The left-hand side of the expression.
-     * @param value The value to be added.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be added.
      */
     private static void addInPlace(NumpyArray target, NumpyArray array, double value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (double) element);
@@ -550,9 +531,10 @@ public final class Numpy {
 
     /**
      * Adds a float value to a numpy array.
+     *
      * @param target The array that stores the calculation.
-     * @param array The left-hand side of the expression.
-     * @param value The value to be added.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be added.
      */
     private static void addInPlace(NumpyArray target, NumpyArray array, float value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (float) element);
@@ -560,9 +542,10 @@ public final class Numpy {
 
     /**
      * Adds a long value to a numpy array.
+     *
      * @param target The array that stores the calculation.
-     * @param array The left-hand side of the expression.
-     * @param value The value to be added.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be added.
      */
     private static void addInPlace(NumpyArray target, NumpyArray array, long value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (long) element);
@@ -570,9 +553,10 @@ public final class Numpy {
 
     /**
      * Adds a int value to a numpy array.
+     *
      * @param target The array that stores the calculation.
-     * @param array The left-hand side of the expression.
-     * @param value The value to be added.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be added.
      */
     private static void addInPlace(NumpyArray target, NumpyArray array, int value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (int) element);
@@ -580,9 +564,10 @@ public final class Numpy {
 
     /**
      * Adds a short value to a numpy array.
+     *
      * @param target The array that stores the calculation.
-     * @param array The left-hand side of the expression.
-     * @param value The value to be added.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be added.
      */
     private static void addInPlace(NumpyArray target, NumpyArray array, short value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (short) element);
@@ -590,9 +575,10 @@ public final class Numpy {
 
     /**
      * Adds a byte value to a numpy array.
+     *
      * @param target The array that stores the calculation.
-     * @param array The left-hand side of the expression.
-     * @param value The value to be added.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be added.
      */
     private static void addInPlace(NumpyArray target, NumpyArray array, byte value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (byte) element);
@@ -601,9 +587,8 @@ public final class Numpy {
     /**
      * Multiplies a numpy array by a double value. The operation is element-wise.
      *
-     * @param array The input array to be multiplied.
+     * @param array  The input array to be multiplied.
      * @param factor The value to be multiplied with.
-     *
      * @return A numpy array of the calculation result.
      */
     public static NumpyArray<Double> multiply(NumpyArray<Double> array, double factor) {
@@ -617,9 +602,8 @@ public final class Numpy {
     /**
      * Multiplies a numpy array by a float value. The operation is element-wise.
      *
-     * @param array The input array to be multiplied.
+     * @param array  The input array to be multiplied.
      * @param factor The value to be multiplied with.
-     *
      * @return A numpy array of the calculation result.
      */
     public static NumpyArray<Float> multiply(NumpyArray<Float> array, float factor) {
@@ -633,9 +617,8 @@ public final class Numpy {
     /**
      * Divides a numpy array by a double value. The operation is element-wise.
      *
-     * @param array The input array to be divided.
+     * @param array  The input array to be divided.
      * @param factor The value to be divided by.
-     *
      * @return A numpy array of the calculation result.
      */
     public static NumpyArray<Double> divide(NumpyArray<Double> array, double factor) {
@@ -645,9 +628,8 @@ public final class Numpy {
     /**
      * Divides a numpy array by a float value. The operation is element-wise.
      *
-     * @param array The input array to be divided.
+     * @param array  The input array to be divided.
      * @param factor The value to be divided by.
-     *
      * @return A numpy array of the calculation result.
      */
     public static NumpyArray<Float> divide(NumpyArray<Float> array, float factor) {
@@ -658,7 +640,6 @@ public final class Numpy {
      * Wraps an atomic double value into a 2 dimensional array.
      *
      * @param value The value to be wrapped into an array.
-     *
      * @return A two dimensional array that wraps the given value.
      */
     public static NumpyArray<Double> atLeast2D(double value) {
@@ -672,7 +653,6 @@ public final class Numpy {
      * Wraps an atomic float value into a 2 dimensional array.
      *
      * @param value The value to be wrapped into an array.
-     *
      * @return A two dimensional array that wraps the given value.
      */
     public static NumpyArray<Float> atLeast2D(float value) {
@@ -686,7 +666,6 @@ public final class Numpy {
      * Wraps an atomic long value into a 2 dimensional array.
      *
      * @param value The value to be wrapped into an array.
-     *
      * @return A two dimensional array that wraps the given value.
      */
     public static NumpyArray<Long> atLeast2D(long value) {
@@ -700,7 +679,6 @@ public final class Numpy {
      * Wraps an atomic int value into a 2 dimensional array.
      *
      * @param value The value to be wrapped into an array.
-     *
      * @return A two dimensional array that wraps the given value.
      */
     public static NumpyArray<Integer> atLeast2D(int value) {
@@ -714,7 +692,6 @@ public final class Numpy {
      * Wraps an atomic short value into a 2 dimensional array.
      *
      * @param value The value to be wrapped into an array.
-     *
      * @return A two dimensional array that wraps the given value.
      */
     public static NumpyArray<Short> atLeast2D(short value) {
@@ -728,7 +705,6 @@ public final class Numpy {
      * Wraps an atomic byte value into a 2 dimensional array.
      *
      * @param value The value to be wrapped into an array.
-     *
      * @return A two dimensional array that wraps the given value.
      */
     public static NumpyArray<Byte> atLeast2D(byte value) {
@@ -742,7 +718,6 @@ public final class Numpy {
      * Wraps a numpy array into a 2 dimensional array if the number dimensions is less than 2.
      *
      * @param array The array to be wrapped into a 2 dimensional array.
-     *
      * @return A two dimensional array that wraps the given value.
      */
     public static <Type> NumpyArray<Type> atLeast2D(NumpyArray<Type> array) {

@@ -5,82 +5,81 @@
 package ai.sklearn4j.core.libraries.numpy.wrappers;
 
 import ai.sklearn4j.core.libraries.numpy.INumpyArrayWrapper;
-
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 import ai.sklearn4j.core.libraries.numpy.NumpyOperationException;
 
 public class Dim2Int32NumpyWrapper implements INumpyArrayWrapper {
-	private final int[][] array;
-	private final int[] shape;
+    private final int[][] array;
+    private final int[] shape;
 
-	public Dim2Int32NumpyWrapper(int[][] array) {
-		this.array = array;
-		this.shape = new int[] {array.length, array[0].length};
-	}
+    public Dim2Int32NumpyWrapper(int[][] array) {
+        this.array = array;
+        this.shape = new int[]{array.length, array[0].length};
+    }
 
-	@Override
-	public int[] getShape() {
-		return shape;
-	}
+    @Override
+    public int[] getShape() {
+        return shape;
+    }
 
-	@Override
-	public Object get(int... indices) {
-		return array[indices[0]][indices[1]];
-	}
+    @Override
+    public Object get(int... indices) {
+        return array[indices[0]][indices[1]];
+    }
 
-	@Override
-	public void set(Object value, int... indices) {
-		this.array[indices[0]][indices[1]] = NumpyArrayFactory.toInteger(value);
-	}
+    @Override
+    public void set(Object value, int... indices) {
+        this.array[indices[0]][indices[1]] = NumpyArrayFactory.toInteger(value);
+    }
 
-	public int[][] getArray() {
-		return this.array;
-	}
+    public int[][] getArray() {
+        return this.array;
+    }
 
-	@Override
-	public boolean isFloatingPoint() {
-		return false;
-	}
-
-
-	@Override
-	public int numberOfBits() {
-		return 32;
-	}
+    @Override
+    public boolean isFloatingPoint() {
+        return false;
+    }
 
 
-	@Override
-	public Object getRawArray() {
-		return array;
-	}
+    @Override
+    public int numberOfBits() {
+        return 32;
+    }
 
 
-	@Override
-	public NumpyArray wrapInnerSubsetArray(int... indices) {
-		NumpyArray result = null;
-
-		if (indices.length == 1) {
-			result = NumpyArrayFactory.from(array[indices[0]]);
-		} else {
-			throw new NumpyOperationException("Invalid slice for array specified.");
-		}
-
-		return result;
-	}
+    @Override
+    public Object getRawArray() {
+        return array;
+    }
 
 
-	@Override
-	public NumpyArray transpose() {
-		int[][] result = new int[shape[1]][shape[0]];
+    @Override
+    public NumpyArray wrapInnerSubsetArray(int... indices) {
+        NumpyArray result = null;
 
-		for (int d0 = 0; d0 < this.shape[0]; d0++) {
-			for (int d1 = 0; d1 < this.shape[1]; d1++) {
-				result[d1][d0] = array[d0][d1];
+        if (indices.length == 1) {
+            result = NumpyArrayFactory.from(array[indices[0]]);
+        } else {
+            throw new NumpyOperationException("Invalid slice for array specified.");
+        }
 
-			}
-		}
+        return result;
+    }
 
-		return NumpyArrayFactory.from(result);
-	}
+
+    @Override
+    public NumpyArray transpose() {
+        int[][] result = new int[shape[1]][shape[0]];
+
+        for (int d0 = 0; d0 < this.shape[0]; d0++) {
+            for (int d1 = 0; d1 < this.shape[1]; d1++) {
+                result[d1][d0] = array[d0][d1];
+
+            }
+        }
+
+        return NumpyArrayFactory.from(result);
+    }
 }

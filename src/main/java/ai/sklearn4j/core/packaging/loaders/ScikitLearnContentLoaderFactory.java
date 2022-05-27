@@ -27,6 +27,7 @@ public class ScikitLearnContentLoaderFactory {
 
     /**
      * Registers a new loader in the static map.
+     *
      * @param loader Instance of the loader to be registered.
      */
     private static void registerLoader(IScikitLearnContentLoader loader) {
@@ -37,7 +38,6 @@ public class ScikitLearnContentLoaderFactory {
      * Returns a loader based on its name for deserialization of contents.
      *
      * @param type Name/ID of the loader.
-     *
      * @return An IScikitLearnContentLoader associated with the requested loader name.
      */
     public static IScikitLearnContentLoader loaderForType(String type) {

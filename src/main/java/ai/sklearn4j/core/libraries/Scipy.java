@@ -13,7 +13,6 @@ public class Scipy {
      *
      * @param data Input array to apply the calculations on.
      * @param axis The axis used by sum for reduction.
-     *
      * @return The result, np.log(np.sum(np.exp(a))) calculated in a numerically more stable way.
      */
     public static NumpyArray<Double> logSumExponent(NumpyArray<Double> data, int axis) {

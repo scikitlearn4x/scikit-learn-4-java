@@ -18,6 +18,7 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
 
     /**
      * Instantiate an unloaded GaussianNaiveBayes classifier.
+     *
      * @return The unloaded classifier.
      */
     @Override
@@ -27,6 +28,7 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
 
     /**
      * Create a clean instance of the loader.
+     *
      * @return A clean instance of the loader.
      */
     @Override
@@ -52,7 +54,7 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
      * Sets the list of features names' of the dataset the model was trained on.
      *
      * @param result The classifier to be loaded.
-     * @param value The list of feature names.
+     * @param value  The list of feature names.
      */
     private void setFeaturesIn(GaussianNaiveBayes result, String[] value) {
         result.setFeatureNamesIn(value);
@@ -62,17 +64,17 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
      * Sets the number of features of the dataset the model was trained on.
      *
      * @param result The classifier to be loaded.
-     * @param value The number of features.
+     * @param value  The number of features.
      */
     private void setNumberOfFeatureIn(GaussianNaiveBayes result, long value) {
-        result.setNumberOfFeatures((int)value);
+        result.setNumberOfFeatures((int) value);
     }
 
     /**
      * Sets the variance of each feature per class.
      *
      * @param result The classifier to be loaded.
-     * @param value The variance of each feature per class.
+     * @param value  The variance of each feature per class.
      */
     private void setVarianceValues(GaussianNaiveBayes result, NumpyArray value) {
         result.setSigma(value);
@@ -82,7 +84,7 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
      * Sets the mean of each feature per class.
      *
      * @param result The classifier to be loaded.
-     * @param value The mean of each feature per class.
+     * @param value  The mean of each feature per class.
      */
     private void setMeanValues(GaussianNaiveBayes result, NumpyArray value) {
         result.setTheta(value);
@@ -92,7 +94,7 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
      * Sets the probability of each class.
      *
      * @param result The classifier to be loaded.
-     * @param value The probability of each class.
+     * @param value  The probability of each class.
      */
     private void setClassPriors(GaussianNaiveBayes result, NumpyArray value) {
         result.setClassPriors(value);
@@ -102,7 +104,7 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
      * Sets the class labels known to the classifier.
      *
      * @param result The classifier to be loaded.
-     * @param value The class labels known to the classifier.
+     * @param value  The class labels known to the classifier.
      */
     private void setClasses(GaussianNaiveBayes result, NumpyArray value) {
         result.setClasses(value);
@@ -112,7 +114,7 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
      * Sets the number of training samples observed in each class.
      *
      * @param result The classifier to be loaded.
-     * @param value The number of training samples observed in each class.
+     * @param value  The number of training samples observed in each class.
      */
     private void setClassCount(GaussianNaiveBayes result, NumpyArray value) {
         result.setClassCounts(value);

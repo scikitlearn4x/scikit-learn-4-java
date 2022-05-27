@@ -19,6 +19,7 @@ public interface IScikitLearnPackage {
 
     /**
      * Gets a Map[String -> Object] of the extra values stored by the developer when saving the binary package.
+     *
      * @return A dictionary that contains the extra values stored along with the binary package file.
      */
     Map<String, Object> getExtraValues();
@@ -27,13 +28,13 @@ public interface IScikitLearnPackage {
      * Get the primary content stored in binary package file.
      *
      * @param index Index of the content to retrieve.
-     *
      * @return A scikit-learn object that can now be used in Java.
      */
     Object getModel(int index);
 
     /**
      * Loads the binary package from a file.
+     *
      * @param path Path of file to be loaded.
      */
     void loadFromFile(String path);

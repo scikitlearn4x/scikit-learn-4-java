@@ -145,7 +145,7 @@ public class TestHelper {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 for (int k = 0; k < array[i][j].length; k++) {
-                    Assertions.assertEquals(array[i][j][k], (short)numpyArray.get(i, j, k));
+                    Assertions.assertEquals(array[i][j][k], (short) numpyArray.get(i, j, k));
                 }
             }
         }

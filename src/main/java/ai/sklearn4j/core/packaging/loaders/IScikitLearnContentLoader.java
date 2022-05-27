@@ -19,13 +19,13 @@ public interface IScikitLearnContentLoader {
      * Loads a scikit-learn object from an input stream.
      *
      * @param buffer The buffer to load the object from.
-     *
      * @return A deserialized ready to use object.
      */
     Object loadContent(BinaryModelPackage buffer);
 
     /**
      * Creates a clone of the instance.
+     *
      * @return An empty clean instance of the loader.
      */
     IScikitLearnContentLoader duplicate();

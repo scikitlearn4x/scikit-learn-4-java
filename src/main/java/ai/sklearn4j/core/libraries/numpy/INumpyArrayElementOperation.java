@@ -11,7 +11,6 @@ public interface INumpyArrayElementOperation<Type> {
      * The operation to be applied to each element in the NumpyArray.
      *
      * @param value The value of the element.
-     *
      * @return The calculation on the element.
      */
     Type apply(Type value);

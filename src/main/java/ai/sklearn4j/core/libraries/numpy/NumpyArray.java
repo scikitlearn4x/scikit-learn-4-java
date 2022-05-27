@@ -1,9 +1,8 @@
 package ai.sklearn4j.core.libraries.numpy;
 
-import ai.sklearn4j.core.libraries.numpy.wrappers.*;
-
 /**
  * Provide the functionality of the Numpy arrays and an abstraction over the element types.
+ *
  * @param <Type> Type of the elements of the array.
  */
 public class NumpyArray<Type> {
@@ -14,6 +13,7 @@ public class NumpyArray<Type> {
 
     /**
      * Instantiate a new object of NumpyArray.
+     *
      * @param data The content of the numpy array.
      */
     protected NumpyArray(INumpyArrayWrapper data) {
@@ -22,6 +22,7 @@ public class NumpyArray<Type> {
 
     /**
      * Gets the shape of the numpy array.
+     *
      * @return The array shape.
      */
     public int[] getShape() {
@@ -32,7 +33,6 @@ public class NumpyArray<Type> {
      * Gets an element in the array specified by it index.
      *
      * @param indices The index of the element to be retrieved.
-     *
      * @return The element value in the array specified by its index.
      */
     public Type get(int... indices) {
@@ -70,7 +70,7 @@ public class NumpyArray<Type> {
      * Applies a provided operation on every element of the array and stores it in a
      * specified target array.
      *
-     * @param target The array that the result should be stored into.
+     * @param target    The array that the result should be stored into.
      * @param operation The operation to be applied on the elements.
      */
     public void applyToEachElementAnsSaveToTarget(NumpyArray target, INumpyArrayElementOperation<Type> operation) {
@@ -96,7 +96,7 @@ public class NumpyArray<Type> {
      * to move the index to the next element.
      *
      * @param counter The current index.
-     * @param shape The shape of the array.
+     * @param shape   The shape of the array.
      */
     protected static void addCounter(int[] counter, int[] shape) {
         counter[0]++;
@@ -179,6 +179,7 @@ public class NumpyArray<Type> {
      * Wraps a subset of the numpy array. This methods works only when slicing the most inner dimensions
      * of the array. For example, if the shape is [2, 6, 4, 8], wrapInnerSubsetArray(1, 3) is equivalent
      * to numpy array[1, 3, :, :].
+     *
      * @param indices The indices of the first dimensions to keep.
      * @return A new INumpyArrayWrapper wrapping the inner dimensions. This array has the same reference.
      */
@@ -188,6 +189,7 @@ public class NumpyArray<Type> {
 
     /**
      * Gets the number of dimensions of the numpy array.
+     *
      * @return
      */
     public int numberOfDimensions() {

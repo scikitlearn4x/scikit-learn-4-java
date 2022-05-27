@@ -63,8 +63,8 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
 
     /**
      * Loads the scikit-learn object with the provided layout in registerSetters.
-     * @param buffer The buffer to load the object from.
      *
+     * @param buffer The buffer to load the object from.
      * @return The fully initialized scikit-learn object.
      */
     @Override
@@ -82,16 +82,16 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
 
             if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_DOUBLE) {
                 double value = buffer.readDouble();
-                ((IScikitLearnLoaderDoubleFieldSetter<ObjectType>)info.setter).setDoubleField(result, value);
+                ((IScikitLearnLoaderDoubleFieldSetter<ObjectType>) info.setter).setDoubleField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LONG) {
                 long value = buffer.readLongInteger();
-                ((IScikitLearnLoaderLongFieldSetter<ObjectType>)info.setter).setLongField(result, value);
+                ((IScikitLearnLoaderLongFieldSetter<ObjectType>) info.setter).setLongField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_NUMPY) {
                 NumpyArray value = buffer.readNumpyArray();
-                ((IScikitLearnLoaderNumpyArrayFieldSetter<ObjectType>)info.setter).setNumpyArrayField(result, value);
+                ((IScikitLearnLoaderNumpyArrayFieldSetter<ObjectType>) info.setter).setNumpyArrayField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_STRING_ARRAY) {
                 String[] value = buffer.readStringArray();
-                ((IScikitLearnLoaderStringArrayFieldSetter<ObjectType>)info.setter).setStringArrayField(result, value);
+                ((IScikitLearnLoaderStringArrayFieldSetter<ObjectType>) info.setter).setStringArrayField(result, value);
             }
         }
 
@@ -100,7 +100,8 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
 
     /**
      * Registers a double field for the scikit-learn serialized layout.
-     * @param name Name of the field.
+     *
+     * @param name   Name of the field.
      * @param setter The setter callback to load the value of the scikit-learn object.
      */
     protected void registerDoubleField(String name, IScikitLearnLoaderDoubleFieldSetter<ObjectType> setter) {
@@ -118,7 +119,8 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
 
     /**
      * Registers a long integer field for the scikit-learn serialized layout.
-     * @param name Name of the field.
+     *
+     * @param name   Name of the field.
      * @param setter The setter callback to load the value of the scikit-learn object.
      */
     protected void registerLongField(String name, IScikitLearnLoaderLongFieldSetter<ObjectType> setter) {
@@ -136,7 +138,8 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
 
     /**
      * Registers a numpy array field for the scikit-learn serialized layout.
-     * @param name Name of the field.
+     *
+     * @param name   Name of the field.
      * @param setter The setter callback to load the value of the scikit-learn object.
      */
     protected void registerNumpyArrayField(String name, IScikitLearnLoaderNumpyArrayFieldSetter<ObjectType> setter) {
@@ -154,7 +157,8 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
 
     /**
      * Registers a String array field for the scikit-learn serialized layout.
-     * @param name Name of the field.
+     *
+     * @param name   Name of the field.
      * @param setter The setter callback to load the value of the scikit-learn object.
      */
     protected void registerStringArrayField(String name, IScikitLearnLoaderStringArrayFieldSetter<ObjectType> setter) {

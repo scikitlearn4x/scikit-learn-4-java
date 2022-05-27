@@ -11,10 +11,10 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 public abstract class BaseNaiveBayes extends ClassifierMixin {
     /**
      * Compute the unnormalized posterior log probability of X.
-     *
+     * <p>
      * I.e. ``log P(c) + log P(x|c)`` for all rows x of X, as an array-like of shape
      * (n_samples, n_classes).
-     *
+     * <p>
      * predict, predictProbabilities, and predictLogProbabilities pass the input over to
      * jointLogLikelihood.
      *
@@ -37,11 +37,10 @@ public abstract class BaseNaiveBayes extends ClassifierMixin {
      * Return log-probability estimates for the test vector X.
      *
      * @param x array-like of shape (n_samples, n_features) The input samples.
-     *
      * @return array-like of shape (n_samples, n_classes)
-     *         Returns the log-probability of the samples for each class in
-     *         the model. The columns correspond to the classes in sorted
-     *         order, as they appear in the attribute :term:`classes_`.
+     * Returns the log-probability of the samples for each class in
+     * the model. The columns correspond to the classes in sorted
+     * order, as they appear in the attribute :term:`classes_`.
      */
     public NumpyArray<Double> predictLogProbabilities(NumpyArray<Double> x) {
         NumpyArray<Double> jll = jointLogLikelihood(x);
@@ -54,11 +53,10 @@ public abstract class BaseNaiveBayes extends ClassifierMixin {
      * Return probability estimates for the test vector X.
      *
      * @param x array-like of shape (n_samples, n_features) The input samples.
-     *
      * @return array-like of shape (n_samples, n_classes)
-     *         Returns the probability of the samples for each class in
-     *         the model. The columns correspond to the classes in sorted
-     *         order, as they appear in the attribute :term:`classes_`.
+     * Returns the probability of the samples for each class in
+     * the model. The columns correspond to the classes in sorted
+     * order, as they appear in the attribute :term:`classes_`.
      */
     public NumpyArray<Double> predictProbabilities(NumpyArray<Double> x) {
         return Numpy.exp(predictLogProbabilities(x));

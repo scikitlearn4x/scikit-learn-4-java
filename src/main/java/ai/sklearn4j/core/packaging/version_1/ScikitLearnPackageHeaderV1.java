@@ -15,7 +15,7 @@ public class ScikitLearnPackageHeaderV1 implements IScikitLearnPackageHeader {
     /**
      * The sklearn4x version. This is the library used to serialize the models into file. For more
      * information, please see:
-     *
+     * <p>
      * https://pypi.org/project/sklearn4x/
      */
     public String sklearn4xVersion = null;

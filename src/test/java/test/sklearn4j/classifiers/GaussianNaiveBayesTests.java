@@ -26,20 +26,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -53,23 +53,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -85,20 +85,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -114,20 +114,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -143,20 +143,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -172,20 +172,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -199,23 +199,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -231,20 +231,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -260,20 +260,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -289,20 +289,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -318,20 +318,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -345,23 +345,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -377,20 +377,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -406,20 +406,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -435,20 +435,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -468,20 +468,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -495,23 +495,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -527,20 +527,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -556,20 +556,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -585,20 +585,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -614,20 +614,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -641,23 +641,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -673,20 +673,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -702,20 +702,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -731,20 +731,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -760,20 +760,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -787,23 +787,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -819,20 +819,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -848,20 +848,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -877,20 +877,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -910,20 +910,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -937,23 +937,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -969,20 +969,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -998,20 +998,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1027,20 +1027,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1056,20 +1056,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1083,23 +1083,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1115,20 +1115,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1144,20 +1144,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1173,20 +1173,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1202,20 +1202,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1229,23 +1229,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1261,20 +1261,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1290,20 +1290,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1319,20 +1319,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -1352,20 +1352,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1379,23 +1379,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1411,20 +1411,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1440,20 +1440,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1469,20 +1469,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1498,20 +1498,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1525,23 +1525,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1557,20 +1557,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1586,20 +1586,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1615,20 +1615,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1644,20 +1644,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1671,23 +1671,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1703,20 +1703,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1732,20 +1732,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1761,20 +1761,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -1794,20 +1794,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1821,23 +1821,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1853,20 +1853,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1882,20 +1882,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1911,20 +1911,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1940,20 +1940,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1967,23 +1967,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -1999,20 +1999,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2028,20 +2028,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2057,20 +2057,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2086,20 +2086,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2113,23 +2113,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2145,20 +2145,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2174,20 +2174,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2203,20 +2203,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -2236,20 +2236,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2263,23 +2263,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2295,20 +2295,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2324,20 +2324,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2353,20 +2353,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2382,20 +2382,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2409,23 +2409,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2441,20 +2441,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2470,20 +2470,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2499,20 +2499,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2528,20 +2528,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2555,23 +2555,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2587,20 +2587,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2616,20 +2616,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2645,20 +2645,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -2678,20 +2678,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2705,23 +2705,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2737,20 +2737,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2766,20 +2766,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2795,20 +2795,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2824,20 +2824,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2851,23 +2851,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2883,20 +2883,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2912,20 +2912,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2941,20 +2941,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2970,20 +2970,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -2997,23 +2997,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3029,20 +3029,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3058,20 +3058,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3087,20 +3087,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -3120,20 +3120,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3147,23 +3147,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3179,20 +3179,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3208,20 +3208,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3237,20 +3237,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3266,20 +3266,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3293,23 +3293,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3325,20 +3325,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3354,20 +3354,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3383,20 +3383,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3412,20 +3412,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3439,23 +3439,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3471,20 +3471,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3500,20 +3500,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3529,20 +3529,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -3562,20 +3562,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3589,23 +3589,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3621,20 +3621,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3650,20 +3650,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3679,20 +3679,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3708,20 +3708,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3735,23 +3735,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3767,20 +3767,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3796,20 +3796,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3825,20 +3825,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3854,20 +3854,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3881,23 +3881,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3913,20 +3913,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3942,20 +3942,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -3971,20 +3971,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -4004,20 +4004,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4031,23 +4031,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4063,20 +4063,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4092,20 +4092,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4121,20 +4121,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4150,20 +4150,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4177,23 +4177,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4209,20 +4209,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4238,20 +4238,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4267,20 +4267,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4296,20 +4296,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4323,23 +4323,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4355,20 +4355,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4384,20 +4384,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4413,20 +4413,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -4446,20 +4446,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4473,23 +4473,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4505,20 +4505,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4534,20 +4534,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4563,20 +4563,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4592,20 +4592,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4619,23 +4619,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4651,20 +4651,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4680,20 +4680,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4709,20 +4709,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4738,20 +4738,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4765,23 +4765,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4797,20 +4797,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4826,20 +4826,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4855,20 +4855,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -4888,20 +4888,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4915,23 +4915,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4947,20 +4947,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -4976,20 +4976,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5005,20 +5005,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5034,20 +5034,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5061,23 +5061,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5093,20 +5093,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5122,20 +5122,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5151,20 +5151,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5180,20 +5180,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5207,23 +5207,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5239,20 +5239,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5268,20 +5268,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5297,20 +5297,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -5330,20 +5330,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5357,23 +5357,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5389,20 +5389,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5418,20 +5418,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5447,20 +5447,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5476,20 +5476,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5503,23 +5503,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5535,20 +5535,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5564,20 +5564,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5593,20 +5593,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5622,20 +5622,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5649,23 +5649,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5681,20 +5681,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5710,20 +5710,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5739,20 +5739,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     // ------------------------------------------------------------------------
@@ -5772,20 +5772,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5800,23 +5800,23 @@ public class GaussianNaiveBayesTests {
         // Check extra values
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
         Object o = binaryPackage.getExtraValues().get("feature_names");
-        TestHelper.assertCorrectFeatureNames(new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[])o);
+        TestHelper.assertCorrectFeatureNames(new String[]{"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"}, (String[]) o);
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5832,20 +5832,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5861,20 +5861,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5890,20 +5890,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("iris", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5919,20 +5919,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5946,23 +5946,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -5978,20 +5978,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -6007,20 +6007,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -6036,20 +6036,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("wine", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -6065,20 +6065,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -6092,23 +6092,23 @@ public class GaussianNaiveBayesTests {
 
         // Check extra values
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
-        TestHelper.assertCorrectFeatureNames(new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[])binaryPackage.getExtraValues().get("feature_names"));
+        TestHelper.assertCorrectFeatureNames(new String[]{"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"}, (String[]) binaryPackage.getExtraValues().get("feature_names"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -6124,20 +6124,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -6153,20 +6153,20 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 
     @Test
@@ -6182,19 +6182,19 @@ public class GaussianNaiveBayesTests {
         Assertions.assertEquals("breast_cancer", binaryPackage.getExtraValues().get("dataset_name"));
 
         // Check actual computed values
-        GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+        GaussianNaiveBayes classifier = (GaussianNaiveBayes) binaryPackage.getModel(0);
 
-        NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
-        NumpyArray<Long> gtPredictions = (NumpyArray<Long>)binaryPackage.getExtraValues().get("predictions");
+        NumpyArray<Double> x = (NumpyArray<Double>) binaryPackage.getExtraValues().get("training_data");
+        NumpyArray<Long> gtPredictions = (NumpyArray<Long>) binaryPackage.getExtraValues().get("predictions");
         NumpyArray<Long> predictions = classifier.predict(x);
-        TestHelper.assertEqualPredictions(predictions, (long[])gtPredictions.getWrapper().getRawArray());
+        TestHelper.assertEqualPredictions(predictions, (long[]) gtPredictions.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_probabilities");
+        NumpyArray<Double> gtProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_probabilities");
         NumpyArray<Double> probabilities = classifier.predictProbabilities(x);
-        TestHelper.assertEqualData(probabilities, (double[][])gtProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(probabilities, (double[][]) gtProbabilities.getWrapper().getRawArray());
 
-        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>)binaryPackage.getExtraValues().get("prediction_log_probabilities");
+        NumpyArray<Double> gtLogProbabilities = (NumpyArray<Double>) binaryPackage.getExtraValues().get("prediction_log_probabilities");
         NumpyArray<Double> logProbabilities = classifier.predictLogProbabilities(x);
-        TestHelper.assertEqualData(logProbabilities, (double[][])gtLogProbabilities.getWrapper().getRawArray());
+        TestHelper.assertEqualData(logProbabilities, (double[][]) gtLogProbabilities.getWrapper().getRawArray());
     }
 }

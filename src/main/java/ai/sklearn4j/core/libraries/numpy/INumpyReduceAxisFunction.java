@@ -9,7 +9,6 @@ public interface INumpyReduceAxisFunction {
      * The aggregation function that can reduce the values of a NumpyArray dimension.
      *
      * @param valuesInAxis The values in the axis.
-     *
      * @return A single value that contains the reduction of the axis.
      */
     Object reduceAxisValues(Object[] valuesInAxis);

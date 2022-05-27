@@ -1,14 +1,9 @@
 package ai.sklearn4j.naive_bayes;
 
 import ai.sklearn4j.core.Constants;
-import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
-import ai.sklearn4j.core.libraries.numpy.wrappers.Dim1DoubleNumpyWrapper;
 import ai.sklearn4j.core.libraries.numpy.wrappers.Dim2DoubleNumpyWrapper;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Naive Bayes classifier for normal distributed models.
@@ -62,10 +57,10 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Compute the unnormalized posterior log probability of X.
-     *
+     * <p>
      * I.e. ``log P(c) + log P(x|c)`` for all rows x of X, as an array-like of shape
      * (n_samples, n_classes).
-     *
+     * <p>
      * predict, predictProbabilities, and predictLogProbabilities pass the input over to
      * jointLogLikelihood.
      *
@@ -110,6 +105,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the class counts.
+     *
      * @return The value of class counts.
      */
     public NumpyArray<Double> getClassCounts() {
@@ -118,6 +114,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the class counts.
+     *
      * @param classCounts New value to be stored.
      */
     public void setClassCounts(NumpyArray<Double> classCounts) {
@@ -126,6 +123,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the class priors.
+     *
      * @return The value of class priors.
      */
     public NumpyArray<Double> getClassPriors() {
@@ -134,6 +132,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the class priors.
+     *
      * @param classPriors New value to be stored.
      */
     public void setClassPriors(NumpyArray<Double> classPriors) {
@@ -142,6 +141,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the classes.
+     *
      * @return The value of classes.
      */
     public NumpyArray<Long> getClasses() {
@@ -150,6 +150,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the classes.
+     *
      * @param classes New value to be stored.
      */
     public void setClasses(NumpyArray<Long> classes) {
@@ -158,6 +159,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the priors.
+     *
      * @return The value of priors.
      */
     public NumpyArray<Double> getPriors() {
@@ -166,6 +168,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the priors.
+     *
      * @param priors New value to be stored.
      */
     public void setPriors(NumpyArray<Double> priors) {
@@ -174,6 +177,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the feature names.
+     *
      * @return The value of feature names.
      */
     public String[] getFeatureNamesIn() {
@@ -182,6 +186,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the feature names.
+     *
      * @param featureNamesIn New value to be stored.
      */
     public void setFeatureNamesIn(String[] featureNamesIn) {
@@ -190,6 +195,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the number of features.
+     *
      * @return The value of number of features.
      */
     public int getNumberOfFeatures() {
@@ -198,6 +204,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the number of features.
+     *
      * @param numberOfFeatures New value to be stored.
      */
     public void setNumberOfFeatures(int numberOfFeatures) {
@@ -206,6 +213,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the variance of the features.
+     *
      * @return The value of variance of the features.
      */
     public NumpyArray<Double> getSigma() {
@@ -214,6 +222,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the variance of the features.
+     *
      * @param sigma New value to be stored.
      */
     public void setSigma(NumpyArray<Double> sigma) {
@@ -222,6 +231,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the mean of the features.
+     *
      * @return The value of mean of the features.
      */
     public NumpyArray<Double> getTheta() {
@@ -230,6 +240,7 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the mean of the features.
+     *
      * @param theta New value to be stored.
      */
     public void setTheta(NumpyArray<Double> theta) {

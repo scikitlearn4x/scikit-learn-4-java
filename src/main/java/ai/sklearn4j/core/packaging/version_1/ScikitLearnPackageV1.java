@@ -44,6 +44,7 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
 
     /**
      * Gets a Map[String -> Object] of the extra values stored by the developer when saving the binary package.
+     *
      * @return A dictionary that contains the extra values stored along with the binary package file.
      */
     public Map<String, Object> getExtraValues() {
@@ -54,7 +55,6 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
      * Get the primary content stored in binary package file.
      *
      * @param index Index of the content to retrieve.
-     *
      * @return A scikit-learn object that can now be used in Java.
      */
     public Object getModel(int index) {
@@ -63,6 +63,7 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
 
     /**
      * Loads the binary package from a file.
+     *
      * @param path Path of file to be loaded.
      */
     @Override
@@ -77,6 +78,7 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
 
     /**
      * Loads the extra information that the developer added to the package file.
+     *
      * @param buffer The wrapper over the input file/stream.
      */
     private void loadFileExtraContent(BinaryModelPackage buffer) {
@@ -89,6 +91,7 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
 
     /**
      * Loads the primary content stored in binary package file.
+     *
      * @param buffer The wrapper over the input file/stream.
      */
     private void loadFilePrimaryContent(BinaryModelPackage buffer) {
@@ -101,6 +104,7 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
 
     /**
      * Loads the header into an ScikitLearnPackageHeaderV1 object.
+     *
      * @param buffer The wrapper over the input file/stream.
      */
     private void loadFileHeader(BinaryModelPackage buffer) {
@@ -113,6 +117,6 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
         header.scipyVersion = (String) headerValues.get("scipy_version");
         header.pythonInfo = (String) headerValues.get("python_info");
         header.platformInfo = (String) headerValues.get("platform_info");
-        header.serializerTypes = (String[])headerValues.get("serializer_types");
+        header.serializerTypes = (String[]) headerValues.get("serializer_types");
     }
 }

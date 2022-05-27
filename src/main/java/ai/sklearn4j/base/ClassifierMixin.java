@@ -18,11 +18,10 @@ public abstract class ClassifierMixin {
      * Return log-probability estimates for the test vector X.
      *
      * @param x array-like of shape (n_samples, n_features) The input samples.
-     *
      * @return array-like of shape (n_samples, n_classes)
-     *         Returns the log-probability of the samples for each class in
-     *         the model. The columns correspond to the classes in sorted
-     *         order, as they appear in the attribute :term:`classes_`.
+     * Returns the log-probability of the samples for each class in
+     * the model. The columns correspond to the classes in sorted
+     * order, as they appear in the attribute :term:`classes_`.
      */
     public abstract NumpyArray<Double> predictLogProbabilities(NumpyArray<Double> x);
 
@@ -30,11 +29,10 @@ public abstract class ClassifierMixin {
      * Return probability estimates for the test vector X.
      *
      * @param x array-like of shape (n_samples, n_features) The input samples.
-     *
      * @return array-like of shape (n_samples, n_classes)
-     *         Returns the probability of the samples for each class in
-     *         the model. The columns correspond to the classes in sorted
-     *         order, as they appear in the attribute :term:`classes_`.
+     * Returns the probability of the samples for each class in
+     * the model. The columns correspond to the classes in sorted
+     * order, as they appear in the attribute :term:`classes_`.
      */
     public abstract NumpyArray<Double> predictProbabilities(NumpyArray<Double> x);
 }

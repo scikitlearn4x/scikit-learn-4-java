@@ -146,9 +146,8 @@ public class TestNumpyArray {
     }
 
     @Test
-    public void testWrapSubArray()
-    {
-        int[][][] data = new int[][][] { { { 1, 2 }, { 3, 4 } } , { { 5, 6 }, { 7, 8 } }};
+    public void testWrapSubArray() {
+        int[][][] data = new int[][][]{{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}};
         NumpyArray<Integer> np = NumpyArrayFactory.from(data);
 
         NumpyArray<Integer> sub = np.wrapInnerSubsetArray(1);
