@@ -72,7 +72,7 @@ public final class Numpy {
     public static NumpyArray sum(NumpyArray array, int axis) {
         INumpyReduceAxisFunction function = null;
 
-        if (!array.isFloatingPoint() && array.numberOfBytes() == 1) {
+        if (!array.isFloatingPoint() && array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
             function = (values) -> {
                 byte result = 0;
 
@@ -82,7 +82,7 @@ public final class Numpy {
 
                 return result;
             };
-        } else if (!array.isFloatingPoint() && array.numberOfBytes() == 2) {
+        } else if (!array.isFloatingPoint() && array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
             function = (values) -> {
                 short result = 0;
 
@@ -92,7 +92,7 @@ public final class Numpy {
 
                 return result;
             };
-        } else if (!array.isFloatingPoint() && array.numberOfBytes() == 4) {
+        } else if (!array.isFloatingPoint() && array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
             function = (values) -> {
                 int result = 0;
 
@@ -103,7 +103,7 @@ public final class Numpy {
                 return result;
             };
 
-        } else if (!array.isFloatingPoint() && array.numberOfBytes() == 8) {
+        } else if (!array.isFloatingPoint() && array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
             function = (values) -> {
                 long result = 0;
 
@@ -114,7 +114,7 @@ public final class Numpy {
                 return result;
             };
 
-        } else if (array.isFloatingPoint() && array.numberOfBytes() == 4) {
+        } else if (array.isFloatingPoint() && array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
             function = (values) -> {
                 float result = 0;
 
@@ -124,7 +124,7 @@ public final class Numpy {
 
                 return result;
             };
-        } else if (array.isFloatingPoint() && array.numberOfBytes() == 8) {
+        } else if (array.isFloatingPoint() && array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
             function = (values) -> {
                 double result = 0;
 
@@ -155,7 +155,7 @@ public final class Numpy {
      * @return Output array, element-wise exponential of x.
      */
     public static NumpyArray<Double> exp(NumpyArray array) {
-        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, 8, array.getShape());
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, array.getShape());
 
         array.applyToEachElementAnsSaveToTarget(result, value -> Math.exp((double) value));
 
@@ -172,7 +172,7 @@ public final class Numpy {
      * @return Output array, element-wise log of x.
      */
     public static NumpyArray<Double> log(NumpyArray array) {
-        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, 8, array.getShape());
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, array.getShape());
 
         array.applyToEachElementAnsSaveToTarget(result, value -> Math.log((double) value));
 

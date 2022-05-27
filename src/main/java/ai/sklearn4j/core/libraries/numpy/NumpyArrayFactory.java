@@ -63,19 +63,19 @@ public class NumpyArrayFactory {
         NumpyArray result = null;
 
         if (isFloatingPoint) {
-            if (size == 8) {
+            if (size == NumpyArrayFactory.SIZE_OF_DOUBLE) {
                 result = NumpyArrayFactory.arrayOfDoubleWithShape(shape);
             } else {
                 result = NumpyArrayFactory.arrayOfFloatWithShape(shape);
             }
         } else {
-            if (size == 8) {
+            if (size == NumpyArrayFactory.SIZE_OF_INT_64) {
                 result = NumpyArrayFactory.arrayOfInt64WithShape(shape);
-            } else if (size == 4) {
+            } else if (size == NumpyArrayFactory.SIZE_OF_INT_32) {
                 result = NumpyArrayFactory.arrayOfInt32WithShape(shape);
-            } else if (size == 2) {
+            } else if (size == NumpyArrayFactory.SIZE_OF_INT_16) {
                 result = NumpyArrayFactory.arrayOfInt16WithShape(shape);
-            } else if (size == 1) {
+            } else if (size == NumpyArrayFactory.SIZE_OF_INT_8) {
                 result = NumpyArrayFactory.arrayOfInt8WithShape(shape);
             }
         }
