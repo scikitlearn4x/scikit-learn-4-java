@@ -1,9 +1,12 @@
 plugins {
     id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id 'signing'
 }
 
-group 'ai.sklearn4x'
-version '1.0-SNAPSHOT'
+group 'ai.scikitlearn4x' // update line 35 as well
+version '1.0-SNAPSHOT'  // update line 36 as well
 
 repositories {
     mavenCentral()
@@ -16,4 +19,63 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications{
+
+        mavenJava(MavenPublication){
+
+            groupId = 'ai.scikitlearn4x'
+            artifactId = 'sklearn4jvm'
+            version = '1.0-SNAPSHOT'
+            from components.java
+
+            pom {
+                name = 'scikit-learn 4 JVM'
+                description = 'scikit-learn 4 JVM is an open-source Java library that allows inference of scikit-learn models that were trained in Python in Java and other JVM based languages.'
+                url = 'https://github.com/scikitlearn4x/scikit-learn-4-jvm'
+                inceptionYear = '2022'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'http://www.opensource.org/licenses/mit-license.php'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'ma_yektaie'
+                        name = 'Mohammad Ali Yektaie'
+                        email = 'ma_yektaie@outlook.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git:github.com/scikitlearn4x/scikit-learn-4-jvm.git'
+                    developerConnection = 'scm:git:ssh://github.com/scikitlearn4x/scikit-learn-4-jvm.git'
+                    url = 'https://github.com/scikitlearn4x/scikit-learn-4-jvm'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = project.properties["ossrhUsername"]
+                password = project.properties["ossrhPassword"]
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
 }
