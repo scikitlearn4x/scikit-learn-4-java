@@ -43,7 +43,7 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
     }
 
     /**
-     * Gets a Map[String -> Object] of the extra values stored by the developer when saving the binary package.
+     * Gets a Map[String: Object] of the extra values stored by the developer when saving the binary package.
      *
      * @return A dictionary that contains the extra values stored along with the binary package file.
      */
