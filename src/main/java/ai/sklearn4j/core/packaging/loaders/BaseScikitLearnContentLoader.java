@@ -170,13 +170,42 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
     }
 }
 
+/**
+ * Data class to store the information on how to load a field.
+ */
 class LoaderFieldInfo {
+    /**
+     * Constant to specify the field is of type double.
+     */
     public static final int FIELD_TYPE_DOUBLE = 1;
+
+    /**
+     * Constant to specify the field is of type long.
+     */
     public static final int FIELD_TYPE_LONG = 2;
+
+    /**
+     * Constant to specify the field is of type numpy array.
+     */
     public static final int FIELD_TYPE_NUMPY = 3;
+
+    /**
+     * Constant to specify the field is of type string array.
+     */
     public static final int FIELD_TYPE_STRING_ARRAY = 4;
 
+    /**
+     * The name of the field.
+     */
     public String name = null;
+
+    /**
+     * The type of the field.
+     */
     public int fieldType = 0;
+
+    /**
+     * The setting method that sets the loaded value in the classifier.
+     */
     public Object setter = null;
 }

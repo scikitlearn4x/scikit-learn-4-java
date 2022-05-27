@@ -22,6 +22,12 @@ public abstract class BaseNaiveBayes extends ClassifierMixin {
      */
     protected abstract NumpyArray<Double> jointLogLikelihood(NumpyArray<Double> x);
 
+    /**
+     * Perform classification on an array of test vectors X.
+     *
+     * @param x Array-like of shape (n_samples, n_features) The input samples.
+     * @return NumpyArray of shape (n_samples,) Predicted target values for X.
+     */
     public NumpyArray<Long> predict(NumpyArray<Double> x) {
         NumpyArray<Double> jll = jointLogLikelihood(x);
         return Numpy.argmax(jll, 1);

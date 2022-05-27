@@ -17,25 +17,96 @@ import java.util.Map;
  * languages.
  */
 public class BinaryModelPackage {
+    /**
+     * Constant value to denote the element is of type byte.
+     */
     private static final int ELEMENT_TYPE_BYTE = 0x01;
+
+    /**
+     * Constant value to denote the element is of type short.
+     */
     private static final int ELEMENT_TYPE_SHORT = 0x02;
+
+    /**
+     * Constant value to denote the element is of type int.
+     */
     private static final int ELEMENT_TYPE_INT = 0x04;
+
+    /**
+     * Constant value to denote the element is of type long.
+     */
     private static final int ELEMENT_TYPE_LONG = 0x08;
+
+    /**
+     * Constant value to denote the element is of type unsigned byte.
+     */
     private static final int ELEMENT_TYPE_UNSIGNED_BYTE = 0x11;
+
+    /**
+     * Constant value to denote the element is of type unsigned short.
+     */
     private static final int ELEMENT_TYPE_UNSIGNED_SHORT = 0x12;
+
+    /**
+     * Constant value to denote the element is of type unsigned int.
+     */
     private static final int ELEMENT_TYPE_UNSIGNED_INT = 0x14;
+
+    /**
+     * Constant value to denote the element is of type unsigned long.
+     */
     private static final int ELEMENT_TYPE_UNSIGNED_LONG = 0x18;
+
+    /**
+     * Constant value to denote the element is of type float.
+     */
     private static final int ELEMENT_TYPE_FLOAT = 0x20;
+
+    /**
+     * Constant value to denote the element is of type double.
+     */
     private static final int ELEMENT_TYPE_DOUBLE = 0x21;
+
+    /**
+     * Constant value to denote the element is of type string.
+     */
     private static final int ELEMENT_TYPE_STRING = 0x30;
+
+    /**
+     * Constant value to denote the element is of type list.
+     */
     private static final int ELEMENT_TYPE_LIST = 0x40;
+
+    /**
+     * Constant value to denote the element is of type dictionary.
+     */
     private static final int ELEMENT_TYPE_DICTIONARY = 0x41;
+
+    /**
+     * Constant value to denote the element is of type numpy array.
+     */
     private static final int ELEMENT_TYPE_NUMPY_ARRAY = 0x42;
+
+    /**
+     * Constant value to denote the element is of type string array.
+     */
     private static final int ELEMENT_TYPE_STRING_ARRAY = 0x43;
+
+    /**
+     * Constant value to denote the element is null.
+     */
     private static final int ELEMENT_TYPE_NULL = 0x10;
 
+    /**
+     * The input stream from which the buffer is loading.
+     */
     private final InputStream stream;
 
+    /**
+     * Instantiate a new BinaryModelPackage object.
+     *
+     * @param stream The input stream from which the buffer is loading.
+     */
     private BinaryModelPackage(InputStream stream) {
         this.stream = stream;
     }
@@ -419,6 +490,11 @@ public class BinaryModelPackage {
         return buffer;
     }
 
+    /**
+     * Checks if there is still available content in the input stream.
+     *
+     * @return A boolean indicating if the stream still has content or not.
+     */
     public boolean canRead() {
         try {
             return stream.available() > 0;
@@ -428,6 +504,14 @@ public class BinaryModelPackage {
     }
 }
 
+/**
+ * An abstraction on the methods that can read a primitive value from the stream.
+ */
 interface IBinaryModelPackagePrimitiveValueReader {
+    /**
+     * Reads a primitive value from the stream.
+     *
+     * @return The primitive value read from stream.
+     */
     Object readPrimitiveValue();
 }

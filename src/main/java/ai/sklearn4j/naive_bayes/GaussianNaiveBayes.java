@@ -59,7 +59,6 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
      * Dimension: (n_classes, n_features)
      */
     private NumpyArray<Double> theta = null;
-    private double varSmoothing = 1e-9;
 
     /**
      * Compute the unnormalized posterior log probability of X.
@@ -109,75 +108,131 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
         return NumpyArrayFactory.from(jointLogLikelihood);
     }
 
+    /**
+     * Gets the class counts.
+     * @return The value of class counts.
+     */
     public NumpyArray<Double> getClassCounts() {
         return classCounts;
     }
 
+    /**
+     * Sets the class counts.
+     * @param classCounts New value to be stored.
+     */
     public void setClassCounts(NumpyArray<Double> classCounts) {
         this.classCounts = classCounts;
     }
 
+    /**
+     * Gets the class priors.
+     * @return The value of class priors.
+     */
     public NumpyArray<Double> getClassPriors() {
         return classPriors;
     }
 
+    /**
+     * Sets the class priors.
+     * @param classPriors New value to be stored.
+     */
     public void setClassPriors(NumpyArray<Double> classPriors) {
         this.classPriors = classPriors;
     }
 
+    /**
+     * Gets the classes.
+     * @return The value of classes.
+     */
     public NumpyArray<Long> getClasses() {
         return classes;
     }
 
+    /**
+     * Sets the classes.
+     * @param classes New value to be stored.
+     */
     public void setClasses(NumpyArray<Long> classes) {
         this.classes = classes;
     }
 
+    /**
+     * Gets the priors.
+     * @return The value of priors.
+     */
     public NumpyArray<Double> getPriors() {
         return priors;
     }
 
+    /**
+     * Sets the priors.
+     * @param priors New value to be stored.
+     */
     public void setPriors(NumpyArray<Double> priors) {
         this.priors = priors;
     }
 
+    /**
+     * Gets the feature names.
+     * @return The value of feature names.
+     */
     public String[] getFeatureNamesIn() {
         return featureNamesIn;
     }
 
+    /**
+     * Sets the feature names.
+     * @param featureNamesIn New value to be stored.
+     */
     public void setFeatureNamesIn(String[] featureNamesIn) {
         this.featureNamesIn = featureNamesIn;
     }
 
+    /**
+     * Gets the number of features.
+     * @return The value of number of features.
+     */
     public int getNumberOfFeatures() {
         return numberOfFeatures;
     }
 
+    /**
+     * Sets the number of features.
+     * @param numberOfFeatures New value to be stored.
+     */
     public void setNumberOfFeatures(int numberOfFeatures) {
         this.numberOfFeatures = numberOfFeatures;
     }
 
+    /**
+     * Gets the variance of the features.
+     * @return The value of variance of the features.
+     */
     public NumpyArray<Double> getSigma() {
         return sigma;
     }
 
+    /**
+     * Sets the variance of the features.
+     * @param sigma New value to be stored.
+     */
     public void setSigma(NumpyArray<Double> sigma) {
         this.sigma = sigma;
     }
 
+    /**
+     * Gets the mean of the features.
+     * @return The value of mean of the features.
+     */
     public NumpyArray<Double> getTheta() {
         return theta;
     }
 
+    /**
+     * Sets the mean of the features.
+     * @param theta New value to be stored.
+     */
     public void setTheta(NumpyArray<Double> theta) {
         this.theta = theta;
-    }
-
-    public double getVarSmoothing() {
-        return varSmoothing;
-    }
-
-    public void setVarSmoothing(double varSmoothing) {
-        this.varSmoothing = varSmoothing;
     }
 }

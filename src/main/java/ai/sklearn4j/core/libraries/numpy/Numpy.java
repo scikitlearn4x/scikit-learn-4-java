@@ -3,7 +3,19 @@ package ai.sklearn4j.core.libraries.numpy;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Implementation of the Numpy library APIs.
+ */
 public final class Numpy {
+    /**
+     * Returns the indices of the maximum values along an axis.
+     * See: https://numpy.org/doc/stable/reference/generated/numpy.argmax.html
+     *
+     * @param array The input multidimensional array.
+     * @param axis The axis which the argmax should reduce to.
+     *
+     * @return Array of indices into the array. It has the same shape as a.shape with the dimension along axis removed.
+     */
     public static <Type> NumpyArray<Long> argmax(NumpyArray<Type> array, int axis) {
         NumpyArrayOperationWithAxisReduction<Type, Long> operation = new NumpyArrayOperationWithAxisReduction<>() {
             @Override
@@ -31,6 +43,15 @@ public final class Numpy {
         return operation.apply(array, axis);
     }
 
+    /**
+     * Performs an element-wise power operation on a given NumpyArray.
+     * See: https://numpy.org/doc/stable/reference/generated/numpy.power.html
+     *
+     * @param array Input array.
+     * @param power The value of the power.
+     *
+     * @return An array with same dimension with the requested power calculation.
+     */
     public static NumpyArray<Double> pow(NumpyArray array, double power) {
         NumpyArray<Double> result = NumpyArrayFactory.arrayOfDoubleWithShape(array.getShape());
 
@@ -39,6 +60,15 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Sums the values of a NumpyArray along a specified axis.
+     * See: https://numpy.org/doc/stable/reference/generated/numpy.sum.html
+     *
+     * @param array Input array.
+     * @param axis Axis along which a sum is performed.
+     *
+     * @return An array with the same shape as a, with the specified axis removed.
+     */
     public static NumpyArray sum(NumpyArray array, int axis) {
         INumpyReduceAxisFunction function = null;
 
@@ -217,6 +247,14 @@ public final class Numpy {
         }
     }
 
+    /**
+     * Subtract two numpy arrays.
+     *
+     * @param a1 Left-hand side of the expression.
+     * @param a2 Right-hand side of the expression.
+     *
+     * @return The subtraction result.
+     */
     public static NumpyArray subtract(NumpyArray a1, NumpyArray a2) {
         INumpyArrayElementOperation negate = null;
         if (a2.isFloatingPoint()) {
@@ -245,6 +283,14 @@ public final class Numpy {
         return add(a1, negA2);
     }
 
+    /**
+     * Adds two numpy arrays.
+     *
+     * @param a1 Left-hand side of the expression.
+     * @param a2 Right-hand side of the expression.
+     *
+     * @return The addition result.
+     */
     public static NumpyArray add(NumpyArray a1, NumpyArray a2) {
         validateDimensionsForAdd(a1.getShape(), a2.getShape());
         if (shouldSwapForAdd(a1, a2)) {
@@ -266,6 +312,14 @@ public final class Numpy {
     }
 
 
+    /**
+     * Adds a double value to numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The addition result.
+     */
     public static NumpyArray<Double> add(NumpyArray array, double value) {
         NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, array.getShape());
         addInPlace(result, array, value);
@@ -273,10 +327,26 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Subtract a double value from numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The subtraction result.
+     */
     public static NumpyArray<Double> subtract(NumpyArray array, double value) {
         return add(array, -value);
     }
 
+    /**
+     * Adds a float value to numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The addition result.
+     */
     public static NumpyArray<Float> add(NumpyArray array, float value) {
         NumpyArray<Float> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_FLOAT, array.getShape());
         addInPlace(result, array, value);
@@ -284,10 +354,26 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Subtract a float value from numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The subtraction result.
+     */
     public static NumpyArray<Float> subtract(NumpyArray array, float value) {
         return add(array, -value);
     }
 
+    /**
+     * Adds a byte value to numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The addition result.
+     */
     public static NumpyArray add(NumpyArray array, byte value) {
         NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_8, array.getShape());
         addInPlace(result, array, value);
@@ -295,10 +381,26 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Subtract a byte value from numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The subtraction result.
+     */
     public static NumpyArray subtract(NumpyArray array, byte value) {
         return add(array, (byte) -value);
     }
 
+    /**
+     * Adds a short value to numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The addition result.
+     */
     public static NumpyArray add(NumpyArray array, short value) {
         NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_16, array.getShape());
         addInPlace(result, array, value);
@@ -306,10 +408,26 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Subtract a short value from numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The subtraction result.
+     */
     public static NumpyArray subtract(NumpyArray array, short value) {
         return add(array, (short) -value);
     }
 
+    /**
+     * Adds a int value to numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The addition result.
+     */
     public static NumpyArray add(NumpyArray array, int value) {
         NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_32, array.getShape());
         addInPlace(result, array, value);
@@ -317,10 +435,26 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Subtract a int value from numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The subtraction result.
+     */
     public static NumpyArray subtract(NumpyArray array, int value) {
         return add(array, -value);
     }
 
+    /**
+     * Adds a long value to numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The addition result.
+     */
     public static NumpyArray add(NumpyArray array, long value) {
         NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_64, array.getShape());
         addInPlace(result, array, value);
@@ -328,10 +462,26 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Subtract a long value from numpy arrays.
+     *
+     * @param array Left-hand side of the expression.
+     * @param value Right-hand side of the expression.
+     *
+     * @return The subtraction result.
+     */
     public static NumpyArray subtract(NumpyArray array, long value) {
         return add(array, -value);
     }
 
+    /**
+     * Adds two numpy array and stores the result into a target array.
+     *
+     * @param target The target array that stores the results.
+     * @param a1 The left-hand side of the expression.
+     * @param a2 The right-hand side of the expression.
+     * @param sign A sign value to multiply by the right-hand side. The value of this parameter is either 1 or -1. The -1 is used to implement subtraction.
+     */
     private static void addInPlace(NumpyArray target, NumpyArray a1, NumpyArray a2, byte sign) {
         if (a2.isSingleValueArray()) {
             Object singleValue = a2.getSingleValue();
@@ -388,30 +538,74 @@ public final class Numpy {
         }
     }
 
+    /**
+     * Adds a double value to a numpy array.
+     * @param target The array that stores the calculation.
+     * @param array The left-hand side of the expression.
+     * @param value The value to be added.
+     */
     private static void addInPlace(NumpyArray target, NumpyArray array, double value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (double) element);
     }
 
+    /**
+     * Adds a float value to a numpy array.
+     * @param target The array that stores the calculation.
+     * @param array The left-hand side of the expression.
+     * @param value The value to be added.
+     */
     private static void addInPlace(NumpyArray target, NumpyArray array, float value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (float) element);
     }
 
+    /**
+     * Adds a long value to a numpy array.
+     * @param target The array that stores the calculation.
+     * @param array The left-hand side of the expression.
+     * @param value The value to be added.
+     */
     private static void addInPlace(NumpyArray target, NumpyArray array, long value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (long) element);
     }
 
+    /**
+     * Adds a int value to a numpy array.
+     * @param target The array that stores the calculation.
+     * @param array The left-hand side of the expression.
+     * @param value The value to be added.
+     */
     private static void addInPlace(NumpyArray target, NumpyArray array, int value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (int) element);
     }
 
+    /**
+     * Adds a short value to a numpy array.
+     * @param target The array that stores the calculation.
+     * @param array The left-hand side of the expression.
+     * @param value The value to be added.
+     */
     private static void addInPlace(NumpyArray target, NumpyArray array, short value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (short) element);
     }
 
+    /**
+     * Adds a byte value to a numpy array.
+     * @param target The array that stores the calculation.
+     * @param array The left-hand side of the expression.
+     * @param value The value to be added.
+     */
     private static void addInPlace(NumpyArray target, NumpyArray array, byte value) {
         array.applyToEachElementAnsSaveToTarget(target, element -> value + (byte) element);
     }
 
+    /**
+     * Multiplies a numpy array by a double value. The operation is element-wise.
+     *
+     * @param array The input array to be multiplied.
+     * @param factor The value to be multiplied with.
+     *
+     * @return A numpy array of the calculation result.
+     */
     public static NumpyArray<Double> multiply(NumpyArray<Double> array, double factor) {
         NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
 
@@ -420,6 +614,14 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Multiplies a numpy array by a float value. The operation is element-wise.
+     *
+     * @param array The input array to be multiplied.
+     * @param factor The value to be multiplied with.
+     *
+     * @return A numpy array of the calculation result.
+     */
     public static NumpyArray<Float> multiply(NumpyArray<Float> array, float factor) {
         NumpyArray<Float> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
 
@@ -428,14 +630,37 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Divides a numpy array by a double value. The operation is element-wise.
+     *
+     * @param array The input array to be divided.
+     * @param factor The value to be divided by.
+     *
+     * @return A numpy array of the calculation result.
+     */
     public static NumpyArray<Double> divide(NumpyArray<Double> array, double factor) {
         return multiply(array, 1.0 / factor);
     }
 
+    /**
+     * Divides a numpy array by a float value. The operation is element-wise.
+     *
+     * @param array The input array to be divided.
+     * @param factor The value to be divided by.
+     *
+     * @return A numpy array of the calculation result.
+     */
     public static NumpyArray<Float> divide(NumpyArray<Float> array, float factor) {
         return multiply(array, 1.0f / factor);
     }
 
+    /**
+     * Wraps an atomic double value into a 2 dimensional array.
+     *
+     * @param value The value to be wrapped into an array.
+     *
+     * @return A two dimensional array that wraps the given value.
+     */
     public static NumpyArray<Double> atLeast2D(double value) {
         NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, new int[]{1, 1});
         result.set(value, 0, 0);
@@ -443,6 +668,13 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Wraps an atomic float value into a 2 dimensional array.
+     *
+     * @param value The value to be wrapped into an array.
+     *
+     * @return A two dimensional array that wraps the given value.
+     */
     public static NumpyArray<Float> atLeast2D(float value) {
         NumpyArray<Float> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_FLOAT, new int[]{1, 1});
         result.set(value, 0, 0);
@@ -450,6 +682,13 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Wraps an atomic long value into a 2 dimensional array.
+     *
+     * @param value The value to be wrapped into an array.
+     *
+     * @return A two dimensional array that wraps the given value.
+     */
     public static NumpyArray<Long> atLeast2D(long value) {
         NumpyArray<Long> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_64, new int[]{1, 1});
         result.set(value, 0, 0);
@@ -457,6 +696,13 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Wraps an atomic int value into a 2 dimensional array.
+     *
+     * @param value The value to be wrapped into an array.
+     *
+     * @return A two dimensional array that wraps the given value.
+     */
     public static NumpyArray<Integer> atLeast2D(int value) {
         NumpyArray<Integer> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_32, new int[]{1, 1});
         result.set(value, 0, 0);
@@ -464,6 +710,13 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Wraps an atomic short value into a 2 dimensional array.
+     *
+     * @param value The value to be wrapped into an array.
+     *
+     * @return A two dimensional array that wraps the given value.
+     */
     public static NumpyArray<Short> atLeast2D(short value) {
         NumpyArray<Short> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_16, new int[]{1, 1});
         result.set(value, 0, 0);
@@ -471,6 +724,13 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Wraps an atomic byte value into a 2 dimensional array.
+     *
+     * @param value The value to be wrapped into an array.
+     *
+     * @return A two dimensional array that wraps the given value.
+     */
     public static NumpyArray<Byte> atLeast2D(byte value) {
         NumpyArray<Byte> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(false, NumpyArrayFactory.SIZE_OF_INT_8, new int[]{1, 1});
         result.set(value, 0, 0);
@@ -478,6 +738,13 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Wraps a numpy array into a 2 dimensional array if the number dimensions is less than 2.
+     *
+     * @param array The array to be wrapped into a 2 dimensional array.
+     *
+     * @return A two dimensional array that wraps the given value.
+     */
     public static <Type> NumpyArray<Type> atLeast2D(NumpyArray<Type> array) {
         // https://github.com/numpy/numpy/blob/v1.22.0/numpy/core/shape_base.py#L81-L132
         NumpyArray<Type> result = null;
