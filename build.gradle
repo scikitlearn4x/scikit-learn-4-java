@@ -18,7 +18,7 @@ plugins {
 sourceCompatibility = 11
 targetCompatibility = 11
 
-def library_version = '0.0.0.2'
+def library_version = '0.0.0.5'
 def library_group_id = 'ai.scikitlearn4x'
 def library_artifact_id = 'sklearn4jvm'
 
@@ -50,6 +50,7 @@ signing {
 publishing {
     repositories {
         maven {
+            name = "MavenCentral"
             url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
                 username = project.properties["ossrhUsername"]
@@ -91,60 +92,6 @@ publishing {
         }
     }
 }
-
-//publishing {
-//    publications{
-//
-//        mavenJava(MavenPublication){
-//
-//            groupId = library_group_id
-//            artifactId = library_artifact_id
-//            version = library_version
-//            from components.java
-//
-//            pom {
-//                name = 'scikit-learn 4 JVM'
-//                description = 'scikit-learn 4 JVM is an open-source Java library that allows inference of scikit-learn models that were trained in Python in Java and other JVM based languages.'
-//                url = 'https://github.com/scikitlearn4x/scikit-learn-4-jvm'
-//                inceptionYear = '2022'
-//
-//                licenses {
-//                    license {
-//                        name = 'MIT License'
-//                        url = 'http://www.opensource.org/licenses/mit-license.php'
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        id = 'ma_yektaie'
-//                        name = 'Mohammad Ali Yektaie'
-//                        email = 'ma_yektaie@outlook.com'
-//                    }
-//                }
-//                scm {
-//                    connection = 'scm:git:git:github.com/scikitlearn4x/scikit-learn-4-jvm.git'
-//                    developerConnection = 'scm:git:ssh://github.com/scikitlearn4x/scikit-learn-4-jvm.git'
-//                    url = 'https://github.com/scikitlearn4x/scikit-learn-4-jvm'
-//                }
-//            }
-//        }
-//    }
-//
-//    repositories {
-//        maven {
-//            name = "OSSRH"
-//            url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-//            credentials {
-//                username = project.properties["ossrhUsername"]
-//                password = project.properties["ossrhPassword"]
-//            }
-//        }
-//    }
-//}
-//
-//signing {
-//    sign publishing.publications.mavenJava
-//}
 
 javadoc {
     if(JavaVersion.current().isJava9Compatible()) {
