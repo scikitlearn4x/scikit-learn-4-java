@@ -1,5 +1,6 @@
 package ai.sklearn4j.core.packaging.loaders;
 
+import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.packaging.loaders.classifiers.naive_bayes.GaussianNaiveBayesContentLoader;
 
 import java.util.HashMap;
@@ -44,6 +45,6 @@ public class ScikitLearnContentLoaderFactory {
             return registeredLoaders.get(type);
         }
 
-        throw new RuntimeException(String.format("The loader type '%s' is not supported.", type));
+        throw new ScikitLearnCoreException(String.format("The loader type '%s' is not supported.", type));
     }
 }

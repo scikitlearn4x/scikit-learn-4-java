@@ -1,5 +1,6 @@
 package ai.sklearn4j.core.packaging;
 
+import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 
@@ -128,7 +129,7 @@ public class BinaryModelPackage {
 
             return result;
         } catch (IOException ex) {
-            throw new RuntimeException(ex);
+            throw new ScikitLearnCoreException("An error occurred while loading a package from file:\n" + ex.getMessage());
         }
     }
 
@@ -316,7 +317,7 @@ public class BinaryModelPackage {
         } else if (elementType == ELEMENT_TYPE_DOUBLE) {
             result = NumpyArrayFactory.arrayOfDoubleWithShape(shape);
         } else {
-            throw new RuntimeException(String.format("Numpy array with element type %d is not supported.", elementType));
+            throw new ScikitLearnCoreException(String.format("Numpy array with element type %d is not supported.", elementType));
         }
 
         return result;
@@ -460,7 +461,7 @@ public class BinaryModelPackage {
         } else if (elementType == ELEMENT_TYPE_LIST) {
             result = this::readList;
         } else {
-            throw new RuntimeException(String.format("Numpy array with element type %d is not supported.", elementType));
+            throw new ScikitLearnCoreException(String.format("Numpy array with element type %d is not supported.", elementType));
         }
 
         return result;
@@ -480,11 +481,11 @@ public class BinaryModelPackage {
         try {
             length = stream.read(buffer);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new ScikitLearnCoreException("Unable to read from buffer.");
         }
 
         if (length != size) {
-            throw new RuntimeException(String.format("Unable to read %d bytes from the stream.", size));
+            throw new ScikitLearnCoreException(String.format("Unable to read %d bytes from the stream.", size));
         }
 
         return buffer;
@@ -499,7 +500,7 @@ public class BinaryModelPackage {
         try {
             return stream.available() > 0;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new ScikitLearnCoreException("An error occurred while assessing if the stream reached end or not:\n" + e.getMessage());
         }
     }
 }

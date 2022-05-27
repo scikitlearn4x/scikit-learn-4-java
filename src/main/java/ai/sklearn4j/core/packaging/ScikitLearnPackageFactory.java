@@ -1,5 +1,6 @@
 package ai.sklearn4j.core.packaging;
 
+import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.packaging.version_1.ScikitLearnPackageV1;
 
 import java.io.FileInputStream;
@@ -26,7 +27,7 @@ public class ScikitLearnPackageFactory {
             pkg = new ScikitLearnPackageV1();
             pkg.loadFromFile(path);
         } else {
-            throw new RuntimeException("This version of the file format is not supported.");
+            throw new ScikitLearnCoreException("This version of the file format is not supported.");
         }
 
         return pkg;
@@ -48,7 +49,7 @@ public class ScikitLearnPackageFactory {
             fs.close();
             return result;
         } catch (Exception ex) {
-            throw new RuntimeException(ex);
+            throw new ScikitLearnCoreException("An error occurred while determining the version of binary package file."  + ex.getMessage());
         }
     }
 

@@ -1,5 +1,6 @@
 package ai.sklearn4j.core.packaging.loaders;
 
+import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.BinaryModelPackage;
 
@@ -74,7 +75,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
         for (int i = 0; i < fieldCount; i++) {
             String name = buffer.readString();
             if (!fields.containsKey(name)) {
-                throw new RuntimeException("Package contains an unregistered field name: " + name);
+                throw new ScikitLearnCoreException("Package contains an unregistered field name: " + name);
             }
 
             LoaderFieldInfo info = fields.get(name);
@@ -104,7 +105,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     protected void registerDoubleField(String name, IScikitLearnLoaderDoubleFieldSetter<ObjectType> setter) {
         if (fields.containsKey(name)) {
-            throw new RuntimeException("Field is already added");
+            throw new ScikitLearnCoreException("Field is already added");
         }
 
         LoaderFieldInfo field = new LoaderFieldInfo();
@@ -122,7 +123,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     protected void registerLongField(String name, IScikitLearnLoaderLongFieldSetter<ObjectType> setter) {
         if (fields.containsKey(name)) {
-            throw new RuntimeException("Field is already added");
+            throw new ScikitLearnCoreException("Field is already added");
         }
 
         LoaderFieldInfo field = new LoaderFieldInfo();
@@ -140,7 +141,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     protected void registerNumpyArrayField(String name, IScikitLearnLoaderNumpyArrayFieldSetter<ObjectType> setter) {
         if (fields.containsKey(name)) {
-            throw new RuntimeException("Field is already added");
+            throw new ScikitLearnCoreException("Field is already added");
         }
 
         LoaderFieldInfo field = new LoaderFieldInfo();
@@ -158,7 +159,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     protected void registerStringArrayField(String name, IScikitLearnLoaderStringArrayFieldSetter<ObjectType> setter) {
         if (fields.containsKey(name)) {
-            throw new RuntimeException("Field is already added");
+            throw new ScikitLearnCoreException("Field is already added");
         }
 
         LoaderFieldInfo field = new LoaderFieldInfo();
