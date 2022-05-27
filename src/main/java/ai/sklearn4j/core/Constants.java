@@ -1,7 +1,7 @@
 package ai.sklearn4j.core;
 
 /**
- * Constants related to calculations for Classifiers & Regressors
+ * Constants related to calculations for Classifiers and Regressors
  */
 public class Constants {
     /**

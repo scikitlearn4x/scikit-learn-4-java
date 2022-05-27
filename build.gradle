@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'ai.scikitlearn4x' // update line 35 as well
-version '1.0-SNAPSHOT'  // update line 36 as well
+version '0.0.0.3'  // update line 36 as well
 
 repositories {
     mavenCentral()
@@ -33,7 +33,7 @@ publishing {
 
             groupId = 'ai.scikitlearn4x'
             artifactId = 'sklearn4jvm'
-            version = '1.0-SNAPSHOT'
+            version = '0.0.0.3'
             from components.java
 
             pom {
@@ -67,7 +67,7 @@ publishing {
     repositories {
         maven {
             name = "OSSRH"
-            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
             credentials {
                 username = project.properties["ossrhUsername"]
                 password = project.properties["ossrhPassword"]
@@ -78,4 +78,10 @@ publishing {
 
 signing {
     sign publishing.publications.mavenJava
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
 }
