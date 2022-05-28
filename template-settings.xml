@@ -1,0 +1,27 @@
+<!--
+===================================================================================================================
+This file should be copied into ~/.m2/
+===================================================================================================================
+-->
+<settings>
+    <servers>
+        <server>
+            <id>ossrh</id>
+            <username>ma_yektaie</username>
+            <password>****</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>ossrh</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+                <gpg.keyname>****</gpg.keyname>
+                <gpg.passphrase>****</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+</settings>
