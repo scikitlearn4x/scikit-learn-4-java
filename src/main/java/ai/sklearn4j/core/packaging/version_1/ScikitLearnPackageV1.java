@@ -22,9 +22,9 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
     private ScikitLearnPackageHeaderV1 header = null;
 
     /**
-     * List of the scikit-learn objects of the binary package file.
+     * Map of the scikit-learn objects of the binary package file.
      */
-    private List<Object> primaryContent = null;
+    private Map<String, Object> primaryContent = null;
 
     /**
      * Extra information that the developer added to the package file.
@@ -54,11 +54,11 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
     /**
      * Get the primary content stored in binary package file.
      *
-     * @param index Index of the content to retrieve.
+     * @param name Name of the content to retrieve.
      * @return A scikit-learn object that can now be used in Java.
      */
-    public Object getModel(int index) {
-        return primaryContent.get(index);
+    public Object getModel(String name) {
+        return primaryContent.get(name);
     }
 
     /**
@@ -95,10 +95,11 @@ public class ScikitLearnPackageV1 implements IScikitLearnPackage {
      * @param buffer The wrapper over the input file/stream.
      */
     private void loadFilePrimaryContent(BinaryModelPackage buffer) {
-        primaryContent = new ArrayList<>();
+        primaryContent = new HashMap<>();
         for (String serializerType : header.serializerTypes) {
             IScikitLearnContentLoader loader = ScikitLearnContentLoaderFactory.loaderForType(serializerType);
-            primaryContent.add(loader.loadContent(buffer));
+            String name = buffer.readString();
+            primaryContent.put(name, loader.loadContent(buffer));
         }
     }
 

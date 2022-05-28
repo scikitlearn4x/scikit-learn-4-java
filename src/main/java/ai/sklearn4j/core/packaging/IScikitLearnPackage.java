@@ -27,10 +27,10 @@ public interface IScikitLearnPackage {
     /**
      * Get the primary content stored in binary package file.
      *
-     * @param index Index of the content to retrieve.
+     * @param name Name of the content to retrieve.
      * @return A scikit-learn object that can now be used in Java.
      */
-    Object getModel(int index);
+    Object getModel(String name);
 
     /**
      * Loads the binary package from a file.
