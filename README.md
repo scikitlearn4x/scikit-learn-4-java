@@ -1,6 +1,6 @@
 Working with Python and the Machine Learning and Data Science ecosystem is fun, but
 when it comes to deployment, you may not want to have to use Python. The goal of this
-repository is to address this need; you can experiment and train models in the rich
+repository (and its siblings) is to address this need; you can experiment and train models in the rich
 Python ecosystem, but deploy your models in other languages and platforms.
 **scikit-learn4x** is a free an open source library that allows you to deploy
 scikit-learn model in other programming languages. As such, the training codes are not
@@ -13,9 +13,12 @@ languages.
 
 ### Important Links
 
-scikit-learn4x: https://scikitlearn4x.ai
 scikit-learn4x Python Library: https://github.com/scikitlearn4x/scikit-learn-4x-python-lib
+This is the library that serializes the models into a format that this repository understands.
+
 scikit-learn 4 .NET Repository: https://github.com/scikitlearn4x/scikit-learn-4-net
+Very similar to this repository, scikit-learn-4-net provide the same functionality for .NET
+based languages.
 
 ## Example Usage
 
@@ -55,7 +58,7 @@ print(f'First data point probabilities: {prediction_probabilities[0, 0]:.3f}, {p
 print(f'First data point log probabilities: {prediction_log_probabilities[0, 0]:.3f}, {prediction_log_probabilities[0, 1]:.3f}')
 
 
-save_scikit_learn_model(classifier, '/some/path/on/disk.skx', test_data)
+save_scikit_learn_model({'classifier_to_deploy_in_java': classifier}, '/some/path/on/disk.skx', test_data)
 
 # You should see the following outputs:
 #
@@ -71,7 +74,7 @@ String path = "/same/path/on/disk.skx";
 IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
 // Check actual computed values
-GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel(0);
+GaussianNaiveBayes classifier = (GaussianNaiveBayes)binaryPackage.getModel("classifier_to_deploy_in_java");
 
 NumpyArray<Double> x = (NumpyArray<Double>)binaryPackage.getExtraValues().get("training_data");
 
