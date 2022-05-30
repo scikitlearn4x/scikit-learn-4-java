@@ -1,3 +1,5 @@
+![Maven Central](https://img.shields.io/maven-central/v/ai.scikitlearn4x/sklearn4jvm)
+
 Working with Python and the Machine Learning and Data Science ecosystem is fun, but
 when it comes to deployment, you may not want to have to use Python. The goal of this
 repository (and its siblings) is to address this need; you can experiment and train models in the rich
@@ -127,19 +129,36 @@ The regressors are not supported yet.
 
 ## Installation
 
-To be completed
+scikit-learn for JVM is available as a Gradle or Maven package. Simply use the following
+package information to add it as a dependency to your project.
 
-## Development
+**Gradle**
+```
+dependencies {
+    // Change the version the latest available
+    implementation 'ai.scikitlearn4x:sklearn4jvm:0.0.0.8'
+}
+```
 
-To be completed
-
-## Performance
-
-To be completed
+**Maven**
+```
+<dependency>
+  <groupId>ai.scikitlearn4x</groupId>
+  <artifactId>sklearn4jvm</artifactId>
+  <!-- Change the version the latest available -->
+  <version>0.0.0.8</version>
+</dependency>
+```
 
 ## Project Raison d'Être
 
-To be completed
+I have been a softwar enegineer for the better part of the last two decades. C# and 
+Java has always been my favorite languages. Then, I started working with machine 
+learning and I got stucked with Python from the design to deployment. In some cases,
+I was looking for real time performance or I just didn't have access to an HTTP server
+that will host my trained models. At some point, I just decided to remove this limitation 
+and implement the inference in my preferred language once and for all. The result of this
+effort is this repository and its siblings. I hope it will be useful :) 
 
 ## Credits
 
