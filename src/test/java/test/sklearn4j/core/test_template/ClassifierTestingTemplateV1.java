@@ -19,7 +19,8 @@ public class ClassifierTestingTemplateV1 {
     public String[] featureNames = null;
 
     public void test() {
-        String path = TestHelper.getAbsolutePathOfBinaryPackage("1.0/3.8/gaussian_naive_bayes_base_case_including_feature_name_on_iris.skx");
+        String path = String.format("%s/%s/%s_%s.skx", scikitLearnVersion, pythonVersion, classifierName, classifierConfigurationName);
+        path = TestHelper.getAbsolutePathOfBinaryPackage(path);
         IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
         validateHeaderValues(binaryPackage);
