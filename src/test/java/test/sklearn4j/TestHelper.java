@@ -194,7 +194,7 @@ public class TestHelper {
     }
 
     public static String getAbsolutePathOfBinaryPackage(String path) {
-        return "/Users/yektaie/Desktop/unit_tests/binaries/" + path;
+        return "/Users/yektaie/Documents/Unit Test Generation/binaries/" + path;
     }
 
     public static void assertEqualPredictions(NumpyArray<Long> predictions, long[] rawArray) {
