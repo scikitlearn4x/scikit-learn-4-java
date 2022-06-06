@@ -4,6 +4,7 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import org.junit.jupiter.api.Assertions;
 
 public class TestHelper {
+    public static final String TEST_FILES_HOME = "/Volumes/Files/Projects/scikit-learn4x/Test Files";
 
     public static final double DOUBLE_COMPARE_EPSILON = 0.0000001;
 
@@ -191,10 +192,6 @@ public class TestHelper {
 
             Assertions.assertTrue(check);
         }
-    }
-
-    public static String getAbsolutePathOfBinaryPackage(String path) {
-        return "/Users/yektaie/Documents/Unit Test Generation/binaries/" + path;
     }
 
     public static void assertEqualPredictions(NumpyArray<Long> predictions, long[] rawArray) {

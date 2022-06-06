@@ -1,12 +1,18 @@
 package test.sklearn4j.core.test_template;
 
 import ai.sklearn4j.base.ClassifierMixin;
+import ai.sklearn4j.core.Constants;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.IScikitLearnPackage;
 import ai.sklearn4j.core.packaging.ScikitLearnPackageFactory;
 import ai.sklearn4j.naive_bayes.GaussianNaiveBayes;
 import org.junit.jupiter.api.Assertions;
 import test.sklearn4j.TestHelper;
+
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClassifierTestingTemplateV1 {
     public static final int BINARY_PACKAGE_FILE_FORMAT = 1;
@@ -17,16 +23,67 @@ public class ClassifierTestingTemplateV1 {
     public String classifierConfigurationName = null;
     public String dataSetName = null;
     public String[] featureNames = null;
+    public boolean supportProbability = false;
 
     public void test() {
-        String path = String.format("%s/%s/%s_%s.skx", scikitLearnVersion, pythonVersion, classifierName, classifierConfigurationName);
-        path = TestHelper.getAbsolutePathOfBinaryPackage(path);
-        IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
+        adjustPythonVersion();
+        List<String> versions = getDirectoriesIn(TestHelper.TEST_FILES_HOME);
 
-        validateHeaderValues(binaryPackage);
-        validateExtraValues(binaryPackage);
-        validateClassifierData(binaryPackage);
+        for (String version : versions) {
+            String path = String.format("%s%s/%s/%s_%s_on_%s.skx", version, scikitLearnVersion, pythonVersion, classifierName.toLowerCase().replace(" ", "_"), classifierConfigurationName.replace(" ", "_"), dataSetName);
+            if (!(new File(path)).exists()) {
+                continue;
+            }
+            IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
+
+            validateHeaderValues(binaryPackage);
+            validateExtraValues(binaryPackage);
+            validateClassifierData(binaryPackage);
+        }
     }
+
+    private void adjustPythonVersion() {
+        int count = 0;
+
+        for (int i = 0; i < pythonVersion.length(); i++) {
+            char ch = pythonVersion.charAt(i);
+            if (ch == '.') {
+                count++;
+            }
+        }
+
+        if (count == 2) {
+            pythonVersion = pythonVersion.substring(0, pythonVersion.lastIndexOf("."));
+        }
+    }
+
+    public static ArrayList<String> getDirectoriesIn(String path) {
+        if (!path.endsWith("/")) {
+            path += "/";
+        }
+
+        File file = new File(path);
+        String[] directories = file.list(new FilenameFilter() {
+            @Override
+            public boolean accept(File current, String name) {
+                return new File(current, name).isDirectory();
+            }
+        });
+
+        ArrayList<String> result = new ArrayList<>();
+
+        for (String directory : directories) {
+            String folder = directory;
+            if (!folder.endsWith("/")) {
+                folder += "/";
+            }
+
+            result.add(path + folder);
+        }
+        return result;
+    }
+
+
 
     private void validateClassifierData(IScikitLearnPackage binaryPackage) {
         ClassifierMixin classifier = (ClassifierMixin) binaryPackage.getModel("classifier_to_test");
