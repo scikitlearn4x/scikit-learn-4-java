@@ -31,9 +31,9 @@ public class ClassifierTestingTemplateV1 {
 
         for (String version : versions) {
             String path = String.format("%s%s/%s/%s_%s_on_%s.skx", version, scikitLearnVersion, pythonVersion, classifierName.toLowerCase().replace(" ", "_"), classifierConfigurationName.replace(" ", "_"), dataSetName);
-            if (!(new File(path)).exists()) {
-                continue;
-            }
+//            if (!(new File(path)).exists()) {
+//                continue;
+//            }
             IScikitLearnPackage binaryPackage = ScikitLearnPackageFactory.loadFromFile(path);
 
             validateHeaderValues(binaryPackage);
