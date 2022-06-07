@@ -26,7 +26,6 @@ public class ClassifierTestingTemplateV1 {
     public boolean supportProbability = false;
 
     public void test() {
-        adjustPythonVersion();
         List<String> versions = getDirectoriesIn(TestHelper.TEST_FILES_HOME);
 
         for (String version : versions) {
@@ -39,21 +38,6 @@ public class ClassifierTestingTemplateV1 {
             validateHeaderValues(binaryPackage);
             validateExtraValues(binaryPackage);
             validateClassifierData(binaryPackage);
-        }
-    }
-
-    private void adjustPythonVersion() {
-        int count = 0;
-
-        for (int i = 0; i < pythonVersion.length(); i++) {
-            char ch = pythonVersion.charAt(i);
-            if (ch == '.') {
-                count++;
-            }
-        }
-
-        if (count == 2) {
-            pythonVersion = pythonVersion.substring(0, pythonVersion.lastIndexOf("."));
         }
     }
 

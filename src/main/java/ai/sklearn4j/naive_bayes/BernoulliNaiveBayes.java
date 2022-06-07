@@ -49,9 +49,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
  return jll
  */
-        if (binarizationThreshold > 0.0) {
-            x = Preprocessing.binarizeInput(x, binarizationThreshold);
-        }
+        x = Preprocessing.binarizeInput(x, binarizationThreshold);
 
         int n_features = this.featureLogProbabilities.getShape()[1];
         int n_features_X = x.getShape()[1];
