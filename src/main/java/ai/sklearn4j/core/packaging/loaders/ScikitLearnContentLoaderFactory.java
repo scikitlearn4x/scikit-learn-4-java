@@ -1,7 +1,7 @@
 package ai.sklearn4j.core.packaging.loaders;
 
 import ai.sklearn4j.core.ScikitLearnCoreException;
-import ai.sklearn4j.core.packaging.loaders.classifiers.naive_bayes.GaussianNaiveBayesContentLoader;
+import ai.sklearn4j.core.packaging.loaders.classifiers.naive_bayes.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +23,7 @@ public class ScikitLearnContentLoaderFactory {
         registeredLoaders = new HashMap<>();
 
         registerLoader(new GaussianNaiveBayesContentLoader());
+        registerLoader(new BernoulliNaiveBayesContentLoader());
     }
 
     /**

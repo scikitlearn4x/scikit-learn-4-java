@@ -234,11 +234,36 @@ public final class Numpy {
             throw new NumpyOperationException("The effective shape of the two numpy array has different number of dimensions.");
         }
 
+        // This check is for the case where 2 arrays are added with shapes: a1: [5,3], a2: [3]
+        if ((shape1.length > shape2.length && isShapeEndingLike(shape1, shape2)) ||
+                (shape2.length > shape1.length && isShapeEndingLike(shape2, shape1))) {
+            return;
+        }
+
         for (int i = 0; i < effective1; i++) {
             if (shape1[i] != shape2[i] && (shape1[i] != 1 && shape2[i] != 1)) {
                 throw new NumpyOperationException(String.format("Dimension %d of the two numpy arrays doesn't match.", i + 1));
             }
         }
+    }
+
+    /**
+     * Check if the shape 1 later dimensions are the shape as the one specified by shape 2.
+     * @param shape1 The base shape to check.
+     * @param shape2 The shorter shape to check.
+     * @return A boolean indicating if shape 1 ends with shape 2.
+     */
+    private static boolean isShapeEndingLike(int[] shape1, int[] shape2) {
+        boolean result = true;
+
+        for (int i = 0; i < shape2.length; i++) {
+            if (shape2[shape2.length - i - 1] != shape1[shape1.length - i - 1]) {
+                result = false;
+                break;
+            }
+        }
+
+        return result;
     }
 
     /**
@@ -483,6 +508,48 @@ public final class Numpy {
                     addInPlace(target, a1, ((long) singleValue) * sign);
                 }
             }
+        } else if (a1.numberOfDimensions() > 1 && a2.numberOfDimensions() == 1) {
+            int[] leftNoneCommonShape = new int[a1.numberOfDimensions() - 1];
+            int[] index = new int[a1.numberOfDimensions()];
+            for (int i = 0; i < leftNoneCommonShape.length; i++) {
+                leftNoneCommonShape[i] = a1.getShape()[i];
+            }
+
+            int[] counter = new int[leftNoneCommonShape.length + 1];
+            int rightShape = a2.getShape()[0];
+
+            do {
+                NumpyArray.addCounter(counter, leftNoneCommonShape);
+
+                for (int i = 0; i < leftNoneCommonShape.length; i++) {
+                    index[i] = counter[i];
+                }
+
+                for (int i = 0; i < rightShape; i++) {
+                    index[index.length - 1] = i;
+                    Object value = null;
+
+                    if (target.isFloatingPoint()) {
+                        if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                            value = (double) a1.get(index) + sign * (double) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                            value = (float) a1.get(index) + sign * (float) a2.get(i);
+                        }
+                    } else {
+                        if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                            value = (byte) a1.get(index) + sign * (byte) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                            value = (short) a1.get(index) + sign * (short) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                            value = (int) a1.get(index) + sign * (int) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                            value = (long) a1.get(index) + sign * (long) a2.get(i);
+                        }
+                    }
+
+                    target.set(value, index);
+                }
+            } while (counter[counter.length - 1] == 0);
         } else if (a1.numberOfDimensions() == 1 && a2.numberOfDimensions() == 1) {
             int firstDim = target.getShape()[0];
 

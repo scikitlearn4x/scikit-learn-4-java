@@ -10,38 +10,16 @@ import ai.sklearn4j.core.libraries.numpy.wrappers.Dim2DoubleNumpyWrapper;
  */
 public class GaussianNaiveBayes extends BaseNaiveBayes {
     /**
-     * The frequency of each class in the training set.
-     * Dimension: (class_count)
-     */
-    private NumpyArray<Double> classCounts = null;
-
-    /**
      * The prior probability of each class.
      * Dimension: (class_count)
      */
     private NumpyArray<Double> classPriors = null;
 
     /**
-     * The list of class IDs.
-     * Dimension: (class_count)
-     */
-    private NumpyArray<Long> classes = null;
-
-    /**
      * The user provided class priors. If specified, the priors are not adjusted according to the data.
      * Dimension: (class_count)
      */
     private NumpyArray<Double> priors = null;
-
-    /**
-     * Names of features seen during training. Defined only when `X` has feature names that are all strings.
-     */
-    private String[] featureNamesIn = null;
-
-    /**
-     * Number of features seen during training.
-     */
-    private int numberOfFeatures = 0;
 
     /**
      * Variance of each feature per class.
@@ -104,24 +82,6 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
     }
 
     /**
-     * Gets the class counts.
-     *
-     * @return The value of class counts.
-     */
-    public NumpyArray<Double> getClassCounts() {
-        return classCounts;
-    }
-
-    /**
-     * Sets the class counts.
-     *
-     * @param classCounts New value to be stored.
-     */
-    public void setClassCounts(NumpyArray<Double> classCounts) {
-        this.classCounts = classCounts;
-    }
-
-    /**
      * Gets the class priors.
      *
      * @return The value of class priors.
@@ -140,24 +100,6 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
     }
 
     /**
-     * Gets the classes.
-     *
-     * @return The value of classes.
-     */
-    public NumpyArray<Long> getClasses() {
-        return classes;
-    }
-
-    /**
-     * Sets the classes.
-     *
-     * @param classes New value to be stored.
-     */
-    public void setClasses(NumpyArray<Long> classes) {
-        this.classes = classes;
-    }
-
-    /**
      * Gets the priors.
      *
      * @return The value of priors.
@@ -173,42 +115,6 @@ public class GaussianNaiveBayes extends BaseNaiveBayes {
      */
     public void setPriors(NumpyArray<Double> priors) {
         this.priors = priors;
-    }
-
-    /**
-     * Gets the feature names.
-     *
-     * @return The value of feature names.
-     */
-    public String[] getFeatureNamesIn() {
-        return featureNamesIn;
-    }
-
-    /**
-     * Sets the feature names.
-     *
-     * @param featureNamesIn New value to be stored.
-     */
-    public void setFeatureNamesIn(String[] featureNamesIn) {
-        this.featureNamesIn = featureNamesIn;
-    }
-
-    /**
-     * Gets the number of features.
-     *
-     * @return The value of number of features.
-     */
-    public int getNumberOfFeatures() {
-        return numberOfFeatures;
-    }
-
-    /**
-     * Sets the number of features.
-     *
-     * @param numberOfFeatures New value to be stored.
-     */
-    public void setNumberOfFeatures(int numberOfFeatures) {
-        this.numberOfFeatures = numberOfFeatures;
     }
 
     /**
