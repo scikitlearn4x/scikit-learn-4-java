@@ -43,10 +43,7 @@ public class BernoulliNaiveBayesContentLoader extends BaseScikitLearnContentLoad
         registerNumpyArrayField("class_log_prior_", this::setClassLogPriors);
         registerNumpyArrayField("feature_log_prob_", this::setFeatureLogProbabilities);
         registerNumpyArrayField("feature_count_", this::setFeatureCount);
-        registerLongField("n_features_", this::setNumberOfFeatureIn);
-        registerLongField("n_features_in_", this::setNumberOfFeatureIn);
         registerDoubleField("binarize", this::setBinarization);
-        registerStringArrayField("feature_names_in_", this::setFeaturesIn);
     }
 
     private void setBinarization(BernoulliNaiveBayes result, double value) {
@@ -59,26 +56,6 @@ public class BernoulliNaiveBayesContentLoader extends BaseScikitLearnContentLoad
 
     private void setFeatureCount(BernoulliNaiveBayes result, NumpyArray numpyArray) {
         result.setFeatureCount(numpyArray);
-    }
-
-    /**
-     * Sets the list of features names' of the dataset the model was trained on.
-     *
-     * @param result The classifier to be loaded.
-     * @param value  The list of feature names.
-     */
-    private void setFeaturesIn(BernoulliNaiveBayes result, String[] value) {
-        result.setFeatureNamesIn(value);
-    }
-
-    /**
-     * Sets the number of features of the dataset the model was trained on.
-     *
-     * @param result The classifier to be loaded.
-     * @param value  The number of features.
-     */
-    private void setNumberOfFeatureIn(BernoulliNaiveBayes result, long value) {
-        result.setNumberOfFeatures((int) value);
     }
 
     /**

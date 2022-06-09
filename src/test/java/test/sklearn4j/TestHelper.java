@@ -4,7 +4,7 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import org.junit.jupiter.api.Assertions;
 
 public class TestHelper {
-    public static final String TEST_FILES_HOME = "/Volumes/Files/Projects/scikit-learn4x/Test Files";
+    public static final String TEST_FILES_HOME = "/Volumes/Files/Projects/scikit-learn4x/Test Files"; // Should not end with '/'
 
     public static final double DOUBLE_COMPARE_EPSILON = 0.0000001;
 

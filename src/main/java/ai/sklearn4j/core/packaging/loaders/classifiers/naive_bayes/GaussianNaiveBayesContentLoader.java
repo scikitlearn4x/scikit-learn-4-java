@@ -46,28 +46,6 @@ public class GaussianNaiveBayesContentLoader extends BaseScikitLearnContentLoade
         registerNumpyArrayField("class_prior_", this::setClassPriors);
         registerNumpyArrayField("theta_", this::setMeanValues);
         registerNumpyArrayField("var_", this::setVarianceValues);
-        registerLongField("n_features_in_", this::setNumberOfFeatureIn);
-        registerStringArrayField("feature_names_in_", this::setFeaturesIn);
-    }
-
-    /**
-     * Sets the list of features names' of the dataset the model was trained on.
-     *
-     * @param result The classifier to be loaded.
-     * @param value  The list of feature names.
-     */
-    private void setFeaturesIn(GaussianNaiveBayes result, String[] value) {
-        result.setFeatureNamesIn(value);
-    }
-
-    /**
-     * Sets the number of features of the dataset the model was trained on.
-     *
-     * @param result The classifier to be loaded.
-     * @param value  The number of features.
-     */
-    private void setNumberOfFeatureIn(GaussianNaiveBayes result, long value) {
-        result.setNumberOfFeatures((int) value);
     }
 
     /**

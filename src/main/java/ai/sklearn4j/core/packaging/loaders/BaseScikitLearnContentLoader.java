@@ -1,8 +1,10 @@
 package ai.sklearn4j.core.packaging.loaders;
 
+import ai.sklearn4j.base.ClassifierMixin;
 import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.BinaryModelPackage;
+import ai.sklearn4j.naive_bayes.GaussianNaiveBayes;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,6 +36,11 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
     protected BaseScikitLearnContentLoader(String typeName) {
         this.typeName = typeName;
         registerSetters();
+
+        if (createResultObject() instanceof ClassifierMixin) {
+            registerLongField("n_features", this::setNumberOfFeatureIn);
+            registerStringArrayField("feature_names", this::setFeaturesIn);
+        }
     }
 
     /**
@@ -172,6 +179,30 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
         field.fieldType = LoaderFieldInfo.FIELD_TYPE_STRING_ARRAY;
 
         fields.put(name, field);
+    }
+
+    /**
+     * Sets the list of features names' of the dataset the model was trained on.
+     *
+     * @param result The classifier to be loaded.
+     * @param value  The list of feature names.
+     */
+    private void setFeaturesIn(ObjectType result, String[] value) {
+        if (result instanceof ClassifierMixin) {
+            ((ClassifierMixin)result).setFeatureNamesIn(value);
+        }
+    }
+
+    /**
+     * Sets the number of features of the dataset the model was trained on.
+     *
+     * @param result The classifier to be loaded.
+     * @param value  The number of features.
+     */
+    private void setNumberOfFeatureIn(ObjectType result, long value) {
+        if (result instanceof ClassifierMixin) {
+            ((ClassifierMixin)result).setNumberOfFeatures((int) value);
+        }
     }
 }
 
