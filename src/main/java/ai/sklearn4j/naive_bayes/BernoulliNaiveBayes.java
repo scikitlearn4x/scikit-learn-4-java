@@ -12,9 +12,24 @@ import ai.sklearn4j.utils.Preprocessing;
  * Naive Bayes classifier for bernoulli distributed models.
  */
 public class BernoulliNaiveBayes extends BaseNaiveBayes {
+    /**
+     * Empirical log probability of features given a class, P(x_i|y).
+     */
     private NumpyArray<Double> featureLogProbabilities = null;
+
+    /**
+     * Log probability of each class (smoothed).
+     */
     private NumpyArray<Double> classLogPrior = null;
 
+    /**
+     * Number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+     */
+    private NumpyArray<Double> featureCounts = null;
+
+    /**
+     * Threshold for binarizing (mapping to booleans) of sample features. If None, input is presumed to already consist of binary vectors.
+     */
     private double binarizationThreshold = 0.0;
 
     /**
@@ -68,30 +83,68 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
         return jll;
     }
 
+    /**
+     * Gets the empirical log probability of features given a class, P(x_i|y).
+     * @return Empirical log probability of features given a class, P(x_i|y).
+     */
     public NumpyArray<Double> getFeatureLogProbabilities() {
         return featureLogProbabilities;
     }
 
+    /**
+     * Sets the empirical log probability of features given a class, P(x_i|y).
+     * @param featureLogProbabilities The empirical log probability of features given a class, P(x_i|y).
+     */
     public void setFeatureLogProbabilities(NumpyArray<Double> featureLogProbabilities) {
         this.featureLogProbabilities = featureLogProbabilities;
     }
 
+    /**
+     * Gets the log probability of each class (smoothed).
+     * @return Log probability of each class (smoothed).
+     */
     public NumpyArray<Double> getClassLogPrior() {
         return classLogPrior;
     }
 
+    /**
+     * Sets the log probability of each class (smoothed).
+     * @param classLogPrior The log probability of each class (smoothed).
+     */
     public void setClassLogPrior(NumpyArray<Double> classLogPrior) {
         this.classLogPrior = classLogPrior;
     }
 
-    public void setFeatureCount(NumpyArray numpyArray) {
-
+    /**
+     * Gets the number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+     * @return Number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+     */
+    public NumpyArray<Double> getFeatureCounts() {
+        return featureCounts;
     }
 
+    /**
+     * Sets the number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+     * @param featureCounts The number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+     */
+    public void setFeatureCount(NumpyArray<Double> featureCounts) {
+        this.featureCounts = featureCounts;
+    }
+
+    /**
+     * Gets the threshold for binarizing (mapping to booleans) of sample features. If None, input
+     * is presumed to already consist of binary vectors.
+     * @return Threshold for binarizing (mapping to booleans) of sample features. If None, input
+     *         is presumed to already consist of binary vectors.
+     */
     public double getBinarizationThreshold() {
         return binarizationThreshold;
     }
 
+    /**
+     * Sets the threshold for binarizing (mapping to booleans) of sample features. If None, input is presumed to already consist of binary vectors.
+     * @param binarizationThreshold The threshold for binarizing (mapping to booleans) of sample features. If None, input is presumed to already consist of binary vectors.
+     */
     public void setBinarizationThreshold(double binarizationThreshold) {
         this.binarizationThreshold = binarizationThreshold;
     }

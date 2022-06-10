@@ -5,6 +5,9 @@ import ai.sklearn4j.core.packaging.loaders.BaseScikitLearnContentLoader;
 import ai.sklearn4j.core.packaging.loaders.IScikitLearnContentLoader;
 import ai.sklearn4j.naive_bayes.BernoulliNaiveBayes;
 
+/**
+ * BernoulliNaiveBayes object loader.
+ */
 public class BernoulliNaiveBayesContentLoader extends BaseScikitLearnContentLoader<BernoulliNaiveBayes> {
     /**
      * Instantiate a new object of BernoulliNaiveBayesContentLoader.
@@ -46,14 +49,32 @@ public class BernoulliNaiveBayesContentLoader extends BaseScikitLearnContentLoad
         registerDoubleField("binarize", this::setBinarization);
     }
 
+    /**
+     * Sets the binarization to be performed on the data.
+     *
+     * @param result The classifier to be loaded.
+     * @param value  The binarization threshold.
+     */
     private void setBinarization(BernoulliNaiveBayes result, double value) {
         result.setBinarizationThreshold(value);
     }
 
+    /**
+     * Sets the feature's log probability in the training data.
+     *
+     * @param result The classifier to be loaded.
+     * @param numpyArray The feature's log probability in the training data.
+     */
     private void setFeatureLogProbabilities(BernoulliNaiveBayes result, NumpyArray numpyArray) {
         result.setFeatureLogProbabilities(numpyArray);
     }
 
+    /**
+     * Sets the frequency of the features in the training data.
+     *
+     * @param result The classifier to be loaded.
+     * @param numpyArray The frequency of the features in the training data.
+     */
     private void setFeatureCount(BernoulliNaiveBayes result, NumpyArray numpyArray) {
         result.setFeatureCount(numpyArray);
     }
