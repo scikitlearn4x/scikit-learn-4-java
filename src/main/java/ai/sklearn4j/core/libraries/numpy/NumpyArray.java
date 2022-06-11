@@ -98,7 +98,7 @@ public class NumpyArray<Type> {
      * @param counter The current index.
      * @param shape   The shape of the array.
      */
-    protected static void addCounter(int[] counter, int[] shape) {
+    public static void addCounter(int[] counter, int[] shape) {
         counter[0]++;
 
         for (int i = 0; i < shape.length; i++) {

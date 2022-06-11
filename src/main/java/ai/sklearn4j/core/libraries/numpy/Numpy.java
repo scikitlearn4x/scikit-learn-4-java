@@ -804,4 +804,29 @@ public final class Numpy {
 
         return result;
     }
+
+    public static NumpyArray<Double> arrayMax(NumpyArray<Double> array, int axis) {
+        NumpyArrayOperationWithAxisReduction<Double, Double> operation = new NumpyArrayOperationWithAxisReduction<>() {
+            @Override
+            public NumpyArray<Double> createInstanceResultNumpyArray(int[] shape) {
+                return NumpyArrayFactory.arrayOfDoubleWithShape(shape);
+            }
+
+            @Override
+            public Object reduceAxisValues(Object[] valuesInAxis) {
+                double max = (double) valuesInAxis[0];
+
+                for (int i = 1; i < valuesInAxis.length; i++) {
+                    double m = (double) valuesInAxis[i];
+                    if (m > max) {
+                        max = m;
+                    }
+                }
+
+                return max;
+            }
+        };
+
+        return operation.apply(array, axis);
+    }
 }
