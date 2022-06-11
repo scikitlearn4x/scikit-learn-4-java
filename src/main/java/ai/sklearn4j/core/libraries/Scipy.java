@@ -39,6 +39,12 @@ public class Scipy {
         return tmp;
     }
 
+    /**
+     * Reshapes the array for supporting arithmetic.
+     *
+     * @param np Numpy array to be changed.
+     * @return The changed NumpyArray.
+     */
     private static NumpyArray<Double> to2DArrayShape(NumpyArray<Double> np) {
         double[] values = (double[]) np.getWrapper().getRawArray();
         double[][] result = new double[values.length][1];

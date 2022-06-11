@@ -805,7 +805,14 @@ public final class Numpy {
         return result;
     }
 
-    public static NumpyArray<Double> arrayMax(NumpyArray<Double> array, int axis) {
+    /**
+     * Returns the maximum values along an axis.
+     * See: https://numpy.org/doc/stable/reference/generated/numpy.amax.html
+     *
+     * @param array The input multidimensional array.
+     * @param axis  The axis which the amax should reduce to.
+     * @return Array of maximum into the array. It has the same shape as a.shape with the dimension along axis removed.
+     */  public static NumpyArray<Double> arrayMax(NumpyArray<Double> array, int axis) {
         NumpyArrayOperationWithAxisReduction<Double, Double> operation = new NumpyArrayOperationWithAxisReduction<>() {
             @Override
             public NumpyArray<Double> createInstanceResultNumpyArray(int[] shape) {

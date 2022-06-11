@@ -26,6 +26,7 @@ public class ScikitLearnContentLoaderFactory {
         registerLoader(new BernoulliNaiveBayesContentLoader());
         registerLoader(new CategoricalNaiveBayesContentLoader());
         registerLoader(new ComplementNaiveBayesContentLoader());
+        registerLoader(new MultinomialNaiveBayesContentLoader());
     }
 
     /**
