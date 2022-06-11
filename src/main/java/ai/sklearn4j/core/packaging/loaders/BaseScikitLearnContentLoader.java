@@ -4,9 +4,10 @@ import ai.sklearn4j.base.ClassifierMixin;
 import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.BinaryModelPackage;
-import ai.sklearn4j.naive_bayes.GaussianNaiveBayes;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -99,6 +100,13 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_STRING_ARRAY) {
                 String[] value = buffer.readStringArray();
                 ((IScikitLearnLoaderStringArrayFieldSetter<ObjectType>) info.setter).setStringArrayField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LIST_OF_NUMPY_ARRAY) {
+                List<Object> value = buffer.readList();
+                List<NumpyArray> finalValue = new ArrayList<>();
+                for (Object o : value) {
+                    finalValue.add((NumpyArray) o);
+                }
+                ((IScikitLearnLoaderListOfNumpyArrayFieldSetter) info.setter).setListOfNumpyArrayField(result, finalValue);
             }
         }
 
@@ -182,6 +190,25 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
     }
 
     /**
+     * Registers a list of numpy array field for the scikit-learn serialized layout.
+     *
+     * @param name   Name of the field.
+     * @param setter The setter callback to load the value of the scikit-learn object.
+     */
+    protected <ArrayType> void registerListOfNumpyArrayField(String name, IScikitLearnLoaderListOfNumpyArrayFieldSetter<ObjectType, ArrayType> setter) {
+        if (fields.containsKey(name)) {
+            throw new ScikitLearnCoreException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_LIST_OF_NUMPY_ARRAY;
+
+        fields.put(name, field);
+    }
+
+    /**
      * Sets the list of features names' of the dataset the model was trained on.
      *
      * @param result The classifier to be loaded.
@@ -229,6 +256,11 @@ class LoaderFieldInfo {
      * Constant to specify the field is of type string array.
      */
     public static final int FIELD_TYPE_STRING_ARRAY = 4;
+
+    /**
+     * Constant to specify the field is of type list of numpy array.
+     */
+    public static final int FIELD_TYPE_LIST_OF_NUMPY_ARRAY = 5;
 
     /**
      * The name of the field.
