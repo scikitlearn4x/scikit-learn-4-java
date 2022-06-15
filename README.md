@@ -142,7 +142,7 @@ package information to add it as a dependency to your project.
 ```
 dependencies {
     // Change the version the latest available
-    implementation 'ai.scikitlearn4x:sklearn4jvm:0.0.0.8'
+    implementation 'ai.scikitlearn4x:sklearn4jvm:0.0.3'
 }
 ```
 
@@ -152,7 +152,7 @@ dependencies {
   <groupId>ai.scikitlearn4x</groupId>
   <artifactId>sklearn4jvm</artifactId>
   <!-- Change the version the latest available -->
-  <version>0.0.0.8</version>
+  <version>0.0.3</version>
 </dependency>
 ```
 
