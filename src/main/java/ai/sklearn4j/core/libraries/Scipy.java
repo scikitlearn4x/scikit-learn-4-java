@@ -21,8 +21,7 @@ public class Scipy {
         // https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.logsumexp.html
         // Calculates np.log(np.sum(np.exp(a)))
 //        return Numpy.log(Numpy.sum(Numpy.exp(data), axis));
-        NumpyArray<Double> aMaxOriginal = Numpy.arrayMax(data, axis);
-        NumpyArray<Double> aMax = to2DArrayShape(aMaxOriginal);
+        NumpyArray<Double> aMax = Numpy.arrayMax(data, axis, true);
         aMax.applyToEachElement(value -> {
             if (!Double.isFinite(value)) {
                 return 0.0;
@@ -32,9 +31,9 @@ public class Scipy {
         });
 
         NumpyArray<Double> tmp = Numpy.exp(Numpy.subtract(data, aMax));
-        tmp = Numpy.sum(tmp, axis);
+        tmp = Numpy.sum(tmp, axis, false);
         tmp = Numpy.log(tmp);
-        tmp = Numpy.add(tmp, aMaxOriginal);
+        tmp = Numpy.add(tmp, Numpy.squeeze(aMax));
 
         return tmp;
     }

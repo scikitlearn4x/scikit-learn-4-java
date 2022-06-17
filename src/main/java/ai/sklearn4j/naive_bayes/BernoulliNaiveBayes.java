@@ -76,7 +76,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
         // Compute  neg_prob · (1 - X).T  as  ∑neg_prob - X · neg_prob
         NumpyArray<Double> jll = ExtMath.dot(x, Numpy.subtract(featureLogProbabilities, negProb).transpose());
 
-        jll = Numpy.add(jll, Numpy.add(this.classLogPrior, Numpy.sum(negProb, 1)));
+        jll = Numpy.add(jll, Numpy.add(this.classLogPrior, Numpy.sum(negProb, 1, false)));
 
         return jll;
     }

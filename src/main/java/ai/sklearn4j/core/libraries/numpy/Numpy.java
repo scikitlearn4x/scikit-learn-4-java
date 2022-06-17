@@ -8,11 +8,12 @@ public final class Numpy {
      * Returns the indices of the maximum values along an axis.
      * See: https://numpy.org/doc/stable/reference/generated/numpy.argmax.html
      *
-     * @param array The input multidimensional array.
-     * @param axis  The axis which the argmax should reduce to.
+     * @param array          The input multidimensional array.
+     * @param axis           The axis which the argmax should reduce to.
+     * @param keepDimensions A flag to specify whether to keep the reduced dimension in the output.
      * @return Array of indices into the array. It has the same shape as a.shape with the dimension along axis removed.
      */
-    public static <Type> NumpyArray<Long> argmax(NumpyArray<Type> array, int axis) {
+    public static <Type> NumpyArray<Long> argmax(NumpyArray<Type> array, int axis, boolean keepDimensions) {
         NumpyArrayOperationWithAxisReduction<Type, Long> operation = new NumpyArrayOperationWithAxisReduction<>() {
             @Override
             public NumpyArray<Long> createInstanceResultNumpyArray(int[] shape) {
@@ -36,7 +37,7 @@ public final class Numpy {
             }
         };
 
-        return operation.apply(array, axis);
+        return operation.apply(array, axis, keepDimensions);
     }
 
     /**
@@ -59,11 +60,12 @@ public final class Numpy {
      * Sums the values of a NumpyArray along a specified axis.
      * See: https://numpy.org/doc/stable/reference/generated/numpy.sum.html
      *
-     * @param array Input array.
-     * @param axis  Axis along which a sum is performed.
+     * @param array          Input array.
+     * @param axis           Axis along which a sum is performed.
+     * @param keepDimensions A flag to specify whether to keep the reduced dimension in the output.
      * @return An array with the same shape as a, with the specified axis removed.
      */
-    public static NumpyArray sum(NumpyArray array, int axis) {
+    public static NumpyArray sum(NumpyArray array, int axis, boolean keepDimensions) {
         INumpyReduceAxisFunction function = null;
 
         if (!array.isFloatingPoint() && array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
@@ -138,7 +140,7 @@ public final class Numpy {
             }
         };
 
-        return operation.apply(array, axis);
+        return operation.apply(array, axis, keepDimensions);
     }
 
     /**
@@ -249,6 +251,7 @@ public final class Numpy {
 
     /**
      * Check if the shape 1 later dimensions are the shape as the one specified by shape 2.
+     *
      * @param shape1 The base shape to check.
      * @param shape2 The shorter shape to check.
      * @return A boolean indicating if shape 1 ends with shape 2.
@@ -580,7 +583,16 @@ public final class Numpy {
             int firstDim = target.getShape()[0];
 
             for (int i = 0; i < firstDim; i++) {
-                addInPlace(target.wrapInnerSubsetArray(i), a1.wrapInnerSubsetArray(i), a2.wrapInnerSubsetArray(i), sign);
+                NumpyArray leftWrap = a1.wrapInnerSubsetArray(i);
+                NumpyArray rightWrap = null;
+
+                if (a2.getShape()[0] == 1) {
+                    rightWrap = a2.wrapInnerSubsetArray(0);
+                } else {
+                    rightWrap = a2.wrapInnerSubsetArray(i);
+                }
+
+                addInPlace(target.wrapInnerSubsetArray(i), leftWrap, rightWrap, sign);
             }
         }
     }
@@ -809,10 +821,12 @@ public final class Numpy {
      * Returns the maximum values along an axis.
      * See: https://numpy.org/doc/stable/reference/generated/numpy.amax.html
      *
-     * @param array The input multidimensional array.
-     * @param axis  The axis which the amax should reduce to.
+     * @param array          The input multidimensional array.
+     * @param axis           The axis which the amax should reduce to.
+     * @param keepDimensions A flag to specify whether to keep the reduced dimension in the output.
      * @return Array of maximum into the array. It has the same shape as a.shape with the dimension along axis removed.
-     */  public static NumpyArray<Double> arrayMax(NumpyArray<Double> array, int axis) {
+     */
+    public static NumpyArray<Double> arrayMax(NumpyArray<Double> array, int axis, boolean keepDimensions) {
         NumpyArrayOperationWithAxisReduction<Double, Double> operation = new NumpyArrayOperationWithAxisReduction<>() {
             @Override
             public NumpyArray<Double> createInstanceResultNumpyArray(int[] shape) {
@@ -834,6 +848,47 @@ public final class Numpy {
             }
         };
 
-        return operation.apply(array, axis);
+        return operation.apply(array, axis, keepDimensions);
+    }
+
+    /**
+     * Remove axes of length one from the array.
+     * @param array The array to squeeze.
+     * @return An array without any dimension of length 1.
+     */
+    public static NumpyArray squeeze(NumpyArray array) {
+        int desiredDimensions = 0;
+        for (int i = 0; i < array.getShape().length; i++) {
+            int dim = array.getShape()[i];
+            if (dim > 1) {
+                desiredDimensions++;
+            }
+        }
+
+        int[] shape = new int[desiredDimensions];
+        int[] mapper = new int[desiredDimensions];
+        int indexOnShape = 0;
+        for (int i = 0; i < array.getShape().length; i++) {
+            int dim = array.getShape()[i];
+            if (dim > 1) {
+                shape[indexOnShape] = dim;
+                mapper[indexOnShape] = i;
+                indexOnShape++;
+            }
+        }
+
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array.isFloatingPoint(), array.numberOfBytes(), shape);
+        int[] counter = new int[shape.length + 1];
+        int[] indexOnInput = new int[array.getShape().length];
+
+        do {
+            NumpyArray.addCounter(counter, shape);
+            for (int i = 0; i < mapper.length; i++) {
+                indexOnInput[mapper[i]] = counter[i];
+            }
+            result.set(array.get(indexOnInput), counter);
+        } while (counter[counter.length - 1] == 0);
+
+        return result;
     }
 }

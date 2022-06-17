@@ -205,5 +205,26 @@ public class NumpyArray<Type> {
     public INumpyArrayWrapper getWrapper() {
         return data;
     }
+
+    /**
+     * Returns a string representation of the array for DEBUGGING purposes. This value should not be
+     * used by external libraries.
+     */
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+
+        result.append("[");
+        String sep = "";
+        for (int i = 0; i < getShape().length; i++) {
+            result.append(sep);
+            result.append(getShape()[i]);
+            sep = ", ";
+        }
+        result.append("]");
+
+
+        return result.toString();
+    }
 }
 

@@ -334,4 +334,16 @@ public class TestNumpyArithmetics {
         Assertions.assertEquals(0.9425335f, array[0][0]);
         Assertions.assertEquals(9.425335f, expected[0][0]);
     }
+
+    @Test
+    public void testAddWhereTheTrailingDimensionsIsTheSame() {
+        double[][][] arr1={{{0.89, 0.74}, {0.21, 0.25}}, {{0.31, 0.93}, {0.67, 0.15}}, {{0.04, 0.56}, {0.06, 0.42}}};
+        double[][][] arr2={{{0.44, 0.87}, {0.87, 0.98}}};
+        double[][][] expected={{{1.33, 1.61}, {1.08, 1.23}}, {{0.75, 1.8}, {1.54, 1.13}}, {{0.48, 1.43}, {0.93, 1.4}}};
+
+        NumpyArray<Double> a = NumpyArrayFactory.from(arr1);
+        NumpyArray<Double> b = NumpyArrayFactory.from(arr2);
+        NumpyArray<Double> actual = Numpy.add(a, b);
+        TestHelper.assertEqualData(actual, expected, 0.009999999999999);
+    }
 }

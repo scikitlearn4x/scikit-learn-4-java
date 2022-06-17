@@ -58,4 +58,15 @@ public class TestNumpy {
 
         TestHelper.assertEqualData(Numpy.atLeast2D(numpyArray), new double[][]{array});
     }
+
+    @Test
+    public void testNumpyArraySqueeze() {
+        double[][][][][] a = {{{{{0.162, 0.533, 0.247, 0.386}}, {{0.608, 0.069, 0.434, 0.237}}}}, {{{{0.327, 0.803, 0.603, 0.499}}, {{0.765, 0.925, 0.715, 0.93}}}}, {{{{0.781, 0.037, 0.512, 0.693}}, {{0.771, 0.91, 0.029, 0.844}}}}};
+        double[][][] expected = {{{0.162, 0.533, 0.247, 0.386}, {0.608, 0.069, 0.434, 0.237}}, {{0.327, 0.803, 0.603, 0.499}, {0.765, 0.925, 0.715, 0.93}}, {{0.781, 0.037, 0.512, 0.693}, {0.771, 0.91, 0.029, 0.844}}};
+
+        NumpyArray<Double> numpyA = NumpyArrayFactory.from(a);
+        NumpyArray<Double> numpySqueezed = Numpy.squeeze(numpyA);
+
+        TestHelper.assertEqualData(numpySqueezed, expected);
+    }
 }

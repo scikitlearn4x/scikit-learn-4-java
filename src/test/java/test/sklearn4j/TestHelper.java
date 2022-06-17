@@ -87,6 +87,10 @@ public class TestHelper {
     }
 
     public static void assertEqualData(NumpyArray<Double> numpyArray, double[][][] array) {
+        assertEqualData(numpyArray, array, DOUBLE_COMPARE_EPSILON);
+    }
+
+    public static void assertEqualData(NumpyArray<Double> numpyArray, double[][][] array, double epsilon) {
         Assertions.assertEquals(3, numpyArray.getShape().length);
         Assertions.assertEquals(array.length, numpyArray.getShape()[0]);
         Assertions.assertEquals(array[0].length, numpyArray.getShape()[1]);
@@ -96,7 +100,7 @@ public class TestHelper {
             for (int j = 0; j < array[i].length; j++) {
                 for (int k = 0; k < array[i][j].length; k++) {
                     double diff = Math.abs(array[i][j][k] - numpyArray.get(i, j, k));
-                    boolean check = diff < DOUBLE_COMPARE_EPSILON;
+                    boolean check = diff < epsilon;
 
                     Assertions.assertTrue(check);
                 }

@@ -20,30 +20,26 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
      * @param axis  The axis that should be reduced on.
      * @return The numpy array that contains the result of the reduction.
      */
-    public NumpyArray<OutputType> apply(NumpyArray<InputType> array, int axis) {
+    public NumpyArray<OutputType> apply(NumpyArray<InputType> array, int axis, boolean keepDimensions) {
         this.array = array;
         int[] inputShape = array.getShape();
         int countInAxis = inputShape[axis];
 
-        int[] outputShape = new int[inputShape.length - 1];
+        int[] outputShape = getOutShape(axis, inputShape, false);
+        int[] outputShapeWithKeepDimensions = getOutShape(axis, inputShape, keepDimensions);
 
-        int temp = 0;
-        for (int i = 0; i < inputShape.length; i++) {
-            if (i != axis) {
-                outputShape[temp] = inputShape[i];
-                temp++;
-            }
-        }
-
-
-        NumpyArray<OutputType> result = createInstanceResultNumpyArray(outputShape);
+        NumpyArray<OutputType> result = createInstanceResultNumpyArray(outputShapeWithKeepDimensions);
         int[] counter = new int[outputShape.length + 1];
         counter[0] = -1;
+        int[] outputCounter = new int[outputShapeWithKeepDimensions.length + 1];
+        outputCounter[0] = -1;
 
         do {
             NumpyArray.addCounter(counter, outputShape);
+            NumpyArray.addCounter(outputCounter, outputShapeWithKeepDimensions);
+
             int[] indexOnInput = new int[inputShape.length];
-            temp = 0;
+            int temp = 0;
             for (int i = 0; i < indexOnInput.length; i++) {
                 if (i != axis) {
                     indexOnInput[i] = counter[temp];
@@ -57,10 +53,36 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
                 valuesInAxis[i] = array.get(indexOnInput);
             }
 
-            result.set(reduceAxisValues(valuesInAxis), counter);
+            result.set(reduceAxisValues(valuesInAxis), outputCounter);
         } while (counter[counter.length - 1] == 0);
 
         return result;
+    }
+
+    /**
+     * Calculate the shape of the output array.
+     *
+     * @param axis The axis to reduce on.
+     * @param inputShape The shape of the input array.
+     * @param keepDimensions A boolean indicating to keep the original number of dimensions.
+     *
+     * @return The shape of the output based on the parameters.
+     */
+    private int[] getOutShape(int axis, int[] inputShape, boolean keepDimensions) {
+        int offset = keepDimensions ? 0 : 1;
+        int[] outputShape = new int[inputShape.length - offset];
+
+        int temp = 0;
+        for (int i = 0; i < inputShape.length; i++) {
+            if (i != axis) {
+                outputShape[temp] = inputShape[i];
+                temp++;
+            } else if (keepDimensions) {
+                outputShape[temp] = 1;
+                temp++;
+            }
+        }
+        return outputShape;
     }
 
     /**
