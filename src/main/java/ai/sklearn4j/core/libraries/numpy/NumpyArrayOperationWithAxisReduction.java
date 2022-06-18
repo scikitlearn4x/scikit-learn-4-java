@@ -18,6 +18,7 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
      *
      * @param array Input array to perform operation on.
      * @param axis  The axis that should be reduced on.
+     * @param keepDimensions A flag indicating to keep the same number of dimension as the input.
      * @return The numpy array that contains the result of the reduction.
      */
     public NumpyArray<OutputType> apply(NumpyArray<InputType> array, int axis, boolean keepDimensions) {
