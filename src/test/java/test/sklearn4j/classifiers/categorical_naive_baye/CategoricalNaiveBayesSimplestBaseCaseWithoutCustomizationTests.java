@@ -16,8 +16,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -31,8 +31,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -46,8 +46,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -65,8 +65,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -80,8 +80,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -95,8 +95,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -114,8 +114,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -129,8 +129,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -144,8 +144,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -163,8 +163,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -178,8 +178,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -193,8 +193,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -212,8 +212,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -227,8 +227,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -242,8 +242,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -261,8 +261,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -276,8 +276,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -291,8 +291,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -310,8 +310,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -325,8 +325,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -340,8 +340,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -359,8 +359,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -374,8 +374,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -389,8 +389,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -408,8 +408,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -423,8 +423,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -438,8 +438,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -457,8 +457,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -472,8 +472,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -487,8 +487,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -506,8 +506,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -521,8 +521,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -536,8 +536,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -555,8 +555,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -570,8 +570,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -585,8 +585,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -604,8 +604,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -619,8 +619,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -634,8 +634,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -653,8 +653,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -668,8 +668,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -683,8 +683,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -702,8 +702,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -717,8 +717,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -732,8 +732,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -751,8 +751,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -766,8 +766,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -781,8 +781,8 @@ public class CategoricalNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Categorical Naive Bayes";
-		testingTemplate.classifierConfigurationName = "simplest base case without customization";
+		testingTemplate.objectName = "Categorical Naive Bayes";
+		testingTemplate.configurationName = "simplest base case without customization";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		

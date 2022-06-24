@@ -15,8 +15,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.5";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -30,8 +30,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.5";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -45,8 +45,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.5";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -64,8 +64,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -79,8 +79,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -94,8 +94,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -113,8 +113,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -128,8 +128,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -143,8 +143,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -162,8 +162,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -177,8 +177,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -192,8 +192,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -211,8 +211,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -226,8 +226,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -241,8 +241,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -260,8 +260,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -275,8 +275,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -290,8 +290,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -309,8 +309,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -324,8 +324,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -339,8 +339,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -358,8 +358,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -373,8 +373,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -388,8 +388,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -407,8 +407,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -422,8 +422,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -437,8 +437,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -456,8 +456,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -471,8 +471,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -486,8 +486,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -505,8 +505,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -520,8 +520,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -535,8 +535,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -554,8 +554,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -569,8 +569,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -584,8 +584,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -603,8 +603,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -618,8 +618,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -633,8 +633,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -652,8 +652,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -667,8 +667,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -682,8 +682,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -701,8 +701,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -716,8 +716,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -731,8 +731,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -750,8 +750,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -765,8 +765,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -780,8 +780,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -799,8 +799,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -814,8 +814,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -829,8 +829,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -848,8 +848,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -863,8 +863,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -878,8 +878,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -897,8 +897,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -912,8 +912,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -927,8 +927,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -946,8 +946,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -961,8 +961,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -976,8 +976,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -995,8 +995,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1010,8 +1010,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1025,8 +1025,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1044,8 +1044,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1059,8 +1059,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1074,8 +1074,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1093,8 +1093,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1108,8 +1108,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1123,8 +1123,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1142,8 +1142,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1157,8 +1157,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1172,8 +1172,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1191,8 +1191,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1206,8 +1206,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1221,8 +1221,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1240,8 +1240,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1255,8 +1255,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1270,8 +1270,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1289,8 +1289,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1304,8 +1304,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1319,8 +1319,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1338,8 +1338,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1353,8 +1353,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1368,8 +1368,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1387,8 +1387,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1402,8 +1402,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1417,8 +1417,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1436,8 +1436,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1451,8 +1451,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1466,8 +1466,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1485,8 +1485,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1500,8 +1500,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1515,8 +1515,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1534,8 +1534,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1549,8 +1549,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1564,8 +1564,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1583,8 +1583,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1598,8 +1598,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1613,8 +1613,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1632,8 +1632,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1647,8 +1647,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1662,8 +1662,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1681,8 +1681,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1696,8 +1696,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1711,8 +1711,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1730,8 +1730,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1745,8 +1745,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1760,8 +1760,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1779,8 +1779,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1794,8 +1794,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1809,8 +1809,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1828,8 +1828,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1843,8 +1843,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1858,8 +1858,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1877,8 +1877,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1892,8 +1892,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1907,8 +1907,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1926,8 +1926,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1941,8 +1941,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -1956,8 +1956,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -1975,8 +1975,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -1990,8 +1990,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -2005,8 +2005,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		
@@ -2024,8 +2024,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
 		
@@ -2039,8 +2039,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
 		
@@ -2054,8 +2054,8 @@ public class BernoulliNaiveBayesBaseCaseIncludingFeatureNameTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Bernoulli Naive Bayes";
-		testingTemplate.classifierConfigurationName = "base case including feature name";
+		testingTemplate.objectName = "Bernoulli Naive Bayes";
+		testingTemplate.configurationName = "base case including feature name";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
 		

@@ -2,6 +2,7 @@ package ai.sklearn4j.core.packaging.loaders;
 
 import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.packaging.loaders.classifiers.naive_bayes.*;
+import ai.sklearn4j.core.packaging.loaders.preprocessing.label.LabelEncoderContentLoader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +23,15 @@ public class ScikitLearnContentLoaderFactory {
     static {
         registeredLoaders = new HashMap<>();
 
+        registerNaiveBayesLoaders();
+
+        registerLoader(new LabelEncoderContentLoader());
+    }
+
+    /**
+     * Registers the classes coming from the naive_bayes file in sklearn repository.
+     */
+    private static void registerNaiveBayesLoaders() {
         registerLoader(new GaussianNaiveBayesContentLoader());
         registerLoader(new BernoulliNaiveBayesContentLoader());
         registerLoader(new CategoricalNaiveBayesContentLoader());

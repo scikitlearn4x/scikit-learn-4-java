@@ -15,8 +15,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.5";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -30,8 +30,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.5";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -45,8 +45,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.5";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -64,8 +64,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -79,8 +79,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -94,8 +94,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -113,8 +113,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -128,8 +128,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -143,8 +143,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.0";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -162,8 +162,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -177,8 +177,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -192,8 +192,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -211,8 +211,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -226,8 +226,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -241,8 +241,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -260,8 +260,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -275,8 +275,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -290,8 +290,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -309,8 +309,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -324,8 +324,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -339,8 +339,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -358,8 +358,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -373,8 +373,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -388,8 +388,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -407,8 +407,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -422,8 +422,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -437,8 +437,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.20.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -456,8 +456,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -471,8 +471,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -486,8 +486,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -505,8 +505,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -520,8 +520,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -535,8 +535,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -554,8 +554,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -569,8 +569,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -584,8 +584,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -603,8 +603,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -618,8 +618,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -633,8 +633,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -652,8 +652,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -667,8 +667,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -682,8 +682,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -701,8 +701,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -716,8 +716,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -731,8 +731,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.21.3";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -750,8 +750,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -765,8 +765,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -780,8 +780,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -799,8 +799,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -814,8 +814,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -829,8 +829,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -848,8 +848,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -863,8 +863,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -878,8 +878,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -897,8 +897,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -912,8 +912,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -927,8 +927,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -946,8 +946,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -961,8 +961,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -976,8 +976,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.22.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -995,8 +995,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1010,8 +1010,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1025,8 +1025,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1044,8 +1044,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1059,8 +1059,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1074,8 +1074,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1093,8 +1093,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1108,8 +1108,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1123,8 +1123,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1142,8 +1142,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1157,8 +1157,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1172,8 +1172,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1191,8 +1191,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1206,8 +1206,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1221,8 +1221,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1240,8 +1240,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1255,8 +1255,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1270,8 +1270,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.23.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1289,8 +1289,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1304,8 +1304,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1319,8 +1319,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.1.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1338,8 +1338,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1353,8 +1353,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1368,8 +1368,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1387,8 +1387,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1402,8 +1402,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1417,8 +1417,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1436,8 +1436,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1451,8 +1451,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1466,8 +1466,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1485,8 +1485,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1500,8 +1500,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1515,8 +1515,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1534,8 +1534,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1549,8 +1549,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1564,8 +1564,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.6";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1583,8 +1583,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1598,8 +1598,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1613,8 +1613,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1632,8 +1632,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1647,8 +1647,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1662,8 +1662,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1681,8 +1681,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1696,8 +1696,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1711,8 +1711,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "0.24.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1730,8 +1730,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1745,8 +1745,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1760,8 +1760,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1779,8 +1779,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1794,8 +1794,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1809,8 +1809,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1828,8 +1828,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1843,8 +1843,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1858,8 +1858,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.1";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1877,8 +1877,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1892,8 +1892,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1907,8 +1907,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.7";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1926,8 +1926,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1941,8 +1941,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1956,8 +1956,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.8";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1975,8 +1975,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -1990,8 +1990,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -2005,8 +2005,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.9";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -2024,8 +2024,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "iris";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -2039,8 +2039,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "wine";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		
@@ -2054,8 +2054,8 @@ public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 		testingTemplate.scikitLearnVersion = "1.0.2";
 		testingTemplate.pythonVersion = "3.10";
 		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.classifierName = "Gaussian Naive Bayes";
-		testingTemplate.classifierConfigurationName = "with explicit var smoothing";
+		testingTemplate.objectName = "Gaussian Naive Bayes";
+		testingTemplate.configurationName = "with explicit var smoothing";
 		testingTemplate.supportProbability = true;
 		testingTemplate.featureNames = null;
 		

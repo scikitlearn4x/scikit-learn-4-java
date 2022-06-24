@@ -100,6 +100,9 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_STRING_ARRAY) {
                 String[] value = buffer.readStringArray();
                 ((IScikitLearnLoaderStringArrayFieldSetter<ObjectType>) info.setter).setStringArrayField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LIST) {
+                List<Object> value = buffer.readList();
+                ((IScikitLearnLoaderListFieldSetter<ObjectType>) info.setter).setListField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LIST_OF_NUMPY_ARRAY) {
                 List<Object> value = buffer.readList();
                 List<NumpyArray> finalValue = new ArrayList<>();
@@ -209,6 +212,26 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
     }
 
     /**
+     * Registers a list field for the scikit-learn serialized layout.
+     *
+     * @param name   Name of the field.
+     * @param setter The setter callback to load the value of the scikit-learn object.
+     */
+    protected void registerListField(String name, IScikitLearnLoaderListFieldSetter<ObjectType> setter) {
+        if (fields.containsKey(name)) {
+            throw new ScikitLearnCoreException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_LIST;
+
+        fields.put(name, field);
+    }
+
+
+    /**
      * Sets the list of features names' of the dataset the model was trained on.
      *
      * @param result The classifier to be loaded.
@@ -261,6 +284,11 @@ class LoaderFieldInfo {
      * Constant to specify the field is of type list of numpy array.
      */
     public static final int FIELD_TYPE_LIST_OF_NUMPY_ARRAY = 5;
+
+    /**
+     * Constant to specify the field is of type list.
+     */
+    public static final int FIELD_TYPE_LIST = 6;
 
     /**
      * The name of the field.
