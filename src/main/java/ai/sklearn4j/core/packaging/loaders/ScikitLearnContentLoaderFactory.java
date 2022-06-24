@@ -2,6 +2,7 @@ package ai.sklearn4j.core.packaging.loaders;
 
 import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.packaging.loaders.classifiers.naive_bayes.*;
+import ai.sklearn4j.core.packaging.loaders.preprocessing.label.LabelBinarizerContentLoader;
 import ai.sklearn4j.core.packaging.loaders.preprocessing.label.LabelEncoderContentLoader;
 
 import java.util.HashMap;
@@ -26,6 +27,7 @@ public class ScikitLearnContentLoaderFactory {
         registerNaiveBayesLoaders();
 
         registerLoader(new LabelEncoderContentLoader());
+        registerLoader(new LabelBinarizerContentLoader());
     }
 
     /**

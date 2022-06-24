@@ -94,6 +94,9 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LONG) {
                 long value = buffer.readLongInteger();
                 ((IScikitLearnLoaderLongFieldSetter<ObjectType>) info.setter).setLongField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_STRING) {
+                String value = buffer.readString();
+                ((IScikitLearnLoaderStringFieldSetter<ObjectType>) info.setter).setStringField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_NUMPY) {
                 NumpyArray value = buffer.readNumpyArray();
                 ((IScikitLearnLoaderNumpyArrayFieldSetter<ObjectType>) info.setter).setNumpyArrayField(result, value);
@@ -150,6 +153,25 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
         field.name = name;
         field.setter = setter;
         field.fieldType = LoaderFieldInfo.FIELD_TYPE_LONG;
+
+        fields.put(name, field);
+    }
+
+    /**
+     * Registers a string field for the scikit-learn serialized layout.
+     *
+     * @param name   Name of the field.
+     * @param setter The setter callback to load the value of the scikit-learn object.
+     */
+    protected void registerStringField(String name, IScikitLearnLoaderStringFieldSetter<ObjectType> setter) {
+        if (fields.containsKey(name)) {
+            throw new ScikitLearnCoreException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_STRING;
 
         fields.put(name, field);
     }
@@ -289,6 +311,11 @@ class LoaderFieldInfo {
      * Constant to specify the field is of type list.
      */
     public static final int FIELD_TYPE_LIST = 6;
+
+    /**
+     * Constant to specify the field is of type String.
+     */
+    public static final int FIELD_TYPE_STRING = 7;
 
     /**
      * The name of the field.
