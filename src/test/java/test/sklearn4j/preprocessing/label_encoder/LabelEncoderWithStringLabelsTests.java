@@ -5,22 +5,6 @@ import test.sklearn4j.core.test_template.LabelEncoderTesterV1;
 
 public class LabelEncoderWithStringLabelsTests {
 	// ------------------------------------------------------------------------
-	// Test for scikit-learn 0.20.0 on python 3.5
-	// ------------------------------------------------------------------------
-
-	@Test
-	public void testWithStringLabelsOnPython3_5WithSkLearn0_20_0() {
-		LabelEncoderTesterV1 testingTemplate = new LabelEncoderTesterV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.objectName = "Label Encoder";
-		testingTemplate.configurationName = "with string labels";
-		
-		testingTemplate.test();
-	}
-
-	// ------------------------------------------------------------------------
 	// Test for scikit-learn 0.20.0 on python 3.6
 	// ------------------------------------------------------------------------
 

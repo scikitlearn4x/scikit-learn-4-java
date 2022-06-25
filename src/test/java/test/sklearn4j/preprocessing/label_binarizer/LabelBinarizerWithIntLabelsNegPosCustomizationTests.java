@@ -6,25 +6,6 @@ import test.sklearn4j.core.test_template.LabelBinarizerTesterV1;
 
 public class LabelBinarizerWithIntLabelsNegPosCustomizationTests {
 	// ------------------------------------------------------------------------
-	// Test for scikit-learn 0.20.0 on python 3.5
-	// ------------------------------------------------------------------------
-
-	@Test
-	public void testWithIntLabelsNegPosCustomizationOnPython3_5WithSkLearn0_20_0() {
-		LabelBinarizerTesterV1 testingTemplate = new LabelBinarizerTesterV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.objectName = "Label Binarizer";
-		testingTemplate.configurationName = "with int labels neg pos customization";
-		
-		testingTemplate.test();
-		
-		// Preprocessing specifics assertions
-		Assertions.assertEquals(testingTemplate.objectUnderTest.getYType(), "binary");
-	}
-
-	// ------------------------------------------------------------------------
 	// Test for scikit-learn 0.20.0 on python 3.6
 	// ------------------------------------------------------------------------
 

@@ -5,55 +5,6 @@ import test.sklearn4j.core.test_template.ClassifierTestingTemplateV1;
 
 public class GaussianNaiveBayesWithExplicitVarSmoothingTests {
 	// ------------------------------------------------------------------------
-	// Test for scikit-learn 0.20.0 on python 3.5
-	// ------------------------------------------------------------------------
-
-	@Test
-	public void testWithExplicitVarSmoothingOnPython3_5WithSkLearn0_20_0OnIris() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "iris";
-		testingTemplate.objectName = "Gaussian Naive Bayes";
-		testingTemplate.configurationName = "with explicit var smoothing";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = null;
-		
-		testingTemplate.test();
-	}
-
-	@Test
-	public void testWithExplicitVarSmoothingOnPython3_5WithSkLearn0_20_0OnWine() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "wine";
-		testingTemplate.objectName = "Gaussian Naive Bayes";
-		testingTemplate.configurationName = "with explicit var smoothing";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = null;
-		
-		testingTemplate.test();
-	}
-
-	@Test
-	public void testWithExplicitVarSmoothingOnPython3_5WithSkLearn0_20_0OnBreastCancer() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.objectName = "Gaussian Naive Bayes";
-		testingTemplate.configurationName = "with explicit var smoothing";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = null;
-		
-		testingTemplate.test();
-	}
-
-	// ------------------------------------------------------------------------
 	// Test for scikit-learn 0.20.0 on python 3.6
 	// ------------------------------------------------------------------------
 

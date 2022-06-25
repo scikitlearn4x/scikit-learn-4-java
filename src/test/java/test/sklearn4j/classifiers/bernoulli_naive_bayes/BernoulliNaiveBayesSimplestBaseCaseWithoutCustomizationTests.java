@@ -5,55 +5,6 @@ import test.sklearn4j.core.test_template.ClassifierTestingTemplateV1;
 
 public class BernoulliNaiveBayesSimplestBaseCaseWithoutCustomizationTests {
 	// ------------------------------------------------------------------------
-	// Test for scikit-learn 0.20.0 on python 3.5
-	// ------------------------------------------------------------------------
-
-	@Test
-	public void testSimplestBaseCaseWithoutCustomizationOnPython3_5WithSkLearn0_20_0OnIris() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "iris";
-		testingTemplate.objectName = "Bernoulli Naive Bayes";
-		testingTemplate.configurationName = "simplest base case without customization";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = null;
-		
-		testingTemplate.test();
-	}
-
-	@Test
-	public void testSimplestBaseCaseWithoutCustomizationOnPython3_5WithSkLearn0_20_0OnWine() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "wine";
-		testingTemplate.objectName = "Bernoulli Naive Bayes";
-		testingTemplate.configurationName = "simplest base case without customization";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = null;
-		
-		testingTemplate.test();
-	}
-
-	@Test
-	public void testSimplestBaseCaseWithoutCustomizationOnPython3_5WithSkLearn0_20_0OnBreastCancer() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.objectName = "Bernoulli Naive Bayes";
-		testingTemplate.configurationName = "simplest base case without customization";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = null;
-		
-		testingTemplate.test();
-	}
-
-	// ------------------------------------------------------------------------
 	// Test for scikit-learn 0.20.0 on python 3.6
 	// ------------------------------------------------------------------------
 

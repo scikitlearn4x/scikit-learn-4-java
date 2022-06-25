@@ -5,55 +5,6 @@ import test.sklearn4j.core.test_template.ClassifierTestingTemplateV1;
 
 public class GaussianNaiveBayesBaseCaseIncludingFeatureNameTests {
 	// ------------------------------------------------------------------------
-	// Test for scikit-learn 0.20.0 on python 3.5
-	// ------------------------------------------------------------------------
-
-	@Test
-	public void testBaseCaseIncludingFeatureNameOnPython3_5WithSkLearn0_20_0OnIris() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "iris";
-		testingTemplate.objectName = "Gaussian Naive Bayes";
-		testingTemplate.configurationName = "base case including feature name";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = new String[] {"SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"};
-		
-		testingTemplate.test();
-	}
-
-	@Test
-	public void testBaseCaseIncludingFeatureNameOnPython3_5WithSkLearn0_20_0OnWine() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "wine";
-		testingTemplate.objectName = "Gaussian Naive Bayes";
-		testingTemplate.configurationName = "base case including feature name";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = new String[] {"Class Label", "Alcohol", "Malic acid", "Ash", "Alcalinity of ash", "Magnesium", "Total phenols", "Flavanoids", "Nonflavanoid phenols", "Proanthocyanins", "Color intensity", "Hue", "diluted wines"};
-		
-		testingTemplate.test();
-	}
-
-	@Test
-	public void testBaseCaseIncludingFeatureNameOnPython3_5WithSkLearn0_20_0OnBreastCancer() {
-		ClassifierTestingTemplateV1 testingTemplate = new ClassifierTestingTemplateV1();
-		
-		testingTemplate.scikitLearnVersion = "0.20.0";
-		testingTemplate.pythonVersion = "3.5";
-		testingTemplate.dataSetName = "breast_cancer";
-		testingTemplate.objectName = "Gaussian Naive Bayes";
-		testingTemplate.configurationName = "base case including feature name";
-		testingTemplate.supportProbability = true;
-		testingTemplate.featureNames = new String[] {"f_1", "f_2", "f_3", "f_4", "f_5", "f_6", "f_7", "f_8", "f_9", "f_10", "f_11", "f_12", "f_13", "f_14", "f_15", "f_16", "f_17", "f_18", "f_19", "f_20", "f_21", "f_22", "f_23", "f_24", "f_25", "f_26", "f_27", "f_28", "f_29", "f_30"};
-		
-		testingTemplate.test();
-	}
-
-	// ------------------------------------------------------------------------
 	// Test for scikit-learn 0.20.0 on python 3.6
 	// ------------------------------------------------------------------------
 
