@@ -106,6 +106,9 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LIST) {
                 List<Object> value = buffer.readList();
                 ((IScikitLearnLoaderListFieldSetter<ObjectType>) info.setter).setListField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_DICTIONARY) {
+                Map<String, Object> value = buffer.readDictionary();
+                ((IScikitLearnLoaderDictionaryFieldSetter<ObjectType>) info.setter).setDictionaryField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LIST_OF_NUMPY_ARRAY) {
                 List<Object> value = buffer.readList();
                 List<NumpyArray> finalValue = new ArrayList<>();
@@ -252,6 +255,25 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
         fields.put(name, field);
     }
 
+    /**
+     * Registers a dictionary field for the scikit-learn serialized layout.
+     *
+     * @param name   Name of the field.
+     * @param setter The setter callback to load the value of the scikit-learn object.
+     */
+    protected void registerDictionaryField(String name, IScikitLearnLoaderDictionaryFieldSetter<ObjectType> setter) {
+        if (fields.containsKey(name)) {
+            throw new ScikitLearnCoreException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_DICTIONARY;
+
+        fields.put(name, field);
+    }
+
 
     /**
      * Sets the list of features names' of the dataset the model was trained on.
@@ -316,6 +338,11 @@ class LoaderFieldInfo {
      * Constant to specify the field is of type String.
      */
     public static final int FIELD_TYPE_STRING = 7;
+
+    /**
+     * Constant to specify the field is of type dictionary.
+     */
+    public static final int FIELD_TYPE_DICTIONARY = 8;
 
     /**
      * The name of the field.
