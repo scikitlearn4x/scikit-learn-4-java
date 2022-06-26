@@ -77,7 +77,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     /**
      * Internal field of scikit-learn object.     */
-    private long clip = 0;
+    private boolean clip = false;
 
     /**
      * Internal field of scikit-learn object.     */
@@ -231,7 +231,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
      * Sets the value of Clip
      * @param value  The new value for Clip.
      */
-    public void setClip(long value) {
+    public void setClip(boolean value) {
         this.clip = value;
     }
 
@@ -239,7 +239,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     /**
      * Gets the value of Clip
      */
-    public long getClip() {
+    public boolean getClip() {
         return this.clip;
     }
 
@@ -263,30 +263,21 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     @Override
     public NumpyArray<Double> transform(NumpyArray<Double> array) {
-        int[] shape = array.getShape();
-        double[][] result = new double[shape[0]][shape[1]];
+        NumpyArray<Double> result = Numpy.multiply(array, scale);
+        result = Numpy.add(result, min);
 
-        for (int i = 0; i < shape[0]; i++) {
-            for (int j = 0; j < shape[1]; j++) {
-                result[i][j] = array.get(i, j) * scale.get(j) + min.get(j);
-            }
+        if (clip) {
+            result = Numpy.clip(result, featureRange[0], featureRange[1]);
         }
 
-        return NumpyArrayFactory.from(result);
+        return result;
     }
 
     @Override
     public NumpyArray<Double> inverseTransform(NumpyArray<Double> array) {
-        int[] shape = array.getShape();
-        double[][] result = new double[shape[0]][shape[1]];
+        NumpyArray<Double> result = Numpy.subtract(array, min);
+        result = Numpy.divide(result, scale);
 
-        for (int i = 0; i < shape[0]; i++) {
-            for (int j = 0; j < shape[1]; j++) {
-                result[i][j] = (array.get(i, j) - min.get(j)) / scale.get(j);
-            }
-        }
-
-        return NumpyArrayFactory.from(result);
-
+        return result;
     }
 }

@@ -154,7 +154,7 @@ public class MinimumMaximumScalerContentLoader extends BaseScikitLearnContentLoa
      * @param value  The loaded value from stream.
      */
     private void setClip(MinimumMaximumScaler result, long value) {
-        result.setClip(value);
+        result.setClip(value == 1);
     }
 
     /**
