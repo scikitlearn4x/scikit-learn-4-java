@@ -38,44 +38,10 @@ public class Scipy {
         return tmp;
     }
 
-    /**
-     * Reshapes the array for supporting arithmetic.
-     *
-     * @param np Numpy array to be changed.
-     * @return The changed NumpyArray.
-     */
-    private static NumpyArray<Double> to2DArrayShape(NumpyArray<Double> np) {
-        double[] values = (double[]) np.getWrapper().getRawArray();
-        double[][] result = new double[values.length][1];
-
-        for (int i = 0; i < result.length; i++) {
-            result[i][0] = values[i];
+    public static final class NormalDistribution {
+        public static double[] cumulativeDistributionFunction(double[] x) {
+            throw new RuntimeException();
         }
-
-        return NumpyArrayFactory.from(result);
-//        int[] targetShape = new int[np.getShape().length + 1];
-//        for (int i = 0; i < targetShape.length - 1; i++) {
-//            targetShape[i] = np.getShape()[i];
-//        }
-//        targetShape[targetShape.length - 1] = 1;
-//
-//        NumpyArray<Double> result = NumpyArrayFactory.arrayOfDoubleWithShape(targetShape);
-//
-//        int[] counter = new int[targetShape.length+1];
-//        counter[0] = -1;
-//
-//        do {
-//            NumpyArray.addCounter(counter, targetShape);
-//            int[] indexOnOutput = new int[targetShape.length];
-//            int[] indexOnInput = new int[targetShape.length - 1];
-//            for (int i = 0; i < indexOnOutput.length - 1; i++) {
-//                indexOnOutput[i] = counter[i];
-//                indexOnInput[i] = counter[i];
-//            }
-//
-//            result.set(np.get(indexOnInput), indexOnOutput);
-//        } while (counter[counter.length - 1] == 0);
-//
-//        return result;
     }
+
 }

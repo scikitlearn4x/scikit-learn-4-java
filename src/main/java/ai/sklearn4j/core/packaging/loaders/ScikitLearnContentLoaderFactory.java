@@ -26,12 +26,17 @@ public class ScikitLearnContentLoaderFactory {
 
         registerNaiveBayesLoaders();
         registerLabelPreprocessingLoaders();
+        registerDataPreprocessingLoaders();
+    }
 
+    private static void registerDataPreprocessingLoaders() {
         registerLoader(new MinimumMaximumScalerContentLoader());
         registerLoader(new StandardScalerContentLoader());
         registerLoader(new MaximumAbsoluteScalerContentLoader());
         registerLoader(new RobustScalerContentLoader());
         registerLoader(new NormalizerContentLoader());
+        registerLoader(new BinarizerContentLoader());
+//        registerLoader(new QuantileTransformerContentLoader());
     }
 
     private static void registerLabelPreprocessingLoaders() {
