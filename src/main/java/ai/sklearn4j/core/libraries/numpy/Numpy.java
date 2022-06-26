@@ -912,7 +912,7 @@ public final class Numpy {
     public static NumpyArray divide(NumpyArray a1, NumpyArray a2) {
         validateDimensionsForAdd(a1.getShape(), a2.getShape());
         if (shouldSwapForAdd(a1, a2)) {
-            return divide(a2, a1);
+            throw new NumpyOperationException("This division is not supported.");
         }
 
         boolean isFloatingPoint = a1.isFloatingPoint() || a2.isFloatingPoint();
@@ -1052,7 +1052,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, double value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> value / (double) element);
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((double) element) / value);
     }
 
     /**
@@ -1063,7 +1063,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, float value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> value / (float) element);
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((float) element) / value );
     }
 
     /**
@@ -1074,7 +1074,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, long value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> value / (long) element);
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((long) element) / value );
     }
 
     /**
@@ -1085,7 +1085,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, int value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> value / (int) element);
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((int) element) / value );
     }
 
     /**
@@ -1096,7 +1096,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, short value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> value / (short) element);
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((short) element) / value );
     }
 
     /**
@@ -1107,7 +1107,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, byte value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> value / (byte) element);
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((byte) element) / value );
     }
 
     /**
@@ -1324,4 +1324,59 @@ public final class Numpy {
 
         return result;
     }
+
+    public static NumpyArray abs(NumpyArray<Double> array) {
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
+        INumpyArrayElementOperation absOperation = null;
+
+        if (array.isFloatingPoint()) {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                absOperation = value -> Math.abs((double)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                absOperation = value -> Math.abs((float)value);
+            }
+        } else {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                absOperation = value -> Math.abs((byte)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                absOperation = value -> Math.abs((short)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                absOperation = value -> Math.abs((int)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                absOperation = value -> Math.abs((long)value);
+            }
+        }
+
+        array.applyToEachElementAnsSaveToTarget(result, absOperation);
+
+        return result;
+    }
+
+    public static NumpyArray<Double> sqrt(NumpyArray array) {
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, array.getShape());
+        INumpyArrayElementOperation sqrtOperation = null;
+
+        if (array.isFloatingPoint()) {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                sqrtOperation = value -> Math.sqrt((double)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                sqrtOperation = value -> Math.sqrt((float)value);
+            }
+        } else {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                sqrtOperation = value -> Math.sqrt((byte)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                sqrtOperation = value -> Math.sqrt((short)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                sqrtOperation = value -> Math.sqrt((int)value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                sqrtOperation = value -> Math.sqrt((long)value);
+            }
+        }
+
+        array.applyToEachElementAnsSaveToTarget(result, sqrtOperation);
+
+        return result;
+    }
+
 }

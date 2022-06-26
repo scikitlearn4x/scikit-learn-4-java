@@ -1,6 +1,7 @@
 package ai.sklearn4j.utils;
 
 import ai.sklearn4j.core.ScikitLearnFeatureNotImplementedException;
+import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 
@@ -10,6 +11,7 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 public class ExtMath {
     /**
      * Dot product of the NumpyArray.
+     *
      * @param v1 Left-hand side of the expression.
      * @param v2 Right-hand side of the expression.
      * @return The dot product of the two numpy array.
@@ -31,5 +33,35 @@ public class ExtMath {
         }
 
         throw new ScikitLearnFeatureNotImplementedException();
+    }
+
+    /**
+     * Row-wise (squared) Euclidean norm of X.
+     * Equivalent to np.sqrt((X * X).sum(axis=1))
+     *
+     * @param x The input array.
+     * @return The row-wise (squared) Euclidean norm of x.
+     */
+    public static NumpyArray<Double> rowNorm(NumpyArray<Double> x) {
+        return rowNorm(x, false);
+    }
+
+    /**
+     * Row-wise (squared) Euclidean norm of X.
+     * Equivalent to np.sqrt((X * X).sum(axis=1))
+     *
+     * @param x The input array.
+     * @param squared If True, return squared norms.
+     * @return The row-wise (squared) Euclidean norm of x.
+     */
+    public static NumpyArray<Double> rowNorm(NumpyArray<Double> x, boolean squared) {
+        NumpyArray<Double> tmp = Numpy.multiply(x, x);
+        tmp = Numpy.sum(tmp, 1, false);
+
+        if (!squared) {
+            tmp = Numpy.sqrt(tmp);
+        }
+
+        return tmp;
     }
 }
