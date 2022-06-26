@@ -29,6 +29,7 @@ public class ScikitLearnContentLoaderFactory {
 
         registerLoader(new MinimumMaximumScalerContentLoader());
         registerLoader(new StandardScalerContentLoader());
+        registerLoader(new MaximumAbsoluteScalerContentLoader());
     }
 
     private static void registerLabelPreprocessingLoaders() {
