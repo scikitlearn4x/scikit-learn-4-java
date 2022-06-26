@@ -2,7 +2,7 @@ package ai.sklearn4j.core.packaging.loaders;
 
 import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.packaging.loaders.classifiers.naive_bayes.*;
-import ai.sklearn4j.core.packaging.loaders.preprocessing.data.MinimumMaximumScalerContentLoader;
+import ai.sklearn4j.core.packaging.loaders.preprocessing.data.*;
 import ai.sklearn4j.core.packaging.loaders.preprocessing.label.*;
 
 import java.util.HashMap;
@@ -28,6 +28,7 @@ public class ScikitLearnContentLoaderFactory {
         registerLabelPreprocessingLoaders();
 
         registerLoader(new MinimumMaximumScalerContentLoader());
+        registerLoader(new StandardScalerContentLoader());
     }
 
     private static void registerLabelPreprocessingLoaders() {

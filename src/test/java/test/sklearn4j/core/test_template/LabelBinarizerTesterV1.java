@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import test.sklearn4j.TestHelper;
 import test.sklearn4j.core.test_template.bases.BaseTesterV1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,6 +30,17 @@ public class LabelBinarizerTesterV1 extends BaseTesterV1 {
 
         if (_raw instanceof String[]) {
             raw = Arrays.asList((String[]) _raw);
+        } else if (_raw instanceof NumpyArray) {
+            NumpyArray np = (NumpyArray) _raw;
+            if (np.numberOfDimensions() == 1) {
+                raw = new ArrayList<>();
+                for (int i = 0; i < np.getShape()[0]; i++) {
+                    raw.add(np.get(i));
+                }
+            } else{
+                // Not implemented yet
+                throw new RuntimeException();
+            }
         } else {
             raw = (List<Object>)_raw;
         }
