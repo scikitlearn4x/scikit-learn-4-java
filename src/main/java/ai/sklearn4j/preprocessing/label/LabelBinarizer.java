@@ -32,7 +32,14 @@ import java.util.Map;
  * with the inverse_transform method.
  */
 public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Long>> {
+    /**
+     * Constant value for y_type binary.
+     */
     private static final String Y_TYPE_BINARY = "binary";
+
+    /**
+     * Constant value for y_type multi class.
+     */
     private static final String Y_TYPE_MULTICLASS = "multiclass";
 
     /**
@@ -58,12 +65,12 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
     /**
      * Internal field of scikit-learn object.
      */
-    private long negLabel = 0;
+    private long negativeLabel = 0;
 
     /**
      * Internal field of scikit-learn object.
      */
-    private long posLabel = 1;
+    private long positiveLabel = 1;
 
     /**
      * Sets the Holds the label for each class.
@@ -112,16 +119,16 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
      *
      * @param value The new value for NegLabel.
      */
-    public void setNegLabel(long value) {
-        this.negLabel = value;
+    public void setNegativeLabel(long value) {
+        this.negativeLabel = value;
     }
 
 
     /**
      * Gets the value of NegLabel
      */
-    public long getNegLabel() {
-        return this.negLabel;
+    public long getNegativeLabel() {
+        return this.negativeLabel;
     }
 
 
@@ -130,16 +137,16 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
      *
      * @param value The new value for PosLabel.
      */
-    public void setPosLabel(long value) {
-        this.posLabel = value;
+    public void setPositiveLabel(long value) {
+        this.positiveLabel = value;
     }
 
 
     /**
      * Gets the value of PosLabel
      */
-    public long getPosLabel() {
-        return this.posLabel;
+    public long getPositiveLabel() {
+        return this.positiveLabel;
     }
 
     /**
@@ -159,6 +166,13 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
         }
     }
 
+    /**
+     * Transforms a list of labels into a binary format. Since there are only two possible
+     * values, the length of the encoded is 1.
+     *
+     * @param array The input label list to binarize.
+     * @return The transformed array.
+     */
     private NumpyArray<Long> transformBinary(List<Object> array) {
         Map<Object, Integer> mapper = new HashMap<>();
 
@@ -172,7 +186,7 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
         for (Object obj : array) {
             if (mapper.containsKey(obj)) {
                 int index = mapper.get(obj);
-                result.set(index == 0 ? negLabel : posLabel, i, 0);
+                result.set(index == 0 ? negativeLabel : positiveLabel, i, 0);
                 i++;
             } else {
                 throw new ScikitLearnCoreException(String.format("The class '%s' was not defined during the LabelEncoder training.", obj.toString()));
@@ -182,6 +196,13 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
         return result;
     }
 
+    /**
+     * Transforms a list of labels into a multiclass format. Since there are multiple possible
+     * values, the length of the encoded is the number of classes, but only one of them is 1.
+     *
+     * @param array The input label list to binarize.
+     * @return The transformed array.
+     */
     private NumpyArray<Long> transformMulticlass(List<Object> array) {
         Map<Object, Integer> mapper = new HashMap<>();
 
@@ -198,9 +219,9 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
                 int index = mapper.get(obj);
                 for (int j = 0; j < classCount; j++) {
                     if (j == index) {
-                        result.set(posLabel, i, j);
+                        result.set(positiveLabel, i, j);
                     } else {
-                        result.set(negLabel, i, j);
+                        result.set(negativeLabel, i, j);
                     }
                 }
                 i++;
@@ -230,24 +251,36 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
 
     }
 
+    /**
+     * Reverse the transformation on a binary encoded label column.
+     *
+     * @param array The binary encoded labels.
+     * @return List of object that better represents the labels.
+     */
     private List<Object> inverseTransformBinary(NumpyArray<Long> array) {
         List<Object> result = new ArrayList<>();
         long[][] values = (long[][]) array.getWrapper().getRawArray();
 
         for (int i = 0; i < values.length; i++) {
             int cls = (int) values[i][0];
-            result.add(cls == negLabel ? classes.get(0) : classes.get(1));
+            result.add(cls == negativeLabel ? classes.get(0) : classes.get(1));
         }
 
         return result;
     }
 
+    /**
+     * Reverse the transformation on a multiclass encoded label column.
+     *
+     * @param array The multiclass encoded labels.
+     * @return List of object that better represents the labels.
+     */
     private List<Object> inverseTransformMulticlass(NumpyArray<Long> array) {
         List<Object> result = new ArrayList<>();
         long[][] values = (long[][]) array.getWrapper().getRawArray();
 
         for (int i = 0; i < values.length; i++) {
-            int cls = getPosLabelIndex(values[i]);
+            int cls = getPositiveLabelIndex(values[i]);
             if (cls < 0 || cls >= classes.size()) {
                 throw new ScikitLearnCoreException(String.format("The class '%d' is not in valid range.", cls));
             } else {
@@ -258,11 +291,16 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
         return result;
     }
 
-    private int getPosLabelIndex(long[] value) {
+    /**
+     * Gets which index holds the class presence. This only works for multiclass binarized columns.
+     * @param value The binarized value.
+     * @return Index of the class.
+     */
+    private int getPositiveLabelIndex(long[] value) {
         int result = -1;
 
         for (int i = 0; i < value.length; i++) {
-            if (value[i] == posLabel) {
+            if (value[i] == positiveLabel) {
                 result = i;
                 break;
             }

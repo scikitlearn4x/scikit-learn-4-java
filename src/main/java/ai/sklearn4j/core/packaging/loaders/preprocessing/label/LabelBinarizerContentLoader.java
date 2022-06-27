@@ -87,7 +87,7 @@ public class LabelBinarizerContentLoader extends BaseScikitLearnContentLoader<La
      * @param value  The loaded value from stream.
      */
     private void setNegLabel(LabelBinarizer result, long value) {
-        result.setNegLabel(value);
+        result.setNegativeLabel(value);
     }
 
     /**
@@ -97,6 +97,6 @@ public class LabelBinarizerContentLoader extends BaseScikitLearnContentLoader<La
      * @param value  The loaded value from stream.
      */
     private void setPosLabel(LabelBinarizer result, long value) {
-        result.setPosLabel(value);
+        result.setPositiveLabel(value);
     }
 }

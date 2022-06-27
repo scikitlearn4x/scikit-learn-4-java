@@ -54,6 +54,12 @@ public class NormalizerContentLoader extends BaseScikitLearnContentLoader<Normal
         registerStringField("norm", this::setNorm);
     }
 
+    /**
+     * Sets the method for calculating the vectors norm.
+     *
+     * @param result The scikit-learn object to be loaded.
+     * @param value  The loaded value from stream.
+     */
     private void setNorm(Normalizer result, String value) {
         result.setNorm(value);
     }

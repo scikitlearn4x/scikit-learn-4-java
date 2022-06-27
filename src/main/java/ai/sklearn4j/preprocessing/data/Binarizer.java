@@ -42,6 +42,10 @@ public class Binarizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<D
      */
     private String[] featureNamesIn = null;
 
+    /**
+     * Feature values below or equal to this are replaced by 0, above it by 1. Threshold
+     * may not be less than 0 for operations on sparse matrices.
+     */
     private double threshold = 0.0;
 
     /**
@@ -81,10 +85,18 @@ public class Binarizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<D
         return this.featureNamesIn;
     }
 
+    /**
+     * Gets the threshold for binarization.
+     * @return The threshold for binarization.
+     */
     public double getThreshold() {
         return threshold;
     }
 
+    /**
+     * Sets the threshold for binarization.
+     * @param value The threshold for binarization.
+     */
     public void setThreshold(double value) {
         this.threshold = value;
     }

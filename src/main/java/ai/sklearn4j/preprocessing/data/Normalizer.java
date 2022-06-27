@@ -45,6 +45,10 @@ public class Normalizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<
      */
     private String[] featureNamesIn = null;
 
+    /**
+     * The norm to use to normalize each non zero sample. If norm=’max’ is used, values will
+     * be rescaled by the maximum of the absolute values.
+     */
     private String norm = null;
 
     /**
@@ -84,10 +88,19 @@ public class Normalizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<
         return this.featureNamesIn;
     }
 
+    /**
+     * Gets the type of norm that the object performs. The value is either l1, l2, or max.
+     *
+     * @return The norm applied by the Normalizer.
+     */
     public String getNorm() {
         return norm;
     }
 
+    /**
+     * Sets the type of norm that the object performs. The value is either l1, l2, or max.
+     * @param norm The type of norm, either l1, l2, or max.
+     */
     public void setNorm(String norm) {
         this.norm = norm;
     }
@@ -124,11 +137,17 @@ public class Normalizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<
         return result;
     }
 
-    private NumpyArray<Double> addTrailingOneDimension(NumpyArray<Double> norms) {
-        double[][] result = new double[norms.getShape()[0]][1];
+    /**
+     * Adds a trailing dimension of 1 to the end of the shape. Effectively, transforms a (n,) array
+     * to (n, 1).
+     * @param array The input array.
+     * @return The array with an additional 1 dimension at the end of the shape.
+     */
+    private NumpyArray<Double> addTrailingOneDimension(NumpyArray<Double> array) {
+        double[][] result = new double[array.getShape()[0]][1];
 
         for (int i = 0; i < result.length; i++) {
-            result[i][0] = norms.get(i);
+            result[i][0] = array.get(i);
         }
 
         return NumpyArrayFactory.from(result);

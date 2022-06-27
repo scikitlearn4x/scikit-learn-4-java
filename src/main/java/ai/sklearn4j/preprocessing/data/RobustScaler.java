@@ -45,12 +45,28 @@ public class RobustScaler extends TransformerMixin<NumpyArray<Double>, NumpyArra
      */
     private NumpyArray scale = null;
 
+    /**
+     * If True, center the data before scaling.
+     */
     private boolean withCentering = true;
 
+    /**
+     * If True, scale the data to interquartile range.
+     */
     private boolean withScaling = true;
 
+    /**
+     * If True, scale data so that normally distributed features have a variance of 1. In general,
+     * if the difference between the x-values of q_max and q_min for a standard normal distribution
+     * is greater than 1, the dataset will be scaled down. If less than 1, the dataset will be scaled
+     * up.
+     */
     private boolean unitVariance = true;
 
+    /**
+     * Quantile range used to calculate scale_. By default this is equal to the IQR, i.e., q_min is
+     * the first quantile and q_max is the third quantile.
+     */
     private double[] quantilesRange = null;
 
     /**
@@ -139,34 +155,70 @@ public class RobustScaler extends TransformerMixin<NumpyArray<Double>, NumpyArra
         return this.featureNamesIn;
     }
 
+    /**
+     * Gets if the transformer centers the data before scaling.
+     * @return If True, center the data before scaling.
+     */
     public boolean isWithCentering() {
         return withCentering;
     }
 
+    /**
+     * Sets if the transformer centers the data before scaling.
+     * @param withCentering True for centering before scaling.
+     */
     public void setWithCentering(boolean withCentering) {
         this.withCentering = withCentering;
     }
 
+    /**
+     * Gets if the transformer scale the data to interquartile range.
+     *
+     * @return If True, scale the data to interquartile range.
+     */
     public boolean isWithScaling() {
         return withScaling;
     }
 
+    /**
+     * Sets if the transformer scale the data to interquartile range.
+     *
+     * @param withScaling True to scale the data to interquartile range.
+     */
     public void setWithScaling(boolean withScaling) {
         this.withScaling = withScaling;
     }
 
+    /**
+     * Gets if scale data so that normally distributed features have a variance of 1.
+     *
+     * @return True if scale data so that normally distributed features have a variance of 1,
+     * otherwise false.
+     */
     public boolean isUnitVariance() {
         return unitVariance;
     }
 
+    /**
+     * Sets if scale data so that normally distributed features have a variance of 1.
+     * @param unitVariance True to scale, otherwise false.
+     */
     public void setUnitVariance(boolean unitVariance) {
         this.unitVariance = unitVariance;
     }
 
+    /**
+     * Gets the quantile range used to calculate scale.
+     * @return The rage of the quantile.
+     */
     public double[] getQuantilesRange() {
         return quantilesRange;
     }
 
+    /**
+     * Sets the quantile range used to calculate scale
+     * @param quantilesRange A double[] array specifying the min and max of the range.
+     */
     public void setQuantilesRange(double[] quantilesRange) {
         this.quantilesRange = quantilesRange;
     }

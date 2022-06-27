@@ -1,5 +1,6 @@
 package ai.sklearn4j.core.libraries;
 
+import ai.sklearn4j.core.ScikitLearnFeatureNotImplementedException;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 
@@ -36,9 +37,18 @@ public class Scipy {
         return tmp;
     }
 
+    /**
+     * Utility functions in scipy related to normal distributions.
+     */
     public static final class NormalDistribution {
+        /**
+         * Calculate the cumulative distribution function of a normal array.
+         *
+         * @param x The array holding the distribution values.
+         * @return The CDF for the distribution.
+         */
         public static double[] cumulativeDistributionFunction(double[] x) {
-            throw new RuntimeException();
+            throw new ScikitLearnFeatureNotImplementedException();
         }
     }
 

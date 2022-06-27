@@ -1310,6 +1310,21 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Clip (limit) the values in an array.
+     * <p>
+     * Given an interval, values outside the interval are clipped to the interval edges.
+     * For example, if an interval of [0, 1] is specified, values smaller than 0 become 0,
+     * and values larger than 1 become 1.
+     * <p>
+     * Equivalent to but faster than np.minimum(a_max, np.maximum(a, a_min)).
+     *
+     * @param array Array containing elements to clip.
+     * @param min   The minimum value to clip.
+     * @param max   The maximum value to clip.
+     * @return An array with the elements of array, but where values < min are replaced with min,
+     * and those > max with max.
+     */
     public static NumpyArray<Double> clip(NumpyArray<Double> array, double min, double max) {
         NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
 
@@ -1326,6 +1341,12 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Calculate the absolute value element-wise.
+     *
+     * @param array Input array.
+     * @return An ndarray containing the absolute value of each element in x.
+     */
     public static NumpyArray abs(NumpyArray<Double> array) {
         NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
         INumpyArrayElementOperation absOperation = null;
@@ -1353,6 +1374,13 @@ public final class Numpy {
         return result;
     }
 
+    /**
+     * Return the non-negative square-root of an array, element-wise.
+     *
+     * @param array The values whose square-roots are required.
+     * @return An array of the same shape as x, containing the positive square-root
+     * of each element in x.
+     */
     public static NumpyArray<Double> sqrt(NumpyArray array) {
         NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, array.getShape());
         INumpyArrayElementOperation sqrtOperation = null;
