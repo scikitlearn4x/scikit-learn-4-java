@@ -1,7 +1,5 @@
 package ai.sklearn4j.core.packaging.loaders;
 
-import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-
 import java.util.Map;
 
 /**

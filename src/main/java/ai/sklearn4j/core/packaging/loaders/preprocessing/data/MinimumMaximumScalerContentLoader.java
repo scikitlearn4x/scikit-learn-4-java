@@ -16,7 +16,6 @@ import java.util.List;
 /**
  * MinimumMaximumScaler object loader.
  */
-
 public class MinimumMaximumScalerContentLoader extends BaseScikitLearnContentLoader<MinimumMaximumScaler> {
     /**
      * Instantiate a new object of MinimumMaximumScalerContentLoader.
@@ -34,6 +33,7 @@ public class MinimumMaximumScalerContentLoader extends BaseScikitLearnContentLoa
     protected MinimumMaximumScaler createResultObject() {
         return new MinimumMaximumScaler();
     }
+
     /**
      * Create a clean instance of the loader.
      *
@@ -43,6 +43,7 @@ public class MinimumMaximumScalerContentLoader extends BaseScikitLearnContentLoa
     public IScikitLearnContentLoader duplicate() {
         return new MinimumMaximumScalerContentLoader();
     }
+
     /**
      * Defines the fields that are required to initialize a trained scikit-learn object.
      */

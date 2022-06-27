@@ -5,14 +5,15 @@
 // # ==================================================================
 package ai.sklearn4j.core.packaging.loaders.preprocessing.label;
 
-import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.loaders.BaseScikitLearnContentLoader;
 import ai.sklearn4j.core.packaging.loaders.IScikitLearnContentLoader;
 import ai.sklearn4j.preprocessing.label.LabelEncoder;
 
 import java.util.List;
 
-
+/**
+ * LabelEncoder object loader.
+ */
 public class LabelEncoderContentLoader extends BaseScikitLearnContentLoader<LabelEncoder> {
     /**
      * Instantiate a new object of LabelEncoderContentLoader.
@@ -30,6 +31,7 @@ public class LabelEncoderContentLoader extends BaseScikitLearnContentLoader<Labe
     protected LabelEncoder createResultObject() {
         return new LabelEncoder();
     }
+
     /**
      * Create a clean instance of the loader.
      *
@@ -39,6 +41,7 @@ public class LabelEncoderContentLoader extends BaseScikitLearnContentLoader<Labe
     public IScikitLearnContentLoader duplicate() {
         return new LabelEncoderContentLoader();
     }
+
     /**
      * Defines the fields that are required to initialize a trained scikit-learn object.
      */

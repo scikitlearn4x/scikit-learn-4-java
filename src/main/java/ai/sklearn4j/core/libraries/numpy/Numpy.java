@@ -1063,7 +1063,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, float value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> ((float) element) / value );
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((float) element) / value);
     }
 
     /**
@@ -1074,7 +1074,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, long value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> ((long) element) / value );
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((long) element) / value);
     }
 
     /**
@@ -1085,7 +1085,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, int value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> ((int) element) / value );
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((int) element) / value);
     }
 
     /**
@@ -1096,7 +1096,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, short value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> ((short) element) / value );
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((short) element) / value);
     }
 
     /**
@@ -1107,7 +1107,7 @@ public final class Numpy {
      * @param value  The value to be divided by.
      */
     private static void divideInPlace(NumpyArray target, NumpyArray array, byte value) {
-        array.applyToEachElementAnsSaveToTarget(target, element -> ((byte) element) / value );
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((byte) element) / value);
     }
 
     /**
@@ -1270,6 +1270,7 @@ public final class Numpy {
 
     /**
      * Remove axes of length one from the array.
+     *
      * @param array The array to squeeze.
      * @return An array without any dimension of length 1.
      */
@@ -1331,19 +1332,19 @@ public final class Numpy {
 
         if (array.isFloatingPoint()) {
             if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
-                absOperation = value -> Math.abs((double)value);
+                absOperation = value -> Math.abs((double) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
-                absOperation = value -> Math.abs((float)value);
+                absOperation = value -> Math.abs((float) value);
             }
         } else {
             if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
-                absOperation = value -> Math.abs((byte)value);
+                absOperation = value -> Math.abs((byte) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
-                absOperation = value -> Math.abs((short)value);
+                absOperation = value -> Math.abs((short) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
-                absOperation = value -> Math.abs((int)value);
+                absOperation = value -> Math.abs((int) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
-                absOperation = value -> Math.abs((long)value);
+                absOperation = value -> Math.abs((long) value);
             }
         }
 
@@ -1358,19 +1359,19 @@ public final class Numpy {
 
         if (array.isFloatingPoint()) {
             if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
-                sqrtOperation = value -> Math.sqrt((double)value);
+                sqrtOperation = value -> Math.sqrt((double) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
-                sqrtOperation = value -> Math.sqrt((float)value);
+                sqrtOperation = value -> Math.sqrt((float) value);
             }
         } else {
             if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
-                sqrtOperation = value -> Math.sqrt((byte)value);
+                sqrtOperation = value -> Math.sqrt((byte) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
-                sqrtOperation = value -> Math.sqrt((short)value);
+                sqrtOperation = value -> Math.sqrt((short) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
-                sqrtOperation = value -> Math.sqrt((int)value);
+                sqrtOperation = value -> Math.sqrt((int) value);
             } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
-                sqrtOperation = value -> Math.sqrt((long)value);
+                sqrtOperation = value -> Math.sqrt((long) value);
             }
         }
 

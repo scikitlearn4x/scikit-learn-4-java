@@ -283,7 +283,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     private void setFeaturesIn(ObjectType result, String[] value) {
         if (result instanceof ClassifierMixin) {
-            ((ClassifierMixin)result).setFeatureNamesIn(value);
+            ((ClassifierMixin) result).setFeatureNamesIn(value);
         }
     }
 
@@ -295,7 +295,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     private void setNumberOfFeatureIn(ObjectType result, long value) {
         if (result instanceof ClassifierMixin) {
-            ((ClassifierMixin)result).setNumberOfFeatures((int) value);
+            ((ClassifierMixin) result).setNumberOfFeatures((int) value);
         }
     }
 }

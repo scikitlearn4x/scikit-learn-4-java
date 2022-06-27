@@ -16,7 +16,6 @@ import java.util.List;
 /**
  * RobustScaler object loader.
  */
-
 public class RobustScalerContentLoader extends BaseScikitLearnContentLoader<RobustScaler> {
     /**
      * Instantiate a new object of RobustScalerContentLoader.
@@ -63,6 +62,12 @@ public class RobustScalerContentLoader extends BaseScikitLearnContentLoader<Robu
         registerListField("quantile_range", this::setQuantileRange);
     }
 
+    /**
+     * Sets the value of the field `quantile_range`.
+     *
+     * @param result The scikit-learn object to be loaded.
+     * @param value  The loaded value from stream.
+     */
     private void setQuantileRange(RobustScaler result, List<Object> value) {
         double[] quantilesRange = new double[2];
         quantilesRange[0] = (double) value.get(0);
@@ -71,14 +76,32 @@ public class RobustScalerContentLoader extends BaseScikitLearnContentLoader<Robu
         result.setQuantilesRange(quantilesRange);
     }
 
+    /**
+     * Sets the value of the field `unit_variance`.
+     *
+     * @param result The scikit-learn object to be loaded.
+     * @param value  The loaded value from stream.
+     */
     private void setUnitVariance(RobustScaler result, long value) {
         result.setUnitVariance(value == 1);
     }
 
+    /**
+     * Sets the value of the field `with_centering`.
+     *
+     * @param result The scikit-learn object to be loaded.
+     * @param value  The loaded value from stream.
+     */
     private void setWithCentering(RobustScaler result, long value) {
         result.setWithCentering(value == 1);
     }
 
+    /**
+     * Sets the value of the field `with_scaling`.
+     *
+     * @param result The scikit-learn object to be loaded.
+     * @param value  The loaded value from stream.
+     */
     private void setWithScaling(RobustScaler result, long value) {
         result.setWithScaling(value == 1);
     }

@@ -8,7 +8,6 @@ package ai.sklearn4j.preprocessing.data;
 import ai.sklearn4j.base.TransformerMixin;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 
 /**
  * Transform features by scaling each feature to a given range.
@@ -21,8 +20,7 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
  * where min, max = feature_range.
  * This transformation is often used as an alternative to zero mean, unit
  * variance scaling.
- *  */
-
+ */
 public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, NumpyArray<Double>> {
     /**
      * Instantiate a new object of MinimumMaximumScaler.
@@ -76,17 +74,20 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     private Object featureNamesIn = null;
 
     /**
-     * Internal field of scikit-learn object.     */
+     * Internal field of scikit-learn object.
+     */
     private boolean clip = false;
 
     /**
-     * Internal field of scikit-learn object.     */
+     * Internal field of scikit-learn object.
+     */
     private double[] featureRange = null;
 
     /**
      * Sets the Per feature adjustment for minimum. Equivalent to `min - X.min(axis=0)
      * * self.scale_`
-     * @param value  The new value for min.
+     *
+     * @param value The new value for min.
      */
     public void setMin(NumpyArray value) {
         this.min = value;
@@ -105,7 +106,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     /**
      * Sets the Per feature relative scaling of the data. Equivalent to `(max - min) /
      * (X.max(axis=0) - X.min(axis=0))`
-     * @param value  The new value for scale.
+     *
+     * @param value The new value for scale.
      */
     public void setScale(NumpyArray value) {
         this.scale = value;
@@ -123,7 +125,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     /**
      * Sets the Per feature minimum seen in the data
-     * @param value  The new value for dataMin.
+     *
+     * @param value The new value for dataMin.
      */
     public void setDataMin(NumpyArray value) {
         this.dataMin = value;
@@ -140,7 +143,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     /**
      * Sets the Per feature maximum seen in the data
-     * @param value  The new value for dataMax.
+     *
+     * @param value The new value for dataMax.
      */
     public void setDataMax(NumpyArray value) {
         this.dataMax = value;
@@ -157,7 +161,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     /**
      * Sets the Per feature range `(data_max_ - data_min_)` seen in the data
-     * @param value  The new value for dataRange.
+     *
+     * @param value The new value for dataRange.
      */
     public void setDataRange(NumpyArray value) {
         this.dataRange = value;
@@ -174,7 +179,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     /**
      * Sets the Number of features seen during `fit`.
-     * @param value  The new value for nFeaturesIn.
+     *
+     * @param value The new value for nFeaturesIn.
      */
     public void setNFeaturesIn(Object value) {
         this.nFeaturesIn = value;
@@ -192,7 +198,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     /**
      * Sets the The number of samples processed by the estimator. It will be reset on
      * new calls to fit, but increments across `partial_fit` calls.
-     * @param value  The new value for nSamplesSeen.
+     *
+     * @param value The new value for nSamplesSeen.
      */
     public void setNSamplesSeen(long value) {
         this.nSamplesSeen = value;
@@ -211,7 +218,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     /**
      * Sets the Names of features seen during `fit`. Defined only when `X` has feature
      * names that are all strings.
-     * @param value  The new value for featureNamesIn.
+     *
+     * @param value The new value for featureNamesIn.
      */
     public void setFeatureNamesIn(Object value) {
         this.featureNamesIn = value;
@@ -229,7 +237,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     /**
      * Sets the value of Clip
-     * @param value  The new value for Clip.
+     *
+     * @param value The new value for Clip.
      */
     public void setClip(boolean value) {
         this.clip = value;
@@ -246,7 +255,8 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
 
     /**
      * Sets the value of FeatureRange
-     * @param value  The new value for FeatureRange.
+     *
+     * @param value The new value for FeatureRange.
      */
     public void setFeatureRange(double[] value) {
         this.featureRange = value;
@@ -261,6 +271,12 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     }
 
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Double> transform(NumpyArray<Double> array) {
         NumpyArray<Double> result = Numpy.multiply(array, scale);
@@ -273,6 +289,12 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
         return result;
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public NumpyArray<Double> inverseTransform(NumpyArray<Double> array) {
         NumpyArray<Double> result = Numpy.subtract(array, min);

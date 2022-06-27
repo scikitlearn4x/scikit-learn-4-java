@@ -14,7 +14,6 @@ import ai.sklearn4j.preprocessing.data.StandardScaler;
 /**
  * StandardScaler object loader.
  */
-
 public class StandardScalerContentLoader extends BaseScikitLearnContentLoader<StandardScaler> {
     /**
      * Instantiate a new object of StandardScalerContentLoader.

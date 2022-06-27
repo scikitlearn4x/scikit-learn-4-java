@@ -114,7 +114,7 @@ public class NumpyArray<Type> {
     /**
      * Sets an element in the array specified by it index.
      *
-     * @param value The value to be set.
+     * @param value   The value to be set.
      * @param indices The index of the element to be modified.
      */
     public void set(Object value, int... indices) {

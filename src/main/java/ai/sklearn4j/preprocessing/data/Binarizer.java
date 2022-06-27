@@ -23,7 +23,6 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
  * consider boolean random variables (e.g. modelled using the Bernoulli
  * distribution in a Bayesian setting).
  */
-
 public class Binarizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<Double>> {
     /**
      * Instantiate a new object of Binarizer.
@@ -90,6 +89,12 @@ public class Binarizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<D
         this.threshold = value;
     }
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Double> transform(NumpyArray<Double> array) {
         NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
@@ -105,6 +110,12 @@ public class Binarizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<D
         return result;
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public NumpyArray<Double> inverseTransform(NumpyArray<Double> array) {
         throw new ScikitLearnCoreException("The inverse transform is not available for the Binarizer preprocessing.");

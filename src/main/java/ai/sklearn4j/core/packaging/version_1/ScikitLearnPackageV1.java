@@ -6,9 +6,7 @@ import ai.sklearn4j.core.packaging.IScikitLearnPackageHeader;
 import ai.sklearn4j.core.packaging.loaders.IScikitLearnContentLoader;
 import ai.sklearn4j.core.packaging.loaders.ScikitLearnContentLoaderFactory;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

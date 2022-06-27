@@ -14,7 +14,6 @@ import ai.sklearn4j.preprocessing.data.MaximumAbsoluteScaler;
 /**
  * MaximumAbsoluteScaler object loader.
  */
-
 public class MaximumAbsoluteScalerContentLoader extends BaseScikitLearnContentLoader<MaximumAbsoluteScaler> {
     /**
      * Instantiate a new object of MaximumAbsoluteScalerContentLoader.

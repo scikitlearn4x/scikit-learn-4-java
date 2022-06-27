@@ -26,7 +26,6 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArray;
  * and the interquartile range often give better results.
  * .. versionadded:: 0.17
  */
-
 public class RobustScaler extends TransformerMixin<NumpyArray<Double>, NumpyArray<Double>> {
     /**
      * Instantiate a new object of RobustScaler.
@@ -172,6 +171,12 @@ public class RobustScaler extends TransformerMixin<NumpyArray<Double>, NumpyArra
         this.quantilesRange = quantilesRange;
     }
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Double> transform(NumpyArray<Double> array) {
         NumpyArray<Double> result = array;
@@ -187,6 +192,12 @@ public class RobustScaler extends TransformerMixin<NumpyArray<Double>, NumpyArra
         return result;
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public NumpyArray<Double> inverseTransform(NumpyArray<Double> array) {
         NumpyArray<Double> result = array;

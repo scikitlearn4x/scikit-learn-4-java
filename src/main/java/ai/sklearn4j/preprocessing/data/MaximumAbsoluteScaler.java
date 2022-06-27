@@ -17,7 +17,6 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArray;
  * destroy any sparsity.
  * This scaler can also be applied to sparse CSR or CSC matrices.
  */
-
 public class MaximumAbsoluteScaler extends TransformerMixin<NumpyArray<Double>, NumpyArray<Double>> {
     /**
      * Instantiate a new object of MaximumAbsoluteScaler.
@@ -147,11 +146,23 @@ public class MaximumAbsoluteScaler extends TransformerMixin<NumpyArray<Double>, 
     }
 
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Double> transform(NumpyArray<Double> array) {
         return Numpy.divide(array, scale);
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public NumpyArray<Double> inverseTransform(NumpyArray<Double> array) {
         return Numpy.multiply(array, scale);

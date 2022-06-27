@@ -5,7 +5,6 @@
 // ==================================================================
 package ai.sklearn4j.core.packaging.loaders.preprocessing.label;
 
-import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.loaders.BaseScikitLearnContentLoader;
 import ai.sklearn4j.core.packaging.loaders.IScikitLearnContentLoader;
 import ai.sklearn4j.preprocessing.label.MultiLabelBinarizer;
@@ -17,7 +16,6 @@ import java.util.Map;
 /**
  * MultiLabelBinarizer object loader.
  */
-
 public class MultiLabelBinarizerContentLoader extends BaseScikitLearnContentLoader<MultiLabelBinarizer> {
     /**
      * Instantiate a new object of MultiLabelBinarizerContentLoader.
@@ -35,6 +33,7 @@ public class MultiLabelBinarizerContentLoader extends BaseScikitLearnContentLoad
     protected MultiLabelBinarizer createResultObject() {
         return new MultiLabelBinarizer();
     }
+
     /**
      * Create a clean instance of the loader.
      *
@@ -44,6 +43,7 @@ public class MultiLabelBinarizerContentLoader extends BaseScikitLearnContentLoad
     public IScikitLearnContentLoader duplicate() {
         return new MultiLabelBinarizerContentLoader();
     }
+
     /**
      * Defines the fields that are required to initialize a trained scikit-learn object.
      */

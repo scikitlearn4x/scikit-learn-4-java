@@ -1,10 +1,8 @@
 package ai.sklearn4j.naive_bayes;
 
-import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.utils.ExtMath;
-import ai.sklearn4j.utils.Preprocessing;
 
 /**
  * Naive Bayes classifier for complement distributed models.

@@ -5,7 +5,6 @@
 // ==================================================================
 package ai.sklearn4j.core.packaging.loaders.preprocessing.data;
 
-import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.loaders.BaseScikitLearnContentLoader;
 import ai.sklearn4j.core.packaging.loaders.IScikitLearnContentLoader;
 import ai.sklearn4j.preprocessing.data.Binarizer;
@@ -14,7 +13,6 @@ import ai.sklearn4j.preprocessing.data.Binarizer;
 /**
  * Binarizer object loader.
  */
-
 public class BinarizerContentLoader extends BaseScikitLearnContentLoader<Binarizer> {
     /**
      * Instantiate a new object of BinarizerContentLoader.
@@ -56,6 +54,13 @@ public class BinarizerContentLoader extends BaseScikitLearnContentLoader<Binariz
         registerDoubleField("threshold", this::setThreshold);
     }
 
+    /**
+     * Feature values below or equal to this are replaced by 0, above it by 1. Threshold may not be
+     * less than 0 for operations on sparse matrices.
+     *
+     * @param result The scikit-learn object to be loaded.
+     * @param value  The loaded value from stream.
+     */
     private void setThreshold(Binarizer result, double value) {
         result.setThreshold(value);
     }

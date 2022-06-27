@@ -1,9 +1,7 @@
 package ai.sklearn4j.core.libraries;
 
-import ai.sklearn4j.core.libraries.numpy.INumpyArrayElementOperation;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 
 /**
  * Function of the scipy library that was used in scikit-learn.

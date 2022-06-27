@@ -7,7 +7,6 @@ package ai.sklearn4j.preprocessing.label;
 
 import ai.sklearn4j.base.TransformerMixin;
 import ai.sklearn4j.core.ScikitLearnCoreException;
-import ai.sklearn4j.core.ScikitLearnFeatureNotImplementedException;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 
@@ -20,7 +19,6 @@ import java.util.*;
  * between this intuitive format and the supported multilabel format: a
  * (samples x classes)
  */
-
 public class MultiLabelBinarizer extends TransformerMixin<List<Set<Object>>, NumpyArray<Long>> {
     /**
      * Instantiate a new object of MultiLabelBinarizer.
@@ -78,14 +76,20 @@ public class MultiLabelBinarizer extends TransformerMixin<List<Set<Object>>, Num
     }
 
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Long> transform(List<Set<Object>> array) {
         Map<Object, Long> mapper = new HashMap<>();
         for (int i = 0; i < classes.size(); i++) {
-            mapper.put(classes.get(i), (long)i);
+            mapper.put(classes.get(i), (long) i);
         }
 
-        NumpyArray<Long> result = NumpyArrayFactory.arrayOfInt64WithShape(new int[] {array.size(), classes.size()});
+        NumpyArray<Long> result = NumpyArrayFactory.arrayOfInt64WithShape(new int[]{array.size(), classes.size()});
 
         for (int i = 0; i < array.size(); i++) {
             Set<Object> labels = array.get(i);
@@ -93,7 +97,7 @@ public class MultiLabelBinarizer extends TransformerMixin<List<Set<Object>>, Num
             for (Object label : labels) {
                 if (mapper.containsKey(label)) {
                     long index = mapper.get(label);
-                    result.set(1, i, (int)index);
+                    result.set(1, i, (int) index);
                 } else {
                     throw new ScikitLearnCoreException(String.format("The class '%s' was not defined during the MultiLabelBinarizer training.", label.toString()));
                 }
@@ -103,6 +107,12 @@ public class MultiLabelBinarizer extends TransformerMixin<List<Set<Object>>, Num
         return result;
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public List<Set<Object>> inverseTransform(NumpyArray<Long> array) {
         List<Set<Object>> result = new ArrayList<>();

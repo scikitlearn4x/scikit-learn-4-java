@@ -16,8 +16,8 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
     /**
      * Applies the operation on the numpy array.
      *
-     * @param array Input array to perform operation on.
-     * @param axis  The axis that should be reduced on.
+     * @param array          Input array to perform operation on.
+     * @param axis           The axis that should be reduced on.
      * @param keepDimensions A flag indicating to keep the same number of dimension as the input.
      * @return The numpy array that contains the result of the reduction.
      */
@@ -63,10 +63,9 @@ public abstract class NumpyArrayOperationWithAxisReduction<InputType, OutputType
     /**
      * Calculate the shape of the output array.
      *
-     * @param axis The axis to reduce on.
-     * @param inputShape The shape of the input array.
+     * @param axis           The axis to reduce on.
+     * @param inputShape     The shape of the input array.
      * @param keepDimensions A boolean indicating to keep the original number of dimensions.
-     *
      * @return The shape of the output based on the parameters.
      */
     private int[] getOutShape(int axis, int[] inputShape, boolean keepDimensions) {

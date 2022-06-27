@@ -92,6 +92,12 @@ public class Normalizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<
         this.norm = norm;
     }
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Double> transform(NumpyArray<Double> array) {
 //        if norm == "l1":
@@ -130,12 +136,12 @@ public class Normalizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<
 
     /**
      * Set scales of near constant features to 1.
-     *
+     * <p>
      * The goal is to avoid division by very small or zero values.
-     *
+     * <p>
      * Near constant features are detected automatically by identifying scales close to machine
      * precision unless they are precomputed by the caller and passed with the `constant_mask` kwarg.
-     *
+     * <p>
      * Typically for standard scaling, the scales are the standard deviation while near constant
      * features are better detected on the computed variances which are closer to machine precision
      * by construction.
@@ -155,6 +161,12 @@ public class Normalizer extends TransformerMixin<NumpyArray<Double>, NumpyArray<
         });
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public NumpyArray<Double> inverseTransform(NumpyArray<Double> array) {
         throw new ScikitLearnCoreException("The inverse transform is not available for the Normalizer preprocessing.");

@@ -60,7 +60,7 @@ public class LabelEncoder extends TransformerMixin<List<Object>, NumpyArray<Long
         Map<Object, Long> mapper = new HashMap<>();
 
         for (Object cls : classes) {
-            mapper.put(cls, (long)mapper.size());
+            mapper.put(cls, (long) mapper.size());
         }
 
         long[] result = new long[array.size()];
@@ -78,6 +78,12 @@ public class LabelEncoder extends TransformerMixin<List<Object>, NumpyArray<Long
         return NumpyArrayFactory.from(result);
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public List<Object> inverseTransform(NumpyArray<Long> array) {
         List<Object> result = new ArrayList<>();

@@ -36,7 +36,6 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArray;
  * passing `with_mean=False` to avoid breaking the sparsity structure of
  * the data.
  */
-
 public class StandardScaler extends TransformerMixin<NumpyArray<Double>, NumpyArray<Double>> {
     /**
      * Instantiate a new object of StandardScaler.
@@ -265,6 +264,12 @@ public class StandardScaler extends TransformerMixin<NumpyArray<Double>, NumpyAr
     }
 
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Double> transform(NumpyArray<Double> array) {
         NumpyArray<Double> result = array;
@@ -280,6 +285,12 @@ public class StandardScaler extends TransformerMixin<NumpyArray<Double>, NumpyAr
         return result;
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public NumpyArray<Double> inverseTransform(NumpyArray<Double> array) {
         NumpyArray<Double> result = array;

@@ -31,7 +31,6 @@ import java.util.Map;
  * model gave the greatest confidence. LabelBinarizer makes this easy
  * with the inverse_transform method.
  */
-
 public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Long>> {
     private static final String Y_TYPE_BINARY = "binary";
     private static final String Y_TYPE_MULTICLASS = "multiclass";
@@ -143,6 +142,12 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
         return this.posLabel;
     }
 
+    /**
+     * Takes the input array and transforms it.
+     *
+     * @param array The array to transform.
+     * @return The transformed array.
+     */
     @Override
     public NumpyArray<Long> transform(List<Object> array) {
         if (yType.equals(Y_TYPE_BINARY)) {
@@ -207,6 +212,12 @@ public class LabelBinarizer extends TransformerMixin<List<Object>, NumpyArray<Lo
         return result;
     }
 
+    /**
+     * Takes a transformed array and reveres the transformation.
+     *
+     * @param array The array to apply reveres transform.
+     * @return The inversed transform of array.
+     */
     @Override
     public List<Object> inverseTransform(NumpyArray<Long> array) {
         if (yType.equals(Y_TYPE_BINARY)) {

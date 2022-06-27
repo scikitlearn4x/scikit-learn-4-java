@@ -50,7 +50,7 @@ public class ExtMath {
      * Row-wise (squared) Euclidean norm of X.
      * Equivalent to np.sqrt((X * X).sum(axis=1))
      *
-     * @param x The input array.
+     * @param x       The input array.
      * @param squared If True, return squared norms.
      * @return The row-wise (squared) Euclidean norm of x.
      */

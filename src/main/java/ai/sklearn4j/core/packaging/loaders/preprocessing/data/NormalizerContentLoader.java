@@ -5,7 +5,6 @@
 // ==================================================================
 package ai.sklearn4j.core.packaging.loaders.preprocessing.data;
 
-import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.loaders.BaseScikitLearnContentLoader;
 import ai.sklearn4j.core.packaging.loaders.IScikitLearnContentLoader;
 import ai.sklearn4j.preprocessing.data.Normalizer;
@@ -14,7 +13,6 @@ import ai.sklearn4j.preprocessing.data.Normalizer;
 /**
  * Normalizer object loader.
  */
-
 public class NormalizerContentLoader extends BaseScikitLearnContentLoader<Normalizer> {
     /**
      * Instantiate a new object of NormalizerContentLoader.

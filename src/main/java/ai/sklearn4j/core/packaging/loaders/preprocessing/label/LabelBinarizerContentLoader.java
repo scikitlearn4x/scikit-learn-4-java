@@ -5,7 +5,6 @@
 // ==================================================================
 package ai.sklearn4j.core.packaging.loaders.preprocessing.label;
 
-import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.loaders.BaseScikitLearnContentLoader;
 import ai.sklearn4j.core.packaging.loaders.IScikitLearnContentLoader;
 import ai.sklearn4j.preprocessing.label.LabelBinarizer;

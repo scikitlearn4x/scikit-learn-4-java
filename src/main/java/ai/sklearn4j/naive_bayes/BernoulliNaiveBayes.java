@@ -83,6 +83,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the empirical log probability of features given a class, P(x_i|y).
+     *
      * @return Empirical log probability of features given a class, P(x_i|y).
      */
     public NumpyArray<Double> getFeatureLogProbabilities() {
@@ -91,6 +92,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the empirical log probability of features given a class, P(x_i|y).
+     *
      * @param featureLogProbabilities The empirical log probability of features given a class, P(x_i|y).
      */
     public void setFeatureLogProbabilities(NumpyArray<Double> featureLogProbabilities) {
@@ -99,6 +101,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the log probability of each class (smoothed).
+     *
      * @return Log probability of each class (smoothed).
      */
     public NumpyArray<Double> getClassLogPrior() {
@@ -107,6 +110,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the log probability of each class (smoothed).
+     *
      * @param classLogPrior The log probability of each class (smoothed).
      */
     public void setClassLogPrior(NumpyArray<Double> classLogPrior) {
@@ -115,6 +119,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+     *
      * @return Number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
      */
     public NumpyArray<Double> getFeatureCounts() {
@@ -123,6 +128,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
+     *
      * @param featureCounts The number of samples encountered for each (class, feature) during fitting. This value is weighted by the sample weight when provided.
      */
     public void setFeatureCount(NumpyArray<Double> featureCounts) {
@@ -132,8 +138,9 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
     /**
      * Gets the threshold for binarizing (mapping to booleans) of sample features. If None, input
      * is presumed to already consist of binary vectors.
+     *
      * @return Threshold for binarizing (mapping to booleans) of sample features. If None, input
-     *         is presumed to already consist of binary vectors.
+     * is presumed to already consist of binary vectors.
      */
     public double getBinarizationThreshold() {
         return binarizationThreshold;
@@ -141,6 +148,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the threshold for binarizing (mapping to booleans) of sample features. If None, input is presumed to already consist of binary vectors.
+     *
      * @param binarizationThreshold The threshold for binarizing (mapping to booleans) of sample features. If None, input is presumed to already consist of binary vectors.
      */
     public void setBinarizationThreshold(double binarizationThreshold) {

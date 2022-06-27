@@ -52,7 +52,7 @@ public class ComplementNaiveBayesContentLoader extends BaseScikitLearnContentLoa
     /**
      * Sets the feature_all_ field.
      *
-     * @param result The classifier to be loaded.
+     * @param result     The classifier to be loaded.
      * @param numpyArray The feature_all_ field.
      */
     private void setFeatureAll(ComplementNaiveBayes result, NumpyArray numpyArray) {
@@ -62,7 +62,7 @@ public class ComplementNaiveBayesContentLoader extends BaseScikitLearnContentLoa
     /**
      * Sets the feature's log probability in the training data.
      *
-     * @param result The classifier to be loaded.
+     * @param result     The classifier to be loaded.
      * @param numpyArray The feature's log probability in the training data.
      */
     private void setFeatureLogProbabilities(ComplementNaiveBayes result, NumpyArray numpyArray) {
@@ -72,7 +72,7 @@ public class ComplementNaiveBayesContentLoader extends BaseScikitLearnContentLoa
     /**
      * Sets the frequency of the features in the training data.
      *
-     * @param result The classifier to be loaded.
+     * @param result     The classifier to be loaded.
      * @param numpyArray The frequency of the features in the training data.
      */
     private void setFeatureCount(ComplementNaiveBayes result, NumpyArray numpyArray) {

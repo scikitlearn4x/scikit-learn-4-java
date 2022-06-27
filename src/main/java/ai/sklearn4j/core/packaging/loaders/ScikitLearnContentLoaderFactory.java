@@ -3,7 +3,9 @@ package ai.sklearn4j.core.packaging.loaders;
 import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.packaging.loaders.classifiers.naive_bayes.*;
 import ai.sklearn4j.core.packaging.loaders.preprocessing.data.*;
-import ai.sklearn4j.core.packaging.loaders.preprocessing.label.*;
+import ai.sklearn4j.core.packaging.loaders.preprocessing.label.LabelBinarizerContentLoader;
+import ai.sklearn4j.core.packaging.loaders.preprocessing.label.LabelEncoderContentLoader;
+import ai.sklearn4j.core.packaging.loaders.preprocessing.label.MultiLabelBinarizerContentLoader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,6 +31,9 @@ public class ScikitLearnContentLoaderFactory {
         registerDataPreprocessingLoaders();
     }
 
+    /**
+     * Registers the content loaders for data preprocessing.
+     */
     private static void registerDataPreprocessingLoaders() {
         registerLoader(new MinimumMaximumScalerContentLoader());
         registerLoader(new StandardScalerContentLoader());
@@ -39,6 +44,9 @@ public class ScikitLearnContentLoaderFactory {
 //        registerLoader(new QuantileTransformerContentLoader());
     }
 
+    /**
+     * Registers the content loaders for label preprocessing.
+     */
     private static void registerLabelPreprocessingLoaders() {
         registerLoader(new LabelEncoderContentLoader());
         registerLoader(new LabelBinarizerContentLoader());
