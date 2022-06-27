@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Assertions;
 import test.sklearn4j.TestHelper;
 import test.sklearn4j.core.test_template.bases.BaseTesterV1;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ClassifierTestingTemplateV1 extends BaseTesterV1 {
     public String dataSetName = null;

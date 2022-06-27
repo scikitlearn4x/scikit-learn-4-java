@@ -1,6 +1,5 @@
 package test.sklearn4j.core.test_template;
 
-import ai.sklearn4j.base.TransformerMixin;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.core.packaging.IScikitLearnPackage;
 import ai.sklearn4j.preprocessing.data.MinimumMaximumScaler;
@@ -16,8 +15,8 @@ public class MinimumMaximumScalerTesterV1 extends BaseTesterV1 {
 
     @Override
     protected void performUseCaseSpecificTest(IScikitLearnPackage binaryPackage) {
-        NumpyArray<Double> transformed = (NumpyArray<Double>)binaryPackage.getExtraValues().get("transformed");
-        NumpyArray<Double> raw = (NumpyArray<Double>)binaryPackage.getExtraValues().get("raw");
+        NumpyArray<Double> transformed = (NumpyArray<Double>) binaryPackage.getExtraValues().get("transformed");
+        NumpyArray<Double> raw = (NumpyArray<Double>) binaryPackage.getExtraValues().get("raw");
 
         MinimumMaximumScaler transformerMixin = (MinimumMaximumScaler) binaryPackage.getModel("preprocessing_to_test");
 

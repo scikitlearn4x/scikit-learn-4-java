@@ -6,7 +6,7 @@ plugins {
 sourceCompatibility = 11
 targetCompatibility = 11
 
-def library_version = '0.0.3'
+def library_version = '0.0.4'
 def library_group_id = 'ai.scikitlearn4x'
 def library_artifact_id = 'sklearn4jvm'
 

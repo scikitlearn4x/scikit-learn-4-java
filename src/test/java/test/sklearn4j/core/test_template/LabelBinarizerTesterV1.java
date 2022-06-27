@@ -24,7 +24,7 @@ public class LabelBinarizerTesterV1 extends BaseTesterV1 {
     protected void performUseCaseSpecificTest(IScikitLearnPackage binaryPackage) {
         objectUnderTest = (LabelBinarizer) binaryPackage.getModel("preprocessing_to_test");
 
-        long[][] transformed = (long[][]) ((NumpyArray)binaryPackage.getExtraValues().get("transformed")).getWrapper().getRawArray();
+        long[][] transformed = (long[][]) ((NumpyArray) binaryPackage.getExtraValues().get("transformed")).getWrapper().getRawArray();
         Object _raw = binaryPackage.getExtraValues().get("raw");
         List<Object> raw = null;
 
@@ -37,12 +37,12 @@ public class LabelBinarizerTesterV1 extends BaseTesterV1 {
                 for (int i = 0; i < np.getShape()[0]; i++) {
                     raw.add(np.get(i));
                 }
-            } else{
+            } else {
                 // Not implemented yet
                 throw new RuntimeException();
             }
         } else {
-            raw = (List<Object>)_raw;
+            raw = (List<Object>) _raw;
         }
 
         LabelBinarizer encoder = (LabelBinarizer) binaryPackage.getModel("preprocessing_to_test");

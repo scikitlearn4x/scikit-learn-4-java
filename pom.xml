@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ai.scikitlearn4x</groupId>
     <artifactId>sklearn4jvm</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <name>scikit-learn 4 JVM</name>
     <description>scikit-learn 4 JVM is an open-source Java library that allows inference of scikit-learn models that
         were trained in Python in Java and other JVM based languages.

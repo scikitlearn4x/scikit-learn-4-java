@@ -15,8 +15,8 @@ public class StandardDataTransformerTesterV1 extends BaseTesterV1 {
 
     @Override
     protected void performUseCaseSpecificTest(IScikitLearnPackage binaryPackage) {
-        NumpyArray<Double> transformed = (NumpyArray<Double>)binaryPackage.getExtraValues().get("transformed");
-        NumpyArray<Double> raw = (NumpyArray<Double>)binaryPackage.getExtraValues().get("raw");
+        NumpyArray<Double> transformed = (NumpyArray<Double>) binaryPackage.getExtraValues().get("transformed");
+        NumpyArray<Double> raw = (NumpyArray<Double>) binaryPackage.getExtraValues().get("raw");
 
         TransformerMixin transformerMixin = (TransformerMixin) binaryPackage.getModel("preprocessing_to_test");
 

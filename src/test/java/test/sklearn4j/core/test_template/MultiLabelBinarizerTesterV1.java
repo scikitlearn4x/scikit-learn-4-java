@@ -1,16 +1,13 @@
 package test.sklearn4j.core.test_template;
 
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 import ai.sklearn4j.core.packaging.IScikitLearnPackage;
 import ai.sklearn4j.preprocessing.label.MultiLabelBinarizer;
 import org.junit.jupiter.api.Assertions;
 import test.sklearn4j.TestHelper;
 import test.sklearn4j.core.test_template.bases.BaseTesterV1;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 public class MultiLabelBinarizerTesterV1 extends BaseTesterV1 {
     public MultiLabelBinarizer objectUnderTest;
@@ -24,7 +21,7 @@ public class MultiLabelBinarizerTesterV1 extends BaseTesterV1 {
     protected void performUseCaseSpecificTest(IScikitLearnPackage binaryPackage) {
         objectUnderTest = (MultiLabelBinarizer) binaryPackage.getModel("preprocessing_to_test");
 
-        long[][] transformed = (long[][]) ((NumpyArray)binaryPackage.getExtraValues().get("transformed")).getWrapper().getRawArray();
+        long[][] transformed = (long[][]) ((NumpyArray) binaryPackage.getExtraValues().get("transformed")).getWrapper().getRawArray();
         Object _raw = binaryPackage.getExtraValues().get("raw");
         List<Object> raw = null;
 

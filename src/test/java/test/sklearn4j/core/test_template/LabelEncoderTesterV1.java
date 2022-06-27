@@ -8,7 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import test.sklearn4j.TestHelper;
 import test.sklearn4j.core.test_template.bases.BaseTesterV1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class LabelEncoderTesterV1 extends BaseTesterV1 {
 
@@ -19,7 +21,7 @@ public class LabelEncoderTesterV1 extends BaseTesterV1 {
 
     @Override
     protected void performUseCaseSpecificTest(IScikitLearnPackage binaryPackage) {
-        long[] transformed = (long[]) ((NumpyArray)binaryPackage.getExtraValues().get("transformed")).getWrapper().getRawArray();
+        long[] transformed = (long[]) ((NumpyArray) binaryPackage.getExtraValues().get("transformed")).getWrapper().getRawArray();
         Object _raw = binaryPackage.getExtraValues().get("raw");
         List<Object> raw = null;
 
@@ -32,12 +34,12 @@ public class LabelEncoderTesterV1 extends BaseTesterV1 {
                 for (int i = 0; i < np.getShape()[0]; i++) {
                     raw.add(np.get(i));
                 }
-            } else{
+            } else {
                 // Not implemented yet
                 throw new RuntimeException();
             }
         } else {
-            raw = (List<Object>)_raw;
+            raw = (List<Object>) _raw;
         }
 
         LabelEncoder encoder = (LabelEncoder) binaryPackage.getModel("preprocessing_to_test");
