@@ -5,22 +5,6 @@ import test.sklearn4j.core.test_template.StandardOneWayDataTransformerTesterV1;
 
 public class BinarizerWithPointFiveThresholdTests {
     // ------------------------------------------------------------------------
-    // Test for scikit-learn 0.20.0 on python 3.5
-    // ------------------------------------------------------------------------
-
-    @Test
-    public void testWithPointFiveThresholdOnPython3_5WithSkLearn0_20_0() {
-        StandardOneWayDataTransformerTesterV1 testingTemplate = new StandardOneWayDataTransformerTesterV1();
-
-        testingTemplate.scikitLearnVersion = "0.20.0";
-        testingTemplate.pythonVersion = "3.5";
-        testingTemplate.objectName = "Binarizer";
-        testingTemplate.configurationName = "with point five threshold";
-
-        testingTemplate.test();
-    }
-
-    // ------------------------------------------------------------------------
     // Test for scikit-learn 0.20.0 on python 3.6
     // ------------------------------------------------------------------------
 

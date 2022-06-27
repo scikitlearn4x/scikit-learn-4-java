@@ -5,22 +5,6 @@ import test.sklearn4j.core.test_template.StandardDataTransformerTesterV1;
 
 public class RobustScalerWithoutCenteringTests {
     // ------------------------------------------------------------------------
-    // Test for scikit-learn 0.20.0 on python 3.5
-    // ------------------------------------------------------------------------
-
-    @Test
-    public void testWithoutCenteringOnPython3_5WithSkLearn0_20_0() {
-        StandardDataTransformerTesterV1 testingTemplate = new StandardDataTransformerTesterV1();
-
-        testingTemplate.scikitLearnVersion = "0.20.0";
-        testingTemplate.pythonVersion = "3.5";
-        testingTemplate.objectName = "Robust Scaler";
-        testingTemplate.configurationName = "without centering";
-
-        testingTemplate.test();
-    }
-
-    // ------------------------------------------------------------------------
     // Test for scikit-learn 0.20.0 on python 3.6
     // ------------------------------------------------------------------------
 

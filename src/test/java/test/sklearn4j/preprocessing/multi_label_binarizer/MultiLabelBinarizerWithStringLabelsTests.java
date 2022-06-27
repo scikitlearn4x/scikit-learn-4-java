@@ -5,22 +5,6 @@ import test.sklearn4j.core.test_template.MultiLabelBinarizerTesterV1;
 
 public class MultiLabelBinarizerWithStringLabelsTests {
     // ------------------------------------------------------------------------
-    // Test for scikit-learn 0.20.0 on python 3.5
-    // ------------------------------------------------------------------------
-
-    @Test
-    public void testWithStringLabelsOnPython3_5WithSkLearn0_20_0() {
-        MultiLabelBinarizerTesterV1 testingTemplate = new MultiLabelBinarizerTesterV1();
-
-        testingTemplate.scikitLearnVersion = "0.20.0";
-        testingTemplate.pythonVersion = "3.5";
-        testingTemplate.objectName = "Multi Label Binarizer";
-        testingTemplate.configurationName = "with string labels";
-
-        testingTemplate.test();
-    }
-
-    // ------------------------------------------------------------------------
     // Test for scikit-learn 0.20.0 on python 3.6
     // ------------------------------------------------------------------------
 
