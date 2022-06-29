@@ -373,7 +373,7 @@ public class TestNumpyArithmetics {
         NumpyArray<Double> a2 = NumpyArrayFactory.from(array2);
 
         try {
-            Numpy.add(a1, a2);
+            Numpy.multiply(a1, a2);
             Assertions.fail("This operation should not be permitted.");
         } catch (NumpyOperationException ignore) {
         } catch (Exception ex) {

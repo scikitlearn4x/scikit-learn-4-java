@@ -116,6 +116,21 @@ other languages.
 Forth, porting the rich library of the regressors with proper testing to JVM and
 other languages.
 
+### Utility / Preprocessing Classes
+
+The following preprocessing are supported:
+* Data
+  - Binarizer 
+  - MaximumAbsoluteScaler (MaxAbsScaler)
+  - MinimumMaximumScaler (MinMaxScaler)
+  - Normalizer 
+  - RobustScaler 
+  - StandardScaler
+* Label
+  - LabelBinarizer
+  - LabelEncoder
+  - MultiLabelBinarizer
+
 ### Classifiers
 
 The following classifiers are supported:

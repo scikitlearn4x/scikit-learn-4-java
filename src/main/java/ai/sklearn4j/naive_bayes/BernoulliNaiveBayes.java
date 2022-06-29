@@ -4,7 +4,7 @@ import ai.sklearn4j.core.ScikitLearnCoreException;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
 import ai.sklearn4j.utils.ExtMath;
-import ai.sklearn4j.utils.Preprocessing;
+import ai.sklearn4j.utils.Preprocessings;
 
 /**
  * Naive Bayes classifier for bernoulli distributed models.
@@ -62,7 +62,7 @@ public class BernoulliNaiveBayes extends BaseNaiveBayes {
 
  return jll
  */
-        x = Preprocessing.binarizeInput(x, binarizationThreshold);
+        x = Preprocessings.binarizeInput(x, binarizationThreshold);
 
         int n_features = this.featureLogProbabilities.getShape()[1];
         int n_features_X = x.getShape()[1];

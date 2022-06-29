@@ -6,7 +6,7 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 /**
  * Utils method that scikit-learn provide to preprocess the data.
  */
-public class Preprocessing {
+public class Preprocessings {
     /**
      * Binarize a numpy array based on a given threshold.
      *

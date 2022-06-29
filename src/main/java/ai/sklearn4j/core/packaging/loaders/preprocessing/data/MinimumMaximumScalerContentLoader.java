@@ -122,7 +122,7 @@ public class MinimumMaximumScalerContentLoader extends BaseScikitLearnContentLoa
      * @param result The scikit-learn object to be loaded.
      * @param value  The loaded value from stream.
      */
-    private void setNFeaturesIn(MinimumMaximumScaler result, Object value) {
+    private void setNFeaturesIn(MinimumMaximumScaler result, long value) {
         result.setNFeaturesIn(value);
     }
 
@@ -144,7 +144,7 @@ public class MinimumMaximumScalerContentLoader extends BaseScikitLearnContentLoa
      * @param result The scikit-learn object to be loaded.
      * @param value  The loaded value from stream.
      */
-    private void setFeatureNamesIn(MinimumMaximumScaler result, Object value) {
+    private void setFeatureNamesIn(MinimumMaximumScaler result, String[] value) {
         result.setFeatureNamesIn(value);
     }
 

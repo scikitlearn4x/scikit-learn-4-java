@@ -59,7 +59,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     /**
      * Number of features seen during `fit`.
      */
-    private Object nFeaturesIn = null;
+    private long nFeaturesIn = 0;
 
     /**
      * The number of samples processed by the estimator. It will be reset on
@@ -71,7 +71,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
      * Names of features seen during `fit`. Defined only when `X` has feature
      * names that are all strings.
      */
-    private Object featureNamesIn = null;
+    private String[] featureNamesIn = null;
 
     /**
      * Internal field of scikit-learn object.
@@ -182,7 +182,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
      *
      * @param value The new value for nFeaturesIn.
      */
-    public void setNFeaturesIn(Object value) {
+    public void setNFeaturesIn(long value) {
         this.nFeaturesIn = value;
     }
 
@@ -190,7 +190,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
     /**
      * Gets the Number of features seen during `fit`.
      */
-    public Object getNFeaturesIn() {
+    public long getNFeaturesIn() {
         return this.nFeaturesIn;
     }
 
@@ -221,7 +221,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
      *
      * @param value The new value for featureNamesIn.
      */
-    public void setFeatureNamesIn(Object value) {
+    public void setFeatureNamesIn(String[] value) {
         this.featureNamesIn = value;
     }
 
@@ -230,7 +230,7 @@ public class MinimumMaximumScaler extends TransformerMixin<NumpyArray<Double>, N
      * Gets the Names of features seen during `fit`. Defined only when `X` has feature
      * names that are all strings.
      */
-    public Object getFeatureNamesIn() {
+    public String[] getFeatureNamesIn() {
         return this.featureNamesIn;
     }
 
