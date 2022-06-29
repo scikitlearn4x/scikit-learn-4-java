@@ -94,12 +94,21 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LONG) {
                 long value = buffer.readLongInteger();
                 ((IScikitLearnLoaderLongFieldSetter<ObjectType>) info.setter).setLongField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_STRING) {
+                String value = buffer.readString();
+                ((IScikitLearnLoaderStringFieldSetter<ObjectType>) info.setter).setStringField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_NUMPY) {
                 NumpyArray value = buffer.readNumpyArray();
                 ((IScikitLearnLoaderNumpyArrayFieldSetter<ObjectType>) info.setter).setNumpyArrayField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_STRING_ARRAY) {
                 String[] value = buffer.readStringArray();
                 ((IScikitLearnLoaderStringArrayFieldSetter<ObjectType>) info.setter).setStringArrayField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LIST) {
+                List<Object> value = buffer.readList();
+                ((IScikitLearnLoaderListFieldSetter<ObjectType>) info.setter).setListField(result, value);
+            } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_DICTIONARY) {
+                Map<String, Object> value = buffer.readDictionary();
+                ((IScikitLearnLoaderDictionaryFieldSetter<ObjectType>) info.setter).setDictionaryField(result, value);
             } else if (info.fieldType == LoaderFieldInfo.FIELD_TYPE_LIST_OF_NUMPY_ARRAY) {
                 List<Object> value = buffer.readList();
                 List<NumpyArray> finalValue = new ArrayList<>();
@@ -147,6 +156,25 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
         field.name = name;
         field.setter = setter;
         field.fieldType = LoaderFieldInfo.FIELD_TYPE_LONG;
+
+        fields.put(name, field);
+    }
+
+    /**
+     * Registers a string field for the scikit-learn serialized layout.
+     *
+     * @param name   Name of the field.
+     * @param setter The setter callback to load the value of the scikit-learn object.
+     */
+    protected void registerStringField(String name, IScikitLearnLoaderStringFieldSetter<ObjectType> setter) {
+        if (fields.containsKey(name)) {
+            throw new ScikitLearnCoreException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_STRING;
 
         fields.put(name, field);
     }
@@ -209,6 +237,45 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
     }
 
     /**
+     * Registers a list field for the scikit-learn serialized layout.
+     *
+     * @param name   Name of the field.
+     * @param setter The setter callback to load the value of the scikit-learn object.
+     */
+    protected void registerListField(String name, IScikitLearnLoaderListFieldSetter<ObjectType> setter) {
+        if (fields.containsKey(name)) {
+            throw new ScikitLearnCoreException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_LIST;
+
+        fields.put(name, field);
+    }
+
+    /**
+     * Registers a dictionary field for the scikit-learn serialized layout.
+     *
+     * @param name   Name of the field.
+     * @param setter The setter callback to load the value of the scikit-learn object.
+     */
+    protected void registerDictionaryField(String name, IScikitLearnLoaderDictionaryFieldSetter<ObjectType> setter) {
+        if (fields.containsKey(name)) {
+            throw new ScikitLearnCoreException("Field is already added");
+        }
+
+        LoaderFieldInfo field = new LoaderFieldInfo();
+        field.name = name;
+        field.setter = setter;
+        field.fieldType = LoaderFieldInfo.FIELD_TYPE_DICTIONARY;
+
+        fields.put(name, field);
+    }
+
+
+    /**
      * Sets the list of features names' of the dataset the model was trained on.
      *
      * @param result The classifier to be loaded.
@@ -216,7 +283,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     private void setFeaturesIn(ObjectType result, String[] value) {
         if (result instanceof ClassifierMixin) {
-            ((ClassifierMixin)result).setFeatureNamesIn(value);
+            ((ClassifierMixin) result).setFeatureNamesIn(value);
         }
     }
 
@@ -228,7 +295,7 @@ public abstract class BaseScikitLearnContentLoader<ObjectType> implements ISciki
      */
     private void setNumberOfFeatureIn(ObjectType result, long value) {
         if (result instanceof ClassifierMixin) {
-            ((ClassifierMixin)result).setNumberOfFeatures((int) value);
+            ((ClassifierMixin) result).setNumberOfFeatures((int) value);
         }
     }
 }
@@ -261,6 +328,21 @@ class LoaderFieldInfo {
      * Constant to specify the field is of type list of numpy array.
      */
     public static final int FIELD_TYPE_LIST_OF_NUMPY_ARRAY = 5;
+
+    /**
+     * Constant to specify the field is of type list.
+     */
+    public static final int FIELD_TYPE_LIST = 6;
+
+    /**
+     * Constant to specify the field is of type String.
+     */
+    public static final int FIELD_TYPE_STRING = 7;
+
+    /**
+     * Constant to specify the field is of type dictionary.
+     */
+    public static final int FIELD_TYPE_DICTIONARY = 8;
 
     /**
      * The name of the field.

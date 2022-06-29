@@ -62,7 +62,7 @@ public class BernoulliNaiveBayesContentLoader extends BaseScikitLearnContentLoad
     /**
      * Sets the feature's log probability in the training data.
      *
-     * @param result The classifier to be loaded.
+     * @param result     The classifier to be loaded.
      * @param numpyArray The feature's log probability in the training data.
      */
     private void setFeatureLogProbabilities(BernoulliNaiveBayes result, NumpyArray numpyArray) {
@@ -72,7 +72,7 @@ public class BernoulliNaiveBayesContentLoader extends BaseScikitLearnContentLoad
     /**
      * Sets the frequency of the features in the training data.
      *
-     * @param result The classifier to be loaded.
+     * @param result     The classifier to be loaded.
      * @param numpyArray The frequency of the features in the training data.
      */
     private void setFeatureCount(BernoulliNaiveBayes result, NumpyArray numpyArray) {

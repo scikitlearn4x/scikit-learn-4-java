@@ -6,10 +6,11 @@ import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 /**
  * Utils method that scikit-learn provide to preprocess the data.
  */
-public class Preprocessing {
+public class Preprocessings {
     /**
      * Binarize a numpy array based on a given threshold.
-     * @param x Array to be binarized.
+     *
+     * @param x         Array to be binarized.
      * @param threshold The threshold for binarization. If the value in x is greater than threshold,
      *                  the target element is 1.0 otherwise is 0.0.
      * @return The binarized numpy array.

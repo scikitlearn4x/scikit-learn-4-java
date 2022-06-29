@@ -1,9 +1,8 @@
 package ai.sklearn4j.core.libraries;
 
-import ai.sklearn4j.core.libraries.numpy.INumpyArrayElementOperation;
+import ai.sklearn4j.core.ScikitLearnFeatureNotImplementedException;
 import ai.sklearn4j.core.libraries.numpy.Numpy;
 import ai.sklearn4j.core.libraries.numpy.NumpyArray;
-import ai.sklearn4j.core.libraries.numpy.NumpyArrayFactory;
 
 /**
  * Function of the scipy library that was used in scikit-learn.
@@ -39,43 +38,18 @@ public class Scipy {
     }
 
     /**
-     * Reshapes the array for supporting arithmetic.
-     *
-     * @param np Numpy array to be changed.
-     * @return The changed NumpyArray.
+     * Utility functions in scipy related to normal distributions.
      */
-    private static NumpyArray<Double> to2DArrayShape(NumpyArray<Double> np) {
-        double[] values = (double[]) np.getWrapper().getRawArray();
-        double[][] result = new double[values.length][1];
-
-        for (int i = 0; i < result.length; i++) {
-            result[i][0] = values[i];
+    public static final class NormalDistribution {
+        /**
+         * Calculate the cumulative distribution function of a normal array.
+         *
+         * @param x The array holding the distribution values.
+         * @return The CDF for the distribution.
+         */
+        public static double[] cumulativeDistributionFunction(double[] x) {
+            throw new ScikitLearnFeatureNotImplementedException();
         }
-
-        return NumpyArrayFactory.from(result);
-//        int[] targetShape = new int[np.getShape().length + 1];
-//        for (int i = 0; i < targetShape.length - 1; i++) {
-//            targetShape[i] = np.getShape()[i];
-//        }
-//        targetShape[targetShape.length - 1] = 1;
-//
-//        NumpyArray<Double> result = NumpyArrayFactory.arrayOfDoubleWithShape(targetShape);
-//
-//        int[] counter = new int[targetShape.length+1];
-//        counter[0] = -1;
-//
-//        do {
-//            NumpyArray.addCounter(counter, targetShape);
-//            int[] indexOnOutput = new int[targetShape.length];
-//            int[] indexOnInput = new int[targetShape.length - 1];
-//            for (int i = 0; i < indexOnOutput.length - 1; i++) {
-//                indexOnOutput[i] = counter[i];
-//                indexOnInput[i] = counter[i];
-//            }
-//
-//            result.set(np.get(indexOnInput), indexOnOutput);
-//        } while (counter[counter.length - 1] == 0);
-//
-//        return result;
     }
+
 }

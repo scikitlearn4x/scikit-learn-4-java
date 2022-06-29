@@ -664,6 +664,215 @@ public final class Numpy {
     }
 
     /**
+     * Multiplies two numpy arrays.
+     *
+     * @param a1 Left-hand side of the expression.
+     * @param a2 Right-hand side of the expression.
+     * @return The multiplication result.
+     */
+    public static NumpyArray multiply(NumpyArray a1, NumpyArray a2) {
+        validateDimensionsForAdd(a1.getShape(), a2.getShape());
+        if (shouldSwapForAdd(a1, a2)) {
+            return multiply(a2, a1);
+        }
+
+        boolean isFloatingPoint = a1.isFloatingPoint() || a2.isFloatingPoint();
+        int size = Math.max(a1.numberOfBytes(), a2.numberOfBytes());
+
+        if (!a1.isFloatingPoint()) {
+            size = a2.numberOfBytes();
+        } else if (!a2.isFloatingPoint()) {
+            size = a1.numberOfBytes();
+        }
+
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, a1.getShape());
+        multiplyInPlace(result, a1, a2);
+        return result;
+    }
+
+    /**
+     * Multiplies two numpy array and stores the result into a target array.
+     *
+     * @param target The target array that stores the results.
+     * @param a1     The left-hand side of the expression.
+     * @param a2     The right-hand side of the expression.
+     */
+    private static void multiplyInPlace(NumpyArray target, NumpyArray a1, NumpyArray a2) {
+        if (a2.isSingleValueArray()) {
+            Object singleValue = a2.getSingleValue();
+
+            if (target.isFloatingPoint()) {
+                if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                    multiplyInPlace(target, a1, ((double) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                    multiplyInPlace(target, a1, ((double) singleValue));
+                }
+            } else {
+                if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                    multiplyInPlace(target, a1, ((byte) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                    multiplyInPlace(target, a1, ((short) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                    multiplyInPlace(target, a1, ((int) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                    multiplyInPlace(target, a1, ((long) singleValue));
+                }
+            }
+        } else if (a1.numberOfDimensions() > 1 && a2.numberOfDimensions() == 1) {
+            int[] leftNoneCommonShape = new int[a1.numberOfDimensions() - 1];
+            int[] index = new int[a1.numberOfDimensions()];
+            for (int i = 0; i < leftNoneCommonShape.length; i++) {
+                leftNoneCommonShape[i] = a1.getShape()[i];
+            }
+
+            int[] counter = new int[leftNoneCommonShape.length + 1];
+            int rightShape = a2.getShape()[0];
+
+            do {
+                NumpyArray.addCounter(counter, leftNoneCommonShape);
+
+                for (int i = 0; i < leftNoneCommonShape.length; i++) {
+                    index[i] = counter[i];
+                }
+
+                for (int i = 0; i < rightShape; i++) {
+                    index[index.length - 1] = i;
+                    Object value = null;
+
+                    if (target.isFloatingPoint()) {
+                        if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                            value = (double) a1.get(index) * (double) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                            value = (float) a1.get(index) * (float) a2.get(i);
+                        }
+                    } else {
+                        if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                            value = (byte) a1.get(index) * (byte) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                            value = (short) a1.get(index) * (short) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                            value = (int) a1.get(index) * (int) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                            value = (long) a1.get(index) * (long) a2.get(i);
+                        }
+                    }
+
+                    target.set(value, index);
+                }
+            } while (counter[counter.length - 1] == 0);
+        } else if (a1.numberOfDimensions() == 1 && a2.numberOfDimensions() == 1) {
+            int firstDim = target.getShape()[0];
+
+            for (int i = 0; i < firstDim; i++) {
+                Object value = null;
+
+                if (target.isFloatingPoint()) {
+                    if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                        value = (double) a1.get(i) * (double) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                        value = (float) a1.get(i) * (float) a2.get(i);
+                    }
+                } else {
+                    if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                        value = (byte) a1.get(i) * (byte) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                        value = (short) a1.get(i) * (short) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                        value = (int) a1.get(i) * (int) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                        value = (long) a1.get(i) * (long) a2.get(i);
+                    }
+                }
+
+                target.set(value, i);
+            }
+        } else {
+            int firstDim = target.getShape()[0];
+
+            for (int i = 0; i < firstDim; i++) {
+                NumpyArray leftWrap = a1.wrapInnerSubsetArray(i);
+                NumpyArray rightWrap = null;
+
+                if (a2.getShape()[0] == 1) {
+                    rightWrap = a2.wrapInnerSubsetArray(0);
+                } else {
+                    rightWrap = a2.wrapInnerSubsetArray(i);
+                }
+
+                multiplyInPlace(target.wrapInnerSubsetArray(i), leftWrap, rightWrap);
+            }
+        }
+    }
+
+
+    /**
+     * Multiplies a double value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be multiplied by.
+     */
+    private static void multiplyInPlace(NumpyArray target, NumpyArray array, double value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> value * (double) element);
+    }
+
+    /**
+     * Multiplies a float value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be multiplied by.
+     */
+    private static void multiplyInPlace(NumpyArray target, NumpyArray array, float value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> value * (float) element);
+    }
+
+    /**
+     * Multiplies a long value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be multiplied by.
+     */
+    private static void multiplyInPlace(NumpyArray target, NumpyArray array, long value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> value * (long) element);
+    }
+
+    /**
+     * Multiplies a int value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be multiplied by.
+     */
+    private static void multiplyInPlace(NumpyArray target, NumpyArray array, int value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> value * (int) element);
+    }
+
+    /**
+     * Multiplies a short value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be multiplied by.
+     */
+    private static void multiplyInPlace(NumpyArray target, NumpyArray array, short value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> value * (short) element);
+    }
+
+    /**
+     * Multiplies a byte value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be multiplied by.
+     */
+    private static void multiplyInPlace(NumpyArray target, NumpyArray array, byte value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> value * (byte) element);
+    }
+
+
+    /**
      * Multiplies a numpy array by a double value. The operation is element-wise.
      *
      * @param array  The input array to be multiplied.
@@ -691,6 +900,214 @@ public final class Numpy {
         array.applyToEachElementAnsSaveToTarget(result, value -> value * factor);
 
         return result;
+    }
+
+    /**
+     * Divides two numpy arrays.
+     *
+     * @param a1 Left-hand side of the expression.
+     * @param a2 Right-hand side of the expression.
+     * @return The multiplication result.
+     */
+    public static NumpyArray divide(NumpyArray a1, NumpyArray a2) {
+        validateDimensionsForAdd(a1.getShape(), a2.getShape());
+        if (shouldSwapForAdd(a1, a2)) {
+            throw new NumpyOperationException("This division is not supported.");
+        }
+
+        boolean isFloatingPoint = a1.isFloatingPoint() || a2.isFloatingPoint();
+        int size = Math.max(a1.numberOfBytes(), a2.numberOfBytes());
+
+        if (!a1.isFloatingPoint()) {
+            size = a2.numberOfBytes();
+        } else if (!a2.isFloatingPoint()) {
+            size = a1.numberOfBytes();
+        }
+
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(isFloatingPoint, size, a1.getShape());
+        divideInPlace(result, a1, a2);
+        return result;
+    }
+
+    /**
+     * Divides two numpy array and stores the result into a target array.
+     *
+     * @param target The target array that stores the results.
+     * @param a1     The left-hand side of the expression.
+     * @param a2     The right-hand side of the expression.
+     */
+    private static void divideInPlace(NumpyArray target, NumpyArray a1, NumpyArray a2) {
+        if (a2.isSingleValueArray()) {
+            Object singleValue = a2.getSingleValue();
+
+            if (target.isFloatingPoint()) {
+                if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                    divideInPlace(target, a1, ((double) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                    divideInPlace(target, a1, ((double) singleValue));
+                }
+            } else {
+                if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                    divideInPlace(target, a1, ((byte) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                    divideInPlace(target, a1, ((short) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                    divideInPlace(target, a1, ((int) singleValue));
+                } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                    divideInPlace(target, a1, ((long) singleValue));
+                }
+            }
+        } else if (a1.numberOfDimensions() > 1 && a2.numberOfDimensions() == 1) {
+            int[] leftNoneCommonShape = new int[a1.numberOfDimensions() - 1];
+            int[] index = new int[a1.numberOfDimensions()];
+            for (int i = 0; i < leftNoneCommonShape.length; i++) {
+                leftNoneCommonShape[i] = a1.getShape()[i];
+            }
+
+            int[] counter = new int[leftNoneCommonShape.length + 1];
+            int rightShape = a2.getShape()[0];
+
+            do {
+                NumpyArray.addCounter(counter, leftNoneCommonShape);
+
+                for (int i = 0; i < leftNoneCommonShape.length; i++) {
+                    index[i] = counter[i];
+                }
+
+                for (int i = 0; i < rightShape; i++) {
+                    index[index.length - 1] = i;
+                    Object value = null;
+
+                    if (target.isFloatingPoint()) {
+                        if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                            value = (double) a1.get(index) / (double) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                            value = (float) a1.get(index) / (float) a2.get(i);
+                        }
+                    } else {
+                        if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                            value = (byte) a1.get(index) / (byte) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                            value = (short) a1.get(index) / (short) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                            value = (int) a1.get(index) / (int) a2.get(i);
+                        } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                            value = (long) a1.get(index) / (long) a2.get(i);
+                        }
+                    }
+
+                    target.set(value, index);
+                }
+            } while (counter[counter.length - 1] == 0);
+        } else if (a1.numberOfDimensions() == 1 && a2.numberOfDimensions() == 1) {
+            int firstDim = target.getShape()[0];
+
+            for (int i = 0; i < firstDim; i++) {
+                Object value = null;
+
+                if (target.isFloatingPoint()) {
+                    if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                        value = (double) a1.get(i) / (double) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                        value = (float) a1.get(i) / (float) a2.get(i);
+                    }
+                } else {
+                    if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                        value = (byte) a1.get(i) / (byte) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                        value = (short) a1.get(i) / (short) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                        value = (int) a1.get(i) / (int) a2.get(i);
+                    } else if (target.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                        value = (long) a1.get(i) / (long) a2.get(i);
+                    }
+                }
+
+                target.set(value, i);
+            }
+        } else {
+            int firstDim = target.getShape()[0];
+
+            for (int i = 0; i < firstDim; i++) {
+                NumpyArray leftWrap = a1.wrapInnerSubsetArray(i);
+                NumpyArray rightWrap = null;
+
+                if (a2.getShape()[0] == 1) {
+                    rightWrap = a2.wrapInnerSubsetArray(0);
+                } else {
+                    rightWrap = a2.wrapInnerSubsetArray(i);
+                }
+
+                divideInPlace(target.wrapInnerSubsetArray(i), leftWrap, rightWrap);
+            }
+        }
+    }
+
+
+    /**
+     * Divides a double value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be divided by.
+     */
+    private static void divideInPlace(NumpyArray target, NumpyArray array, double value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((double) element) / value);
+    }
+
+    /**
+     * Divides a float value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be divided by.
+     */
+    private static void divideInPlace(NumpyArray target, NumpyArray array, float value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((float) element) / value);
+    }
+
+    /**
+     * Divides a long value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be divided by.
+     */
+    private static void divideInPlace(NumpyArray target, NumpyArray array, long value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((long) element) / value);
+    }
+
+    /**
+     * Divides a int value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be divided by.
+     */
+    private static void divideInPlace(NumpyArray target, NumpyArray array, int value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((int) element) / value);
+    }
+
+    /**
+     * Divides a short value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be divided by.
+     */
+    private static void divideInPlace(NumpyArray target, NumpyArray array, short value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((short) element) / value);
+    }
+
+    /**
+     * Divides a byte value by a numpy array.
+     *
+     * @param target The array that stores the calculation.
+     * @param array  The left-hand side of the expression.
+     * @param value  The value to be divided by.
+     */
+    private static void divideInPlace(NumpyArray target, NumpyArray array, byte value) {
+        array.applyToEachElementAnsSaveToTarget(target, element -> ((byte) element) / value);
     }
 
     /**
@@ -853,6 +1270,7 @@ public final class Numpy {
 
     /**
      * Remove axes of length one from the array.
+     *
      * @param array The array to squeeze.
      * @return An array without any dimension of length 1.
      */
@@ -891,4 +1309,103 @@ public final class Numpy {
 
         return result;
     }
+
+    /**
+     * Clip (limit) the values in an array.
+     * <p>
+     * Given an interval, values outside the interval are clipped to the interval edges.
+     * For example, if an interval of [0, 1] is specified, values smaller than 0 become 0,
+     * and values larger than 1 become 1.
+     * <p>
+     * Equivalent to but faster than np.minimum(a_max, np.maximum(a, a_min)).
+     *
+     * @param array Array containing elements to clip.
+     * @param min   The minimum value to clip.
+     * @param max   The maximum value to clip.
+     * @return An array with the elements of array, but where values less than min are replaced
+     * with min, and those greater than max with max.
+     */
+    public static NumpyArray<Double> clip(NumpyArray<Double> array, double min, double max) {
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
+
+        array.applyToEachElementAnsSaveToTarget(result, value -> {
+            if (value > max) {
+                return max;
+            } else if (value < min) {
+                return min;
+            }
+
+            return value;
+        });
+
+        return result;
+    }
+
+    /**
+     * Calculate the absolute value element-wise.
+     *
+     * @param array Input array.
+     * @return An ndarray containing the absolute value of each element in x.
+     */
+    public static NumpyArray abs(NumpyArray<Double> array) {
+        NumpyArray result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
+        INumpyArrayElementOperation absOperation = null;
+
+        if (array.isFloatingPoint()) {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                absOperation = value -> Math.abs((double) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                absOperation = value -> Math.abs((float) value);
+            }
+        } else {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                absOperation = value -> Math.abs((byte) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                absOperation = value -> Math.abs((short) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                absOperation = value -> Math.abs((int) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                absOperation = value -> Math.abs((long) value);
+            }
+        }
+
+        array.applyToEachElementAnsSaveToTarget(result, absOperation);
+
+        return result;
+    }
+
+    /**
+     * Return the non-negative square-root of an array, element-wise.
+     *
+     * @param array The values whose square-roots are required.
+     * @return An array of the same shape as x, containing the positive square-root
+     * of each element in x.
+     */
+    public static NumpyArray<Double> sqrt(NumpyArray array) {
+        NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(true, NumpyArrayFactory.SIZE_OF_DOUBLE, array.getShape());
+        INumpyArrayElementOperation sqrtOperation = null;
+
+        if (array.isFloatingPoint()) {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_DOUBLE) {
+                sqrtOperation = value -> Math.sqrt((double) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_FLOAT) {
+                sqrtOperation = value -> Math.sqrt((float) value);
+            }
+        } else {
+            if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_8) {
+                sqrtOperation = value -> Math.sqrt((byte) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_16) {
+                sqrtOperation = value -> Math.sqrt((short) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_32) {
+                sqrtOperation = value -> Math.sqrt((int) value);
+            } else if (array.numberOfBytes() == NumpyArrayFactory.SIZE_OF_INT_64) {
+                sqrtOperation = value -> Math.sqrt((long) value);
+            }
+        }
+
+        array.applyToEachElementAnsSaveToTarget(result, sqrtOperation);
+
+        return result;
+    }
+
 }

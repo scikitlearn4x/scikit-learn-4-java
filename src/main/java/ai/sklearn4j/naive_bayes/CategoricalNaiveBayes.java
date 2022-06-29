@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * Naive Bayes classifier for categorical features.
- *
+ * <p>
  * The categorical Naive Bayes classifier is suitable for classification with discrete features that
  * are categorically distributed. The categories of each feature are drawn from a categorical
  * distribution.
@@ -50,7 +50,7 @@ public class CategoricalNaiveBayes extends BaseNaiveBayes {
      */
     @Override
     protected NumpyArray<Double> jointLogLikelihood(NumpyArray<Double> x) {
-        NumpyArray<Double> jll = NumpyArrayFactory.arrayOfDoubleWithShape(new int[] {x.getShape()[0], classCounts.getShape()[0]});
+        NumpyArray<Double> jll = NumpyArrayFactory.arrayOfDoubleWithShape(new int[]{x.getShape()[0], classCounts.getShape()[0]});
         for (int i = 0; i < getNumberOfFeatures(); i++) {
             int[] indices = getArrayFirstDimension(x, i);
             NumpyArray<Double> logProb = this.featureLogProbabilities.get(i);
@@ -73,9 +73,8 @@ public class CategoricalNaiveBayes extends BaseNaiveBayes {
     /**
      * Gets the values of the first dimension. Equivalent to numpy data[:, secondDimensionIndex]
      *
-     * @param x Array to be sliced.
+     * @param x                    Array to be sliced.
      * @param secondDimensionIndex The value of the second dimension.
-     *
      * @return The sliced first dimension.
      */
     private int[] getArrayFirstDimension(NumpyArray<Double> x, int secondDimensionIndex) {
@@ -83,7 +82,7 @@ public class CategoricalNaiveBayes extends BaseNaiveBayes {
 
         for (int j = 0; j < indices.length; j++) {
             double value = x.get(j, secondDimensionIndex);
-            indices[j] = (int)value;
+            indices[j] = (int) value;
         }
 
         return indices;
@@ -91,6 +90,7 @@ public class CategoricalNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the log probability of each class (smoothed).
+     *
      * @return Log probability of each class (smoothed).
      */
     public NumpyArray<Double> getClassLogPrior() {
@@ -99,6 +99,7 @@ public class CategoricalNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the log probability of each class (smoothed).
+     *
      * @param classLogPrior The log probability of each class (smoothed).
      */
     public void setClassLogPrior(NumpyArray<Double> classLogPrior) {
@@ -107,6 +108,7 @@ public class CategoricalNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Gets the empirical log probability of features given a class, P(x_i|y).
+     *
      * @return Empirical log probability of features given a class, P(x_i|y).
      */
     public List<NumpyArray<Double>> getFeatureLogProbabilities() {
@@ -115,6 +117,7 @@ public class CategoricalNaiveBayes extends BaseNaiveBayes {
 
     /**
      * Sets the empirical log probability of features given a class, P(x_i|y).
+     *
      * @param featureLogProbabilities The empirical log probability of features given a class, P(x_i|y).
      */
     public void setFeatureLogProbabilities(List<NumpyArray<Double>> featureLogProbabilities) {

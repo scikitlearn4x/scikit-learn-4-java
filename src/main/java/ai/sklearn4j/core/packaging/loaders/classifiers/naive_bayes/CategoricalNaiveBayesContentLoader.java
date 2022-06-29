@@ -54,7 +54,7 @@ public class CategoricalNaiveBayesContentLoader extends BaseScikitLearnContentLo
     /**
      * Sets the field n_categories_ in the classifier.
      *
-     * @param result The classifier to be loaded.
+     * @param result     The classifier to be loaded.
      * @param numpyArray The n in each category.
      */
     private void setNumberInCategories(CategoricalNaiveBayes result, NumpyArray numpyArray) {
@@ -63,7 +63,8 @@ public class CategoricalNaiveBayesContentLoader extends BaseScikitLearnContentLo
 
     /**
      * Sets the category_count_ in the classifier.
-     * @param result The classifier to be loaded.
+     *
+     * @param result      The classifier to be loaded.
      * @param numpyArrays The categories count in the training data.
      */
     private void setCategoryCounts(CategoricalNaiveBayes result, List<NumpyArray<Double>> numpyArrays) {
@@ -73,7 +74,7 @@ public class CategoricalNaiveBayesContentLoader extends BaseScikitLearnContentLo
     /**
      * Sets the feature's log probability in the training data.
      *
-     * @param result The classifier to be loaded.
+     * @param result     The classifier to be loaded.
      * @param numpyArray The feature's log probability in the training data.
      */
     private void setFeatureLogProbabilities(CategoricalNaiveBayes result, List<NumpyArray<Double>> numpyArray) {

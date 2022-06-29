@@ -56,6 +56,15 @@ public class TestHelper {
         }
     }
 
+    public static void assertEqualData(NumpyArray<Long> numpyArray, long[] array) {
+        Assertions.assertEquals(1, numpyArray.getShape().length);
+        Assertions.assertEquals(array.length, numpyArray.getShape()[0]);
+
+        for (int i = 0; i < array.length; i++) {
+            Assertions.assertEquals(array[i], numpyArray.get(i));
+        }
+    }
+
     public static void assertEqualData(NumpyArray<Double> numpyArray, double[][] array) {
         Assertions.assertEquals(2, numpyArray.getShape().length);
         Assertions.assertEquals(array.length, numpyArray.getShape()[0]);
