@@ -1322,8 +1322,8 @@ public final class Numpy {
      * @param array Array containing elements to clip.
      * @param min   The minimum value to clip.
      * @param max   The maximum value to clip.
-     * @return An array with the elements of array, but where values < min are replaced with min,
-     * and those > max with max.
+     * @return An array with the elements of array, but where values less than min are replaced
+     * with min, and those greater than max with max.
      */
     public static NumpyArray<Double> clip(NumpyArray<Double> array, double min, double max) {
         NumpyArray<Double> result = NumpyArrayFactory.createArrayOfShapeAndTypeInfo(array);
